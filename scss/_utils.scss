@@ -1,0 +1,22 @@
+@import "font-face";
+@import "prefixer";
+@import "mixins";
+
+@function img_url($string) {
+    @return url('#{$images-path}#{$string}');
+}
+
+@function letter-spacing($value,$size) {
+    $result: ($value * $size)/ 1000;
+    @return #{$result}px;
+}
+
+@function _rgba($color,$opacity) {
+    @return rgba(red($color), green($color), blue($color), $opacity);
+}
+
+@mixin tablet_screen() {
+    @media (min-width: 600px) and (max-width: 768px) {
+        @content;
+    }
+}

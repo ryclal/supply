@@ -1,0 +1,683 @@
+header
+{
+    &.index_page
+    {
+        .website_head
+        {
+            background: $black_33;
+
+            .logo
+            {
+                width: 90px;
+                height: 50px;
+                margin-top: 15px;
+                float: left;
+                background: img_url('logo.png') no-repeat center;
+                background-size: contain;
+
+                @media (max-width: 599px) {
+                    float: none;
+                    text-align: center;
+                    @include margin_left_right(auto);
+                }
+            }
+
+            .auth_section
+            {
+                float: right;
+
+                .btn_create_boutique
+                {
+                    position: relative;
+                    display: inline-block;
+                    @include font-details(14px, 'OpenSans', 400);
+                    line-height: 1.2;
+                    letter-spacing: 0;
+                    color: white;
+                    text-align: center;
+                    background: $red_fa;
+                    margin: 20px 42px 20px auto;
+                    @include border-radius(8px);
+                    padding: 13px 18px 11px;
+                }
+
+                .btn_auth
+                {
+                    @include font-details(14px, 'OpenSans', 400);
+                    line-height: 1.2;
+                    letter-spacing: 0;
+                    color: white;
+                    position: relative;
+                    padding: 0;
+                    margin-right: 28px;
+
+                    &:last-child
+                    {
+                        margin-right: 0;
+                    }
+                }
+
+                @media (max-width: 599px) {
+                    float: none;
+                    text-align: center;
+                    @include margin_left_right(auto);
+                }
+            }
+        }
+
+        .navbar
+        {
+            margin-bottom: 0;
+            min-height: 0;
+            height: 48px;
+            z-index: 9;
+            background: #fff;
+            border: none;
+
+            .navbar-header
+            {
+                .navbar-toggle
+                {
+                    margin-top: 7px;
+                    margin-bottom: 7px;
+                }
+                .mobile_right_nav
+                {
+                    padding-left: 0;
+                    margin-bottom: 0;
+
+                    > li
+                    {
+                        padding: 15px 14px 13px;
+                        display: inline-block;
+                        vertical-align: top;
+
+                        a
+                        {
+                            padding: 0;
+                            @include font-details(14px, 'OpenSans', 400);
+                            line-height: 1.2;
+                            letter-spacing: 0;
+                            text-align: center;
+                            color: $black_2a;
+                        }
+
+                        &.language_dropdown
+                        {
+
+                            .dropdown-menu
+                            {
+                                @include box-shadow(none);
+                                border-color: $grey_97;
+                                top: calc(100% - 14px);
+                                background: #fff;
+                                left: calc(50% - 50px);
+                                width: 100px;
+                                min-width: 0;
+                                @include border-radius(0);
+                                padding: 16px 20px;
+
+                                li
+                                {
+                                    padding: 0;
+                                    margin-bottom: 14px;
+
+                                    a
+                                    {
+                                        padding: 0;
+                                        background: transparent;
+
+                                        &:hover
+                                        {
+                                            color: $black_2a;
+                                            background: transparent;
+                                        }
+                                    }
+                                    &:last-child
+                                    {
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+
+                        }
+
+                        &.currency_dropdown
+                        {
+
+                            .dropdown-menu
+                            {
+                                @include box-shadow(none);
+                                border-color: $grey_97;
+                                top: calc(100% - 14px);
+                                background: #fff;
+                                left: calc(50% - 50px);
+                                width: 100px;
+                                min-width: 0;
+                                @include border-radius(0);
+                                padding: 16px 20px;
+
+                                li
+                                {
+                                    padding: 0;
+                                    margin-bottom: 14px;
+
+                                    a
+                                    {
+                                        padding: 0;
+                                        text-transform: uppercase;
+                                        background: transparent;
+
+                                        &:hover
+                                        {
+                                            color: $black_2a;
+                                            background: transparent;
+                                        }
+                                    }
+                                    &:last-child
+                                    {
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.icons
+                        {
+                            span
+                            {
+                                width: 16px;
+                                height: 16px;
+                                background: no-repeat center;
+                                background-size: contain;
+                                display: block;
+                            }
+
+                            .wishlist_icon
+                            {
+                                background-image: img_url('wishlist.png');
+                            }
+
+                            .cart_icon
+                            {
+                                background-image: img_url('cart.png');
+                            }
+                        }
+                    }
+                }
+            }
+            .dropdown
+            {
+                > a
+                {
+                    position: relative;
+                    background: transparent;
+
+                    &:hover
+                    {
+                        color: $black_2a;
+                        background: transparent;
+                    }
+                }
+                &.open
+                {
+                    a
+                    {
+                        background: transparent;
+
+                        &:hover, &:focus, &:visited
+                        {
+                            background: transparent;
+                            color: $black_28;
+                        }
+                    }
+                }
+            }
+        }
+
+        .navbar-collapse
+        {
+            padding: 0;
+
+            .navbar-left
+            {
+                li
+                {
+                    padding: 17px 14px 15px;
+
+                    &:first-of-type
+                    {
+                        padding-left: 0;
+                    }
+
+                    a
+                    {
+                        padding: 0;
+                        @include font-details(14px, 'OpenSans', 400);
+                        line-height: 1.2;
+                        letter-spacing: 0;
+                        text-align: center;
+                        color: $black_2a;
+                    }
+
+                    &.dropdown
+                    {
+                        > a
+                        {
+                            position: relative;
+                            background: transparent;
+
+                            &:hover
+                            {
+                                color: $black_2a;
+                            }
+
+                            &:after
+                            {
+                                position: absolute;
+                                width: 100%;
+                                left: 0;
+                                pointer-events: none;
+                                content: '';
+                                top: calc(100% + 3px);
+                                height: 1px;
+                                background: $grey_97;
+                                opacity: 0;
+                                @include transition(opacity .3s linear);
+                            }
+                        }
+
+                        .dropdown-menu
+                        {
+                            @include box-shadow(none);
+                            border-color: $grey_97;
+                            top: calc(100% - 5px);
+                            background: #fff;
+                            left: -10px;
+                            @include border-radius(0);
+
+                            a
+                            {
+                                text-align: left;
+                            }
+
+                            li
+                            {
+                                padding: 0;
+                                margin-bottom: 14px;
+
+                                &:last-child
+                                {
+                                    margin-bottom: 7px;
+                                }
+
+                                ul
+                                {
+                                    display: inline-block;
+                                    margin-right: 40px;
+
+                                    &.no_margin
+                                    {
+                                        margin-right: 0;
+                                    }
+
+                                    &:last-child
+                                    {
+                                        margin-right: 0;
+                                    }
+                                }
+
+                                h2
+                                {
+                                    text-align: center;
+                                    @include font-details(14px, 'OpenSans', 600);
+                                    line-height: 1.2;
+                                    color: $black_28;
+                                    margin-top: 4px;
+                                    margin-bottom: 18px;
+                                }
+
+                                .with_divider
+                                {
+                                    position: relative;
+
+                                    &:after
+                                    {
+                                        width: 1px;
+                                        height: 100%;
+                                        top: 0;
+                                        position: absolute;
+                                        content: '';
+                                        background: $grey_97;
+                                        right: 0;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.open
+                        {
+                            > a:after
+                            {
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                    &.women_dropdown
+                    {
+                        .dropdown-menu
+                        {
+                            padding: 16px 20px;
+                            width: 330px;
+                            li
+                            {
+                                &:last-child
+                                {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+
+                    &.men_dropdown
+                    {
+                        .dropdown-menu
+                        {
+                            padding: 16px 20px;
+                            width: 330px;
+
+                            li
+                            {
+                                &:last-child
+                                {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+
+                    &.kids_dropdown
+                    {
+
+                        .dropdown-menu
+                        {
+                            padding: 16px 0;
+                            width: 630px;
+
+                            @media (min-width: 768px) and (max-width: 991px) {
+                                width: 450px;
+                            }
+                        }
+                    }
+
+                    &.boutiques_dropdown, &.look_dropdown
+                    {
+                        .dropdown-menu
+                        {
+                            padding: 16px 0;
+                            width: 630px;
+                            text-align: center;
+
+                            li .with_divider
+                            {
+                                &:after
+                                {
+                                    right: 0;
+                                }
+                            }
+
+                            @media (min-width: 768px) and (max-width: 991px) {
+                                width: 450px;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .navbar-right
+            {
+                li
+                {
+                    padding: 17px 14px 15px;
+
+                    a
+                    {
+                        padding: 0;
+                        @include font-details(14px, 'OpenSans', 400);
+                        line-height: 1.2;
+                        letter-spacing: 0;
+                        text-align: center;
+                        color: $black_2a;
+                    }
+                    &.language_dropdown
+                    {
+
+                        .dropdown-menu
+                        {
+                            @include box-shadow(none);
+                            border-color: $grey_97;
+                            top: calc(100% - 5px);
+                            background: #fff;
+                            left: calc(50% - 50px);
+                            width: 100px;
+                            min-width: 0;
+                            @include border-radius(0);
+                            padding: 16px 20px;
+
+                            li
+                            {
+                                padding: 0;
+                                margin-bottom: 14px;
+
+                                a
+                                {
+                                    padding: 0;
+                                    background: transparent;
+
+                                    &:hover
+                                    {
+                                        color: $black_2a;
+                                        background: transparent;
+                                    }
+                                }
+                                &:last-child
+                                {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+
+                    }
+
+                    &.currency_dropdown
+                    {
+
+                        .dropdown-menu
+                        {
+                            @include box-shadow(none);
+                            border-color: $grey_97;
+                            top: calc(100% - 5px);
+                            background: #fff;
+                            left: calc(50% - 50px);
+                            width: 100px;
+                            min-width: 0;
+                            @include border-radius(0);
+                            padding: 16px 20px;
+
+                            li
+                            {
+                                padding: 0;
+                                margin-bottom: 14px;
+
+                                a
+                                {
+                                    padding: 0;
+                                    text-transform: uppercase;
+                                    background: transparent;
+
+                                    &:hover
+                                    {
+                                        color: $black_2a;
+                                        background: transparent;
+                                    }
+                                }
+                                &:last-child
+                                {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+
+                    &.icons
+                    {
+                        span
+                        {
+                            width: 16px;
+                            height: 16px;
+                            background: no-repeat center;
+                            background-size: contain;
+                            display: block;
+                        }
+
+                        .wishlist_icon
+                        {
+                            background-image: img_url('wishlist.png');
+                        }
+
+                        .cart_icon
+                        {
+                            background-image: img_url('cart.png');
+                        }
+                    }
+
+                }
+            }
+
+            @media (max-width: 767px) {
+                background: #fff;
+                border-color: transparent;
+                height: calc(100vh - 128px);
+
+                .navbar-left
+                {
+                    @include margin_left_right(0);
+
+                    li
+                    {
+                        &.dropdown
+                        {
+                            > a
+                            {
+                                font-weight: 700;
+                                text-align: center;
+                                &:after
+                                {
+                                    display: none;
+                                }
+                            }
+                        }
+                        &.women_dropdown, &.men_dropdown
+                        {
+                            .dropdown-menu
+                            {
+                                width: 100%;
+
+                                li
+                                {
+                                    @include margin_left_right(auto);
+                                    text-align: center;
+                                    float: none;
+                                    display: block;
+                                }
+                            }
+                        }
+                        &.kids_dropdown
+                        {
+                            .dropdown-menu
+                            {
+                                width: 100%;
+
+                                li
+                                {
+                                    @include margin_left_right(auto);
+                                    text-align: center;
+                                    float: none;
+                                    vertical-align: top;
+                                    display: block;
+                                }
+                                ul
+                                {
+                                    vertical-align: top;
+                                }
+                            }
+                        }
+
+                        &.boutiques_dropdown, &.look_dropdown
+                        {
+                            .dropdown-menu
+                            {
+                                width: 100%;
+
+                                li
+                                {
+                                    @include margin_left_right(auto);
+                                    text-align: center;
+                                    float: none;
+                                    vertical-align: top;
+                                    display: block;
+                                }
+                                ul
+                                {
+                                    vertical-align: top;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+            @media (max-width: 600px) {
+                .navbar-left
+                {
+
+                    li
+                    {
+
+                        &.kids_dropdown
+                        {
+                            .dropdown-menu
+                            {
+                                .with_divider
+                                {
+                                    &:after
+                                    {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.boutiques_dropdown, &.look_dropdown
+                        {
+                            .dropdown-menu
+                            {
+                                li > .with_divider
+                                {
+                                    &:after
+                                    {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+

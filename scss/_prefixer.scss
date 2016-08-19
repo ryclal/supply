@@ -1,0 +1,172 @@
+//---------------------------------------------------
+//  Sass Prefixer
+//  -------------------------------------------------
+
+
+//Border
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+//Shadow
+@mixin box-shadow($args1) {
+    -webkit-box-shadow: $args1;
+    -moz-box-shadow: $args1;
+    box-shadow: $args1;
+}
+
+// Animation
+
+@mixin animation($args...) {
+    -webkit-animation: $args;
+    -moz-animation: $args;
+    -ms-animation: $args;
+    -o-animation: $args;
+    animation: $args;
+}
+// Keyframes
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+
+
+// Background
+@mixin background-clip($clip) {
+    -webkit-background-clip: $clip;
+    -moz-background-clip: $clip;
+    background-clip: $clip;
+}
+
+
+@mixin text-fill-color($color) {
+    -webkit-text-fill-color: $color;
+    -moz-color: transparent;
+}
+
+// Filter
+@mixin filter($filter-type,$filter-amount) {
+    -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+    -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+    -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+    -o-filter: $filter-type+unquote('(#{$filter-amount})');
+    filter: $filter-type+unquote('(#{$filter-amount})');
+}
+
+// Gradients
+
+@mixin gradient($default: #F5F5F5, $start: #EEE, $stop: #FFF) {
+    @include linear-gradient-top($default,$start,0%,$stop,100%);
+}
+@mixin linear-gradient-top($default,$color1,$stop1,$color2,$stop2) {
+    background-color: $default;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop($stop1, $color1), color-stop($stop2 $color2));
+    background-image: -webkit-linear-gradient(top, $color1 $stop1, $color2 $stop2);
+    background-image: -moz-linear-gradient(top, $color1 $stop1, $color2 $stop2);
+    background-image: -ms-linear-gradient(top, $color1 $stop1, $color2 $stop2);
+    background-image: -o-linear-gradient(top, $color1 $stop1, $color2 $stop2);
+    background-image: linear-gradient(top, $color1 $stop1, $color2 $stop2);
+}
+@mixin linear-gradient-top2($default,$color1,$stop1,$color2,$stop2,$color3,$stop3) {
+    background-color: $default;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop($stop1, $color1), color-stop($stop2 $color2), color-stop($stop3 $color3));
+    background-image: -webkit-linear-gradient(top, $color1 $stop1, $color2 $stop2, $color3 $stop3);
+    background-image: -moz-linear-gradient(top, $color1 $stop1, $color2 $stop2, $color3 $stop3);
+    background-image: -ms-linear-gradient(top, $color1 $stop1, $color2 $stop2, $color3 $stop3);
+    background-image: -o-linear-gradient(top, $color1 $stop1, $color2 $stop2, $color3 $stop3);
+    background-image: linear-gradient(top, $color1 $stop1, $color2 $stop2, $color3 $stop3);
+}
+@mixin linear-gradient-top3($default,$color1,$stop1,$color2,$stop2,$color3,$stop3,$color4,$stop4) {
+    background-color: $default;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop($stop1, $color1), color-stop($stop2 $color2), color-stop($stop3 $color3), color-stop($stop4 $color4));
+    background-image: -webkit-linear-gradient(top, $color1 $stop1, $color2 $stop2, $color3 $stop3, $color4 $stop4);
+    background-image: -moz-linear-gradient(top, $color1 $stop1, $color2 $stop2, $color3 $stop3, $color4 $stop4);
+    background-image: -ms-linear-gradient(top, $color1 $stop1, $color2 $stop2, $color3 $stop3, $color4 $stop4);
+    background-image: -o-linear-gradient(top, $color1 $stop1, $color2 $stop2, $color3 $stop3, $color4 $stop4);
+    background-image: linear-gradient(top, $color1 $stop1, $color2 $stop2, $color3 $stop3, $color4 $stop4);
+}
+@mixin linear-gradient-left($default,$color1,$stop1,$color2,$stop2) {
+    background-color: $default;
+    background-image: -webkit-gradient(linear, left top, left top, color-stop($stop1, $color1), color-stop($stop2 $color2));
+    background-image: -webkit-linear-gradient(left, $color1 $stop1, $color2 $stop2);
+    background-image: -moz-linear-gradient(left, $color1 $stop1, $color2 $stop2);
+    background-image: -ms-linear-gradient(left, $color1 $stop1, $color2 $stop2);
+    background-image: -o-linear-gradient(left, $color1 $stop1, $color2 $stop2);
+    background-image: linear-gradient(left, $color1 $stop1, $color2 $stop2);
+}
+@mixin linear-gradient-left2($default,$color1,$stop1,$color2,$stop2,$color3,$stop3) {
+    background-color: $default;
+    background-image: -webkit-gradient(linear, left top, left top, color-stop($stop1, $color1), color-stop($stop2 $color2), color-stop($stop3 $color3));
+    background-image: -webkit-linear-gradient(left, $color1 $stop1, $color2 $stop2, $color3 $stop3);
+    background-image: -moz-linear-gradient(left, $color1 $stop1, $color2 $stop2, $color3 $stop3);
+    background-image: -ms-linear-gradient(left, $color1 $stop1, $color2 $stop2, $color3 $stop3);
+    background-image: -o-linear-gradient(left, $color1 $stop1, $color2 $stop2, $color3 $stop3);
+    background-image: linear-gradient(left, $color1 $stop1, $color2 $stop2, $color3 $stop3);
+}
+@mixin linear-gradient-left3($default,$color1,$stop1,$color2,$stop2,$color3,$stop3,$color4,$stop4) {
+    background-color: $default;
+    background-image: -webkit-gradient(linear, left top, left top, color-stop($stop1, $color1), color-stop($stop2 $color2), color-stop($stop3 $color3), color-stop($stop4 $color4));
+    background-image: -webkit-linear-gradient(left, $color1 $stop1, $color2 $stop2, $color3 $stop3, $color4 $stop4);
+    background-image: -moz-linear-gradient(left, $color1 $stop1, $color2 $stop2, $color3 $stop3, $color4 $stop4);
+    background-image: -ms-linear-gradient(left, $color1 $stop1, $color2 $stop2, $color3 $stop3, $color4 $stop4);
+    background-image: -o-linear-gradient(left, $color1 $stop1, $color2 $stop2, $color3 $stop3, $color4 $stop4);
+    background-image: linear-gradient(left, $color1 $stop1, $color2 $stop2, $color3 $stop3, $color4 $stop4);
+}
+
+// Transforms
+
+@mixin transform($args) {
+    -webkit-transform: $args;
+    -moz-transform: $args;
+    -ms-transform: $args;
+    -o-transform: $args;
+    transform: $args;
+}
+@mixin rotate($deg:45deg){
+    @include transform(rotate($deg));
+}
+@mixin scale($factor:.5){
+    @include transform(scale($factor));
+}
+@mixin translate($x,$y){
+    @include transform(translate($x,$y));
+}
+@mixin translate3d($x,$y,$z) {
+    @include transform(translate3d($x,$y,$z));
+}
+@mixin translateHardware($x,$y) {
+    @include translate($x,$y);
+    -webkit-transform: translate3d($x,$y,0);
+    -moz-transform: translate3d($x,$y,0);
+    -o-transform: translate3d($x,$y,0);
+    -ms-transform: translate3d($x,$y,0);
+    transform: translate3d($x,$y,0);
+}
+
+
+// Transitions
+
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -o-transition: $args;
+    -ms-transition: $args;
+    transition: $args;
+}
+@mixin transition-delay($delay:0) {
+    -webkit-transition-delay: $delay;
+    -moz-transition-delay: $delay;
+    -o-transition-delay: $delay;
+    -ms-transition-delay: $delay;
+    transition-delay: $delay;
+}

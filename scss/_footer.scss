@@ -1,0 +1,114 @@
+footer
+{
+    position: relative;
+    padding-bottom: 18px;
+    padding-top: 18px;
+    background: $black_4a;
+
+
+    .menu_quick_links, .menu_browsing, .menu_help, .menu_social
+    {
+        @include footer_menu_item;
+
+        @include tablet_screen {
+            margin-bottom: 20px;
+        }
+        @media (max-width: 599px) {
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    }
+
+    .menu_payments_newsletter
+    {
+        h3
+        {
+            @include footer_h3;
+        }
+        .newsletter_block
+        {
+            margin-left: 10px;
+            p
+            {
+                @include font-details(14px, 'OpenSans', 400);
+                color: $grey_c6;
+                margin-bottom: 12px;
+            }
+            form
+            {
+                margin: 0;
+                position: relative;
+                input[type="email"]
+                {
+                    width: calc(75% - 17px);
+                    border: 1px solid $grey_c6;
+                    color: $grey_c6;
+                    background: transparent;
+                    @include font-details(12px, 'OpenSans', 400);
+                    padding: 8px 10px 6px;
+                    @include placeholder($grey_c6, left);
+                    margin-right: 13px;
+
+                    &:focus
+                    {
+                        outline: 0 !important;
+                    }
+                }
+                input[type="submit"]
+                {
+                    width: 25%;
+                    background: $grey_c6;
+                    @include font-details(12px, 'OpenSans', 600);
+                    color: $black_4a;
+                    text-transform: uppercase;
+                    padding: 8px 0 6px;
+                    border: 1px solid $grey_c6;
+                    @include box-shadow(none);
+                }
+            }
+        }
+        .payments_block
+        {
+            margin-left: 10px;
+            position: relative;
+            margin-top: 19px;
+
+            .payment
+            {
+                width: 39px;
+                height: 24px;
+                display: inline-block;
+                margin-right: 7px;
+                background: no-repeat center;
+                background-size: contain;
+
+                &:last-child
+                {
+                    margin-right: 0;
+                }
+
+                &.visa
+                {
+                    background-image: img_url('visa.png');
+                }
+                &.mastercard
+                {
+                    background-image: img_url('mastercard.png');
+                }
+
+                &.paypal {
+                    background-image: img_url('paypal.png');
+                }
+
+            }
+        }
+
+        @media (max-width: 599px) {
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+    }
+}

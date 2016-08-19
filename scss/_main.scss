@@ -1,0 +1,206 @@
+main
+{
+    &.index_page
+    {
+        background: $grey_f0;
+        section
+        {
+            &.section_1
+            {
+                background: img_url('section_1_image.png') no-repeat center;
+                background-size: cover;
+                position: relative;
+
+                .container
+                {
+                    position: relative;
+                    height: calc(100vh - 130px);
+                }
+
+                .search_input
+                {
+                    position: absolute;
+                    width: 80%;
+                    top: calc(100% - 150px);
+                    left: 10%;
+                    background: #fff;
+                    @include border-radius(7px);
+
+                    input
+                    {
+                        width: calc(100% - 49px);
+                        @include font-details(14px, 'OpenSans', 400);
+                        line-height: 1.2;
+                        letter-spacing: 0;
+                        color: $grey_9b;
+                        @include border-radius(7px);
+                        border: none;
+                        padding: 17px 15px 15px 30px;
+                        @include placeholder($grey_9b);
+
+                        &:focus
+                        {
+                            outline: 0 !important;
+                        }
+                    }
+
+                    &:after
+                    {
+                        position: absolute;
+                        content: '';
+                        width: 49px;
+                        height: 49px;
+                        right: 0;
+                        top: 0;
+                        background: img_url('search_icon.png') no-repeat center;
+                        background-size: inherit;
+                    }
+
+                }
+            }
+
+            &.section_2
+            {
+                margin-top: 74px;
+
+                .create_boutique_photo
+                {
+                    height: 307px;
+                    width: 100%;
+                    background: img_url('boutique_photo.png') no-repeat center;
+                    background-size: cover;
+                }
+
+                .create_boutique_block
+                {
+                    background: #fff;
+                    height: 307px;
+                    padding: 0 30px;
+
+                    p
+                    {
+                        @include font-details(20px, 'OpenSans', 400);
+                        line-height: 1.2;
+                        color: $black_2a;
+                        text-align: justify;
+                        position: relative;
+                        padding-top: 79px;
+                        margin-bottom: 38px;
+
+                        @media (max-width: 768px) {
+                            text-align: center;
+                        }
+                    }
+                    a
+                    {
+                        @include border-radius(0);
+                        background: $green_00;
+                        @include font-details(14px, 'OpenSans', 600);
+                        color: #fff;
+                        width: 200px;
+                        text-align: center;
+                        display: block;
+                        @include margin_left_right(auto);
+                        text-transform: uppercase;
+                        line-height: 1.2;
+                        padding: 10px 40px 8px;
+                    }
+                }
+            }
+
+            &.section_3
+            {
+                margin-top: 80px;
+
+                .category_block
+                {
+                    h2
+                    {
+                        @include h2;
+                    }
+                    h5
+                    {
+                        @include h5;
+                    }
+
+                    .nav-tabs
+                    {
+                        @include nav-tabs(140px);
+                    }
+                    .tab-content
+                    {
+                        @include tab-content(true, 'women_item.png');
+
+                        @media (max-width: 599px) {
+                            .item {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .btn_show_more
+                    {
+                        @include btn_show_more;
+                    }
+                }
+
+            }
+
+            &.section_4
+            {
+                margin-top: 30px;
+
+                h2
+                {
+                    @include h2;
+                }
+
+                h5
+                {
+                    @include h5;
+                }
+
+                .nav-tabs
+                {
+                    @include nav-tabs(140px);
+                }
+                .tab-content
+                {
+                    @include boutique_tab-content(true, 'boutique_item.png');
+                }
+                .btn_show_more
+                {
+                    @include btn_show_more;
+                    margin-top: 12px;
+                }
+            }
+
+            &.section_5
+            {
+                margin-top: 30px;
+                h2
+                {
+                    @include h2;
+                }
+
+                h5
+                {
+                    @include h5;
+                }
+
+                .nav-tabs
+                {
+                    @include nav-tabs(140px);
+                }
+                .tab-content
+                {
+                    @include look_tab-content(true, 'look_item.png');
+                }
+                .btn_show_more
+                {
+                    @include btn_show_more;
+                    margin-top: 12px;
+                }
+            }
+        }
+    }
+}

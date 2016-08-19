@@ -1,0 +1,60 @@
+//Utilities import
+@import "variables";
+@import "utils";
+
+//Default style
+
+html, body
+{
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    //background-color: $grey_f5;
+    position: relative;
+    //scrollbar-highlight-color: $grey_5d;
+    //scrollbar-face-color: _rgba($grey_5d,.3);
+    //scrollbar-track-color: _rgba($grey_5d,0);
+    //scrollbar-arrow-color: _rgba($grey_f5,.1);
+    //-webkit-overflow-scrolling: touch;
+}
+
+//
+//::-webkit-scrollbar
+//{
+//    width: 5px;
+//    background-color: $grey_f5;
+//}
+//
+//
+//::-webkit-scrollbar-thumb
+//{
+//    background-color: $grey_5d;
+//}
+
+a,
+a:hover,
+a:focus,
+a:active
+{
+    text-decoration: none;
+    outline: none !important;
+    cursor: pointer;
+    @include box-shadow(none);
+}
+
+
+[required]
+{
+    box-shadow: none;
+}
+
+
+
+
+// Website imports
+
+@import "header";
+@import "main";
+@import "footer";
+
+//Media Query Import
+@import "media-query";

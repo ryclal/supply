@@ -1,0 +1,30 @@
+@import "variables";
+@function capitalize($string) {
+    @return to-upper-case(str-slice($string, 1, 1)) + str-slice($string, 2);
+}
+
+@mixin font($name, $type, $weight, $style: normal) {
+
+    $fonts_path :$fonts_path + capitalize($name) + '/';
+
+    @font-face
+    {
+        font-family: '#{capitalize($name)}';
+        src: url('#{$fonts_path}#{$name}-#{$type}.eot');
+        src: url('#{$fonts_path}#{$name}-#{$type}.eot?#iefix') format('embedded-opentype'),
+        url('#{$fonts_path}#{$name}-#{$type}.woff') format('woff'),
+        url('#{$fonts_path}#{$name}-#{$type}.ttf') format('truetype'),
+        url('#{$fonts_path}#{$name}-#{$type}.svg##{$name}') format('svg');
+        font-weight: $weight;
+        font-style: normal;
+    }
+}
+@mixin font-pair($name, $type, $weight) {
+    @include font($name, $type, $weight);
+}
+
+@include font-pair('OpenSans','Light',300);
+@include font-pair('OpenSans','Regular',400);
+@include font-pair('OpenSans','Semibold',600);
+@include font-pair('OpenSans', 'Bold',700);
+@include font-pair('OpenSans','ExtraBold',800);
