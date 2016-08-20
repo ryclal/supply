@@ -1,5 +1,6 @@
 main
 {
+    min-height: calc(100vh - 336px);
     &.index_page
     {
         background: $grey_f0;
@@ -36,7 +37,7 @@ main
                         @include border-radius(7px);
                         border: none;
                         padding: 17px 15px 15px 30px;
-                        @include placeholder($grey_9b);
+                        @include placeholder($black_4a);
 
                         &:focus
                         {
@@ -132,7 +133,8 @@ main
                         @include tab-content(true, 'women_item.png');
 
                         @media (max-width: 599px) {
-                            .item {
+                            .item
+                            {
                                 width: 100%;
                             }
                         }
@@ -199,6 +201,114 @@ main
                 {
                     @include btn_show_more;
                     margin-top: 12px;
+                }
+            }
+
+            &.section_reset_password
+            {
+                $padding_left: 19px;
+                .modal_block
+                {
+                    width: 340px;
+                    margin-top: 52px;
+                    margin-bottom: 140px;
+                    position: relative;
+                    margin-left: calc(50% - 170px);
+                    background: #fff;
+                    @include border-radius(8px);
+                    @include box-shadow(none);
+                    border: 1px solid $grey_4a;
+                    padding: 0 20px 20px;
+
+                    @media (max-width: 479px) {
+                        width: 300px;
+                        margin-left: calc(50% - 150px);
+                    }
+
+                    .form-group
+                    {
+                        margin-top: 0;
+                        margin-bottom: 6px;
+
+                        &.title_block
+                        {
+                            position: absolute;
+                            top: -1px;
+                            left: -1px;
+                            width: calc(100% + 2px);
+
+                            span
+                            {
+                                width: 100%;
+                                display: block;
+                                position: relative;
+                                @include font-details(16px, 'OpenSans', 600);
+                                color: $black_4a;
+                                line-height: 1.2;
+                                @include border-radius(8px);
+                                background: $grey_f7;
+                                padding: 15px 0 13px 20px;
+                                border: 1px solid $grey_4a;
+                            }
+                        }
+
+                        input
+                        {
+                            width: 100%;
+                            @include border-radius(0);
+                            border: 1px solid $grey_c8;
+                            @include font-details(14px, 'OpenSans', 600);
+                            line-height: 1.2;
+                            color: $black_4a;
+                            padding: 27px 0 25px $padding_left;
+                            @include box-shadow(none);
+                            @include placeholder($grey_9b, left);
+                        }
+
+                        &.first_block
+                        {
+                            margin-top: 64px;
+                        }
+
+                        &.save_block
+                        {
+                            margin-top: 28px;
+                            margin-bottom: 14px;
+
+                            .btn_login
+                            {
+                                @include font-details(14px, 'OpenSans', 600);
+                                line-height: 1.2;
+                                color: #fff;
+                                background: $red_fa;
+                                width: 100%;
+                                border: none;
+                                display: block;
+                                text-align: center;
+                                padding: 20px 0 18px;
+
+                                &:focus
+                                {
+                                    outline: 0 !important;
+                                }
+                            }
+                        }
+
+                        &.terms_block
+                        {
+                            p
+                            {
+                                @include font-details(12px, 'OpenSans', 600);
+                                color: $black_4a;
+
+                                a
+                                {
+                                    color: $red_fa;
+                                }
+                            }
+                        }
+                    }
+
                 }
             }
         }

@@ -45,7 +45,8 @@
                     <input name="remember" id="check_item" type="checkbox">
                     <label for="check_item">Remember me</label>
                 </div>
-                <a href="#" class="btn_forgot_pass">Forgot password?</a>
+                <a href="#" class="btn_forgot_pass fourth_modal open_modal" data-modal="loginModal">Forgot
+                    password?</a>
             </div>
             <div class="form-group submit_block">
                 <button type="submit" class="btn_login">Log In</button>
@@ -143,6 +144,34 @@
             <div class="form-group sign_up_block">
                 <p>Already a member?</p>
                 <a href="#" data-modal="register_mail_Modal" class="btn_signup first_modal open_modal">Log in</a>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="reset_password_modal" class="modal fade reset_password_modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="form-group title_block">
+                <span>Reset Password</span>
+            </div>
+            <div class="form-group first_block">
+                <p>
+                    Enter the email address associated with your account, and we’ll email you a link to reset your
+                    password.
+                </p>
+            </div>
+            <div class="form-group email_block">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Email Address" name="email">
+                    <div class="input-group-addon"><i class="email_icon"></i></div>
+                </div>
+            </div>
+            <div class="form-group sign_up_block">
+                <button type="button" class="btn_login btn_send">Send Reset Link</button>
+                <div class="loader"></div>
+                <a href="reset__password_page.html" class="btn_login btn_sent">
+                    <i class="glyphicon glyphicon-ok"></i> Email Sent
+                </a>
             </div>
         </form>
     </div>

@@ -11,15 +11,16 @@
 
 .modal
 {
-    $padding_left:19px;
+    $padding_left: 19px;
 
-    .modal-dialog {
+    .modal-dialog
+    {
         background: #fff;
         @include border-radius(8px);
         @include box-shadow(none);
         position: absolute;
         width: 340px;
-        border:1px solid $grey_4a;
+        border: 1px solid $grey_4a;
         padding: 25px 20px 20px;
         left: calc(50% - 170px);
 
@@ -32,8 +33,6 @@
             margin-top: 0;
             margin-bottom: 6px;
 
-
-
             .btn_facebook
             {
                 width: 100%;
@@ -45,10 +44,10 @@
                 i
                 {
                     width: 14px;
-                    height:14px;
+                    height: 14px;
                     position: absolute;
-                    left:16px;
-                    top:20px;
+                    left: 16px;
+                    top: 20px;
                     background: img_url('facebook.png') no-repeat center;
                     background-size: auto;
                     vertical-align: middle;
@@ -58,31 +57,31 @@
                 {
                     @include font-details(14px, 'OpenSans', 600);
                     line-height: 1.2;
-                    color:#fff;
+                    color: #fff;
                     width: 100%;
                     display: block;
                     text-align: center;
                     padding: 20px 0 18px;
-
                 }
 
             }
 
-            .btn_google {
+            .btn_google
+            {
                 width: 100%;
                 display: block;
                 position: relative;
                 background: #fff;
                 @include border-radius(0);
-                border:1px solid $grey_c8;
+                border: 1px solid $grey_c8;
 
                 i
                 {
                     width: 20px;
                     height: 20px;
                     position: absolute;
-                    left:19px;
-                    top:17px;
+                    left: 19px;
+                    top: 17px;
                     background: img_url('google.png') no-repeat center;
                     background-size: auto;
                     vertical-align: middle;
@@ -92,82 +91,87 @@
                 {
                     @include font-details(14px, 'OpenSans', 600);
                     line-height: 1.2;
-                    color:$black_4a;
+                    color: $black_4a;
                     width: 100%;
                     display: block;
-
                     text-align: center;
                     padding: 20px 0 18px;
-
                 }
             }
 
-            .divider_line {
+            .divider_line
+            {
                 width: 100%;
-                color:$black_4a;
+                color: $black_4a;
                 margin-bottom: 6px;
-                margin-top:6px;
+                margin-top: 6px;
                 line-height: 1.2;
                 text-align: center;
-                @include font-details(14px,'OpenSans',600);
+                @include font-details(14px, 'OpenSans', 600);
                 position: relative;
 
-                &:before,&:after{
+                &:before, &:after
+                {
                     position: absolute;
-                    content:'';
+                    content: '';
                     height: 1px;
                     background: $grey_c8;
                     width: calc(50% - 16px);
-                    top:calc(50% - .5px);
+                    top: calc(50% - .5px);
                 }
-                &:before {
-                    left:0;
+                &:before
+                {
+                    left: 0;
                 }
-                &:after{
-                    right:0;
+                &:after
+                {
+                    right: 0;
                 }
             }
 
-            .btn_login {
+            .btn_login
+            {
                 @include font-details(14px, 'OpenSans', 600);
                 line-height: 1.2;
-                color:#fff;
+                color: #fff;
                 background: $red_fa;
                 width: 100%;
-                border:none;
+                border: none;
                 display: block;
                 text-align: center;
                 padding: 20px 0 18px;
 
-                &:focus{
-                    outline:0!important;
+                &:focus
+                {
+                    outline: 0 !important;
                 }
             }
 
-            &.sign_up_block {
-                margin-top:16px;
+            &.sign_up_block
+            {
+                margin-top: 16px;
                 margin-bottom: 0;
-
-                border-top:1px solid $grey_c8;
-                p {
-                    float:left;
-                    @include font-details(14px,'OpenSans',600);
-                    color:$black_4a;
+                border-top: 1px solid $grey_c8;
+                p
+                {
+                    float: left;
+                    @include font-details(14px, 'OpenSans', 600);
+                    color: $black_4a;
                     line-height: 1.2;
                     margin-top: 24px;
-                    margin-bottom:0;
+                    margin-bottom: 0;
                 }
-                .btn_signup {
-                    float:right;
+                .btn_signup
+                {
+                    float: right;
                     width: 73px;
-                    color:$red_fa;
+                    color: $red_fa;
                     text-align: center;
-                    border:1px solid $red_fa;
-                    @include font-details(12px,'OpenSans',600);
+                    border: 1px solid $red_fa;
+                    @include font-details(12px, 'OpenSans', 600);
                     line-height: 1.2;
                     margin-top: 16px;
-                    padding: 9px 0  7px;
-
+                    padding: 9px 0 7px;
                 }
             }
 
@@ -177,43 +181,48 @@
                 {
                     width: 100%;
                     @include border-radius(0);
-                    border:1px solid $grey_c8;
+                    border: 1px solid $grey_c8;
                     @include font-details(14px, 'OpenSans', 600);
                     line-height: 1.2;
-                    color:$grey_9b;
-                    padding:27px 0 25px $padding_left;
+                    color: $black_4a;
+                    padding: 27px 0 25px $padding_left;
                     border-right-color: transparent;
                     @include box-shadow(none);
+                    @include placeholder($grey_9b, left);
 
-                    @include placeholder($grey_9b,left);
-
-
-                    &:focus{
-                        outline: 0!important;
+                    &:focus
+                    {
+                        outline: 0 !important;
                     }
                 }
-                .input-group-addon {
+                .input-group-addon
+                {
                     background: #fff;
                     border-left-color: transparent;
                     @include border-radius(0);
 
-                    i{
+                    i
+                    {
                         width: 16px;
                         height: 16px;
                         display: block;
                         background: no-repeat center;
                         background-size: contain;
 
-                        &.email_icon {
+                        &.email_icon
+                        {
                             background-image: img_url('mail.png');
                         }
-                        &.password_icon {
+                        &.password_icon
+                        {
                             background-image: img_url('password.png');
                         }
-                        &.name_icon {
+                        &.name_icon
+                        {
                             background-image: img_url('name.png');
                         }
-                        &.date_icon {
+                        &.date_icon
+                        {
                             background-image: img_url('calendar.png');
                         }
                     }
@@ -223,27 +232,34 @@
         }
     }
 
-    &.register_modal {
-        .modal-dialog {
-            top:calc(50% - 187px);
+    &.register_modal
+    {
+        .modal-dialog
+        {
+            top: calc(50% - 187px);
 
             @media (max-height: 400px) {
-                top:30px;
+                top: 30px;
             }
 
-            .form-group {
-                &.agrement_block {
+            .form-group
+            {
+                &.agrement_block
+                {
                     margin-top: 13px;
-                    p {
-                        @include font-details(12px,'OpenSans',600);
-                        color:$black_4a;
+                    p
+                    {
+                        @include font-details(12px, 'OpenSans', 600);
+                        color: $black_4a;
 
-                        a{
-                            color:$red_fa;
+                        a
+                        {
+                            color: $red_fa;
                         }
                     }
                 }
-                &.sign_up_block{
+                &.sign_up_block
+                {
                     margin-top: 16px;
                 }
             }
@@ -254,35 +270,35 @@
     {
         .modal-dialog
         {
-            top:calc(50vh - 232px);
+            top: calc(50vh - 232px);
 
             @media (max-height: 479px) {
-                top:30px;
+                top: 30px;
             }
 
             .form-group
             {
 
-                &.forgot_pass_block {
+                &.forgot_pass_block
+                {
                     overflow: hidden;
                     padding-top: 2px;
-                    .checkbox {
-                        margin:6px auto;
+                    .checkbox
+                    {
+                        margin: 6px auto;
 
                         label
                         {
                             display: inline-block;
                             padding-left: 25px;
-                            @include font-details(12px, 'OpenSans',600);
+                            @include font-details(12px, 'OpenSans', 600);
                             color: $black_4a;
                             position: relative;
                             line-height: 1.2;
-                            margin-top:0;
-                            float:left;
+                            margin-top: 0;
+                            float: left;
                             cursor: pointer;
-
                             text-transform: none;
-
 
                             &:before
                             {
@@ -316,13 +332,12 @@
                         }
                     }
 
-
-
-                    .btn_forgot_pass {
+                    .btn_forgot_pass
+                    {
                         float: right;
-                        @include font-details(12px,'OpenSans',600);
+                        @include font-details(12px, 'OpenSans', 600);
                         line-height: 1.2;
-                        color:$red_fa;
+                        color: $red_fa;
                         text-align: right;
                     }
                 }
@@ -331,39 +346,144 @@
         }
     }
 
-    &.register_mail_modal {
-        .modal-dialog {
-            top:calc(50vh - 271px);
+    &.register_mail_modal
+    {
+        .modal-dialog
+        {
+            top: calc(50vh - 271px);
 
             @media (max-height: 599px) {
-                top:30px;
+                top: 30px;
             }
 
-            .form-group {
-                &.first_block {
+            .form-group
+            {
+                &.first_block
+                {
                     margin-top: 13px;
-                    p {
+                    p
+                    {
                         text-align: center;
-                        @include font-details(14px,'OpenSans',600);
-                        color:$black_4a;
+                        @include font-details(14px, 'OpenSans', 600);
+                        color: $black_4a;
 
-                        a{
-                            color:$red_fa;
+                        a
+                        {
+                            color: $red_fa;
                         }
                     }
                 }
-                &.agrement_block {
+                &.agrement_block
+                {
                     margin-top: 16px;
-                    p {
-                        @include font-details(12px,'OpenSans',600);
-                        color:$black_4a;
+                    p
+                    {
+                        @include font-details(12px, 'OpenSans', 600);
+                        color: $black_4a;
 
-                        a{
-                            color:$red_fa;
+                        a
+                        {
+                            color: $red_fa;
                         }
                     }
                 }
             }
         }
     }
+
+    &.reset_password_modal
+    {
+
+        .modal-dialog
+        {
+            padding-top: 0;
+            top:calc(50% - 156px);
+
+            @media (max-height: 350px) {
+                top:30px;
+            }
+
+            .form-group
+            {
+                &.title_block
+                {
+                    position: absolute;
+                    top: -1px;
+                    left: -1px;
+                    width: calc(100% + 2px);
+
+                    span
+                    {
+                        width: 100%;
+                        display: block;
+                        position: relative;
+                        @include font-details(16px, 'OpenSans', 600);
+                        color: $black_4a;
+                        line-height: 1.2;
+                        @include border-radius(8px);
+                        background: $grey_f7;
+                        padding: 15px 0 13px 20px;
+                        border: 1px solid $grey_4a;
+                    }
+                }
+
+                &.first_block
+                {
+                    margin-top: 64px;
+                    margin-bottom: 19px;
+                    p
+                    {
+                        @include font-details(14px, 'OpenSans', 600);
+                        color: $black_4a;
+                    }
+                }
+                &.sign_up_block
+                {
+                    margin-top: 18px;
+                    position: relative;
+                    .btn_login
+                    {
+                        @extend .btn_login;
+                        margin-top:20px;
+                    }
+                    .btn_sent
+                    {
+                        display: none;
+                        position: absolute;
+                        top:20px;
+                        left:0;
+                        margin-top:0;
+                        padding: 19px 0 17px;
+
+                        i{
+                            margin-right:5px;
+                            line-height: 1.2;
+                            top:-2px;
+                            vertical-align: middle;
+                        }
+                    }
+
+                    .loader{
+                        display: none;
+                        top:25px;
+                        position: absolute;
+                        left:calc(50% - 12px);
+                        border: 2px solid $google_yellow;
+                        border-radius: 50%;
+                        border-top: 2px solid $google_blue;
+                        border-right: 2px solid $google_green;
+                        border-bottom: 2px solid $google_red;
+                        width: 24px;
+                        height: 24px;
+                        bottom: 25px;
+                        @include animation(spin 2s linear infinite);
+                    }
+                }
+            }
+        }
+
+    }
+
+
+
 }
