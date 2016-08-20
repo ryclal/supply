@@ -15,6 +15,11 @@ html, body
     //scrollbar-track-color: _rgba($grey_5d,0);
     //scrollbar-arrow-color: _rgba($grey_f5,.1);
     //-webkit-overflow-scrolling: touch;
+
+    &.modal-opened {
+        overflow: hidden;
+    }
+
 }
 
 //

@@ -33,6 +33,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/calendar.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1051,
+		"inputAbbreviatedPath": "\/img\/calendar.png",
+		"outputAbbreviatedPath": "\/img\/calendar.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/cart.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -40,6 +51,39 @@
 		"initialSize": 672,
 		"inputAbbreviatedPath": "\/img\/cart.png",
 		"outputAbbreviatedPath": "\/img\/cart.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/check.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 18228,
+		"inputAbbreviatedPath": "\/img\/check.png",
+		"outputAbbreviatedPath": "\/img\/check.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/facebook.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 217,
+		"inputAbbreviatedPath": "\/img\/facebook.png",
+		"outputAbbreviatedPath": "\/img\/facebook.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/google.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1309,
+		"inputAbbreviatedPath": "\/img\/google.png",
+		"outputAbbreviatedPath": "\/img\/google.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -66,6 +110,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/mail.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 465,
+		"inputAbbreviatedPath": "\/img\/mail.png",
+		"outputAbbreviatedPath": "\/img\/mail.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/mastercard.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -73,6 +128,28 @@
 		"initialSize": 2411,
 		"inputAbbreviatedPath": "\/img\/mastercard.png",
 		"outputAbbreviatedPath": "\/img\/mastercard.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/name.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 418,
+		"inputAbbreviatedPath": "\/img\/name.png",
+		"outputAbbreviatedPath": "\/img\/name.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/password.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 568,
+		"inputAbbreviatedPath": "\/img\/password.png",
+		"outputAbbreviatedPath": "\/img\/password.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -327,6 +404,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/scss\/_mixins.scss",
 		"outputAbbreviatedPath": "\/css\/_mixins.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/scss\/_modal.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/scss\/_modal.scss",
+		"outputAbbreviatedPath": "\/css\/_modal.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,

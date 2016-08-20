@@ -1,0 +1,369 @@
+.modal-backdrop
+{
+    background: black;
+
+    &.in
+    {
+        opacity: .7;
+    }
+}
+
+
+.modal
+{
+    $padding_left:19px;
+
+    .modal-dialog {
+        background: #fff;
+        @include border-radius(8px);
+        @include box-shadow(none);
+        position: absolute;
+        width: 340px;
+        border:1px solid $grey_4a;
+        padding: 25px 20px 20px;
+        left: calc(50% - 170px);
+
+        @media (max-width: 579px) {
+            width: 300px;
+            left: calc(50% - 150px);
+        }
+        .form-group
+        {
+            margin-top: 0;
+            margin-bottom: 6px;
+
+
+
+            .btn_facebook
+            {
+                width: 100%;
+                display: block;
+                position: relative;
+                background: $facebook;
+                @include border-radius(0);
+
+                i
+                {
+                    width: 14px;
+                    height:14px;
+                    position: absolute;
+                    left:16px;
+                    top:20px;
+                    background: img_url('facebook.png') no-repeat center;
+                    background-size: auto;
+                    vertical-align: middle;
+                }
+
+                span
+                {
+                    @include font-details(14px, 'OpenSans', 600);
+                    line-height: 1.2;
+                    color:#fff;
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                    padding: 20px 0 18px;
+
+                }
+
+            }
+
+            .btn_google {
+                width: 100%;
+                display: block;
+                position: relative;
+                background: #fff;
+                @include border-radius(0);
+                border:1px solid $grey_c8;
+
+                i
+                {
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    left:19px;
+                    top:17px;
+                    background: img_url('google.png') no-repeat center;
+                    background-size: auto;
+                    vertical-align: middle;
+                }
+
+                span
+                {
+                    @include font-details(14px, 'OpenSans', 600);
+                    line-height: 1.2;
+                    color:$black_4a;
+                    width: 100%;
+                    display: block;
+
+                    text-align: center;
+                    padding: 20px 0 18px;
+
+                }
+            }
+
+            .divider_line {
+                width: 100%;
+                color:$black_4a;
+                margin-bottom: 6px;
+                margin-top:6px;
+                line-height: 1.2;
+                text-align: center;
+                @include font-details(14px,'OpenSans',600);
+                position: relative;
+
+                &:before,&:after{
+                    position: absolute;
+                    content:'';
+                    height: 1px;
+                    background: $grey_c8;
+                    width: calc(50% - 16px);
+                    top:calc(50% - .5px);
+                }
+                &:before {
+                    left:0;
+                }
+                &:after{
+                    right:0;
+                }
+            }
+
+            .btn_login {
+                @include font-details(14px, 'OpenSans', 600);
+                line-height: 1.2;
+                color:#fff;
+                background: $red_fa;
+                width: 100%;
+                border:none;
+                display: block;
+                text-align: center;
+                padding: 20px 0 18px;
+
+                &:focus{
+                    outline:0!important;
+                }
+            }
+
+            &.sign_up_block {
+                margin-top:16px;
+                margin-bottom: 0;
+
+                border-top:1px solid $grey_c8;
+                p {
+                    float:left;
+                    @include font-details(14px,'OpenSans',600);
+                    color:$black_4a;
+                    line-height: 1.2;
+                    margin-top: 24px;
+                    margin-bottom:0;
+                }
+                .btn_signup {
+                    float:right;
+                    width: 73px;
+                    color:$red_fa;
+                    text-align: center;
+                    border:1px solid $red_fa;
+                    @include font-details(12px,'OpenSans',600);
+                    line-height: 1.2;
+                    margin-top: 16px;
+                    padding: 9px 0  7px;
+
+                }
+            }
+
+            .input-group
+            {
+                input
+                {
+                    width: 100%;
+                    @include border-radius(0);
+                    border:1px solid $grey_c8;
+                    @include font-details(14px, 'OpenSans', 600);
+                    line-height: 1.2;
+                    color:$grey_9b;
+                    padding:27px 0 25px $padding_left;
+                    border-right-color: transparent;
+                    @include box-shadow(none);
+
+                    @include placeholder($grey_9b,left);
+
+
+                    &:focus{
+                        outline: 0!important;
+                    }
+                }
+                .input-group-addon {
+                    background: #fff;
+                    border-left-color: transparent;
+                    @include border-radius(0);
+
+                    i{
+                        width: 16px;
+                        height: 16px;
+                        display: block;
+                        background: no-repeat center;
+                        background-size: contain;
+
+                        &.email_icon {
+                            background-image: img_url('mail.png');
+                        }
+                        &.password_icon {
+                            background-image: img_url('password.png');
+                        }
+                        &.name_icon {
+                            background-image: img_url('name.png');
+                        }
+                        &.date_icon {
+                            background-image: img_url('calendar.png');
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    &.register_modal {
+        .modal-dialog {
+            top:calc(50% - 187px);
+
+            @media (max-height: 400px) {
+                top:30px;
+            }
+
+            .form-group {
+                &.agrement_block {
+                    margin-top: 13px;
+                    p {
+                        @include font-details(12px,'OpenSans',600);
+                        color:$black_4a;
+
+                        a{
+                            color:$red_fa;
+                        }
+                    }
+                }
+                &.sign_up_block{
+                    margin-top: 16px;
+                }
+            }
+        }
+    }
+
+    &.login_modal
+    {
+        .modal-dialog
+        {
+            top:calc(50vh - 232px);
+
+            @media (max-height: 479px) {
+                top:30px;
+            }
+
+            .form-group
+            {
+
+                &.forgot_pass_block {
+                    overflow: hidden;
+                    padding-top: 2px;
+                    .checkbox {
+                        margin:6px auto;
+
+                        label
+                        {
+                            display: inline-block;
+                            padding-left: 25px;
+                            @include font-details(12px, 'OpenSans',600);
+                            color: $black_4a;
+                            position: relative;
+                            line-height: 1.2;
+                            margin-top:0;
+                            float:left;
+                            cursor: pointer;
+
+                            text-transform: none;
+
+
+                            &:before
+                            {
+                                position: absolute;
+                                width: 16px;
+                                height: 16px;
+                                top: -2px;
+                                left: 0;
+                                content: '';
+                                background: none;
+                                border: 2px solid $grey_c8;
+                            }
+
+                        }
+                        input
+                        {
+                            display: inline-block;
+                            width: auto;
+                            opacity: 0;
+                            cursor: pointer;
+                            position: absolute;
+                            @include box-shadow(none);
+                            border: none;
+                            margin-left: 0;
+                            margin-top: 5px;
+                        }
+                        input:checked + label:before
+                        {
+                            border-color: $grey_c8;
+                            background: $grey_c8 img_url('check.png') no-repeat 50% 50%;
+                        }
+                    }
+
+
+
+                    .btn_forgot_pass {
+                        float: right;
+                        @include font-details(12px,'OpenSans',600);
+                        line-height: 1.2;
+                        color:$red_fa;
+                        text-align: right;
+                    }
+                }
+            }
+
+        }
+    }
+
+    &.register_mail_modal {
+        .modal-dialog {
+            top:calc(50vh - 271px);
+
+            @media (max-height: 599px) {
+                top:30px;
+            }
+
+            .form-group {
+                &.first_block {
+                    margin-top: 13px;
+                    p {
+                        text-align: center;
+                        @include font-details(14px,'OpenSans',600);
+                        color:$black_4a;
+
+                        a{
+                            color:$red_fa;
+                        }
+                    }
+                }
+                &.agrement_block {
+                    margin-top: 16px;
+                    p {
+                        @include font-details(12px,'OpenSans',600);
+                        color:$black_4a;
+
+                        a{
+                            color:$red_fa;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
