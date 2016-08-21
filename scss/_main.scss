@@ -497,8 +497,6 @@
     }
     @include pagination;
 }
-
-
 main
 {
     min-height: calc(100vh - 336px);
@@ -984,7 +982,7 @@ main
                                 {
                                     height: 42px;
 
-                                    a
+                                    div
                                     {
                                         padding-top: 11px;
                                         padding-bottom: 9px;
@@ -993,6 +991,7 @@ main
                             }
                         }
                     }
+
                     .thumbnail_view
                     {
                         .item
@@ -1053,7 +1052,7 @@ main
                             {
                                 height: 42px;
 
-                                a
+                                div
                                 {
                                     padding-top: 11px;
                                     padding-bottom: 9px;
@@ -1220,6 +1219,201 @@ main
                             }
 
                         }
+                    }
+                }
+
+                #blog_tab
+                {
+                    margin-top: 16px;
+                    .item
+                    {
+                        @include blog-content(true,'blog_item.png');
+                    }
+                }
+
+                #review_tab
+                {
+                    margin-top: 10px;
+
+                    .item{
+
+                        .person_item
+                        {
+                            margin-bottom: 60px;
+
+                            .person_name_block
+                            {
+                                margin-bottom: 10px;
+
+                                .name{
+                                    display: inline-block;
+                                    margin-right: 15px;
+                                    @include font-details(14px, 'OpenSans', 700);
+                                    line-height: 1.2;
+                                    color: $black_28;
+                                }
+
+                                .review_block
+                                {
+                                    display: inline-block;
+                                    span{
+                                        display: inline-block;
+                                        color: $grey_97;
+                                        vertical-align: middle;
+                                        margin-top: -4px;
+
+                                        &.active
+                                        {
+                                            color:$gold_d9;
+                                        }
+                                    }
+                                }
+
+                                @media (max-width: 767px)
+                                {
+                                    text-align: center;
+                                }
+
+                            }
+
+                            .person_desc
+                            {
+                                p
+                                {
+                                    @include font-details(14px, 'OpenSans', 400);
+                                    color: $black_28;
+                                    margin-top: 0;
+                                    margin-bottom: 0;
+                                }
+                            }
+
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.blog_page
+    {
+        background: #fff;
+
+        section
+        {
+            &.section_1
+            {
+                border-top: 1px solid $grey_97;
+                padding-top: 48px;
+
+                .blog_photo
+                {
+                    height: 400px;
+                    width: 100%;
+                    background: img_url('blog_item_large.png') no-repeat center;
+                    background-size: cover;
+                }
+
+                h4 {
+                    margin-top: 36px;
+                    @include font-details(14px, 'OpenSans', 700);
+                    line-height: 1.2;
+                    color: $black_28;
+                    text-align: center;
+                    margin-bottom: 16px;
+
+                }
+                .content_block
+                {
+                    margin-top: 0;
+                    margin-bottom: 72px;
+
+                    p
+                    {
+                        @include font-details(14px, 'OpenSans', 400);
+                        color: $black_28;
+                        margin-top: 0;
+                        margin-bottom: 28px;
+
+                        &:last-child
+                        {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+
+    &.look_book_item
+    {
+        background: #fff;
+
+        section
+        {
+            &.section_1
+            {
+                border-top: 1px solid $grey_97;
+
+                .container{
+                    height: calc(100vh - 130px);
+                    position: relative;
+                }
+
+                .reader_block
+                {
+                    width: 100%;
+                    position: absolute;
+                    height: 100%;
+                    left:0;
+                }
+
+            }
+            &.section_2
+            {
+                padding-bottom: 25px;
+
+                h2
+                {
+                    @include h2;
+                    @include font-details(25px, 'OpenSans', 400);
+                    margin-top: 56px;
+                    margin-bottom: 46px;
+                    text-align: center;
+
+                }
+
+                .item
+                {
+                    @include look_tab-content(true, 'look_item.png');
+
+                    .look_item
+                    {
+                        height: 220px;
+                        width: 220px;
+                        margin: 0 auto 47px;
+
+                        .picture_block
+                        {
+                            height: 178px;
+                        }
+
+                        .name_block
+                        {
+                            height: 42px;
+
+                            div
+                            {
+                                padding-top: 11px;
+                                padding-bottom: 9px;
+                            }
+                        }
+                    }
+
+                    @media (max-width: 599px) {
+                        width: 100%;
                     }
                 }
             }

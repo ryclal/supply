@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Supply Apparel | Boutiques </title>
+    <title>Supply Apparel | Blog </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
     <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -437,445 +437,44 @@
         </div>
     </nav>
 </header>
-<main class="boutiques_page">
+<main class="blog_page">
     <section class="section_1">
         <div class="container">
             <div class="row">
-                <h2>Boutiques</h2>
-                <h5>Browse through some of the most trending fashion boutiques on the internet</h5>
-            </div>
-            <div class="split_view_block">
-                <div data-open="grid_view" class="grid_view split active">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                </div>
-                <div data-open="thumbnail_view" class=" split thumbnail_view">
-                    <i class="fa fa-th-large" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0">
                     <div class="row">
-                        <div class="col-xs-12">
-                            <ul class="item_type">
-                                <li><a href="#">All</a></li>
-                                <li><a href="#">New</a></li>
-                                <li><a href="#">Top Rated</a></li>
-                            </ul>
-                        </div>
+                        <div class="blog_photo"></div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-12">
-                            <ul class="item_categories">
-                                <li><a href="#">Own Label</a></li>
-                                <li><a href="#">Pre-owned</a></li>
-                                <li><a href="#">Multi-Brand</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div id="search_b" class="search_b">
-                                <form>
-                                    <input class="search_input" placeholder="Enter your search text" type="text"
-                                           value=""
-                                           name="search" id="search">
-                                    <input class="search_submit" type="submit" value="">
-                                    <span class="icon_search search_trigger"></span>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3 col-sm-4 col-xs-5 filter_side">
-                            <form action="" method="post">
-                                <div class="row gender_list">
-                                    <div class="col-xs-12">
-                                        <h3>Gender</h3>
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input name="filter" id="genre_item_1" type="checkbox">
-                                                    <label for="genre_item_1">Women</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input name="filter" id="genre_item_2" type="checkbox">
-                                                    <label for="genre_item_2">Men</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input name="filter" id="genre_item_3" type="checkbox">
-                                                    <label for="genre_item_3">Kids</label>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="row country_list">
-                                    <div class="col-xs-12">
-                                        <h3>Countries</h3>
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input name="filter" id="brand_item_1" type="checkbox">
-                                                    <label for="brand_item_1">Afganistan</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input name="filter" id="brand_item_2" type="checkbox">
-                                                    <label for="brand_item_2">Albania</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input name="filter" id="brand_item_3" type="checkbox">
-                                                    <label for="brand_item_3">Algeria</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input name="filter" id="brand_item_4" type="checkbox">
-                                                    <label for="brand_item_4">American Samoa</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input name="filter" id="brand_item_10" type="checkbox">
-                                                    <label for="brand_item_10">Andorra</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input name="filter" id="brand_item_9" type="checkbox">
-                                                    <label for="brand_item_9">Angola</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input name="filter" id="brand_item_5" type="checkbox">
-                                                    <label for="brand_item_5">Anguilla</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input name="filter" id="brand_item_11" type="checkbox">
-                                                    <label for="brand_item_11">Bolivia</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input name="filter" id="brand_item_12" type="checkbox">
-                                                    <label for="brand_item_12">Butan</label>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="row product_list">
-                                    <div class="col-xs-12">
-                                        <h3>Products</h3>
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input name="filter" id="product_item_1" type="checkbox">
-                                                    <label for="product_item_1">Coat's & Jackets</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input name="filter" id="product_item_2" type="checkbox">
-                                                    <label for="product_item_2">Dresses</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input name="filter" id="product_item_3" type="checkbox">
-                                                    <label for="product_item_3">Jeans</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input name="filter" id="product_item_4" type="checkbox">
-                                                    <label for="product_item_4">Jumpsuits</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input name="filter" id="product_item_10" type="checkbox">
-                                                    <label for="product_item_10">Shirts & Blouses</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input name="filter" id="product_item_9" type="checkbox">
-                                                    <label for="product_item_9">Tops & T-Shirts</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input name="filter" id="product_item_5" type="checkbox">
-                                                    <label for="product_item_5">Trousers & Leggings</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input name="filter" id="product_item_6" type="checkbox">
-                                                    <label for="product_item_6">Shorts & Skirts</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input name="filter" id="product_item_7" type="checkbox">
-                                                    <label for="product_item_7">Lingerie & Nightware</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input name="remember" id="product_item_8" type="checkbox">
-                                                    <label for="product_item_8">Shoes</label>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="col-md-9 col-sm-8 col-xs-7 product_side">
-                            <div class="row">
-                                <div class="select_block">
-                                    <select name="filter_type" id="filter_select">
-                                        <option>Ascending</option>
-                                        <option>Descending</option>
-                                        <option selected="selected">Popular</option>
-                                        <option>New</option>
-                                    </select>
-                                    <div class="results">Showing 36 of 178 Results</div>
-                                </div>
-                            </div>
-                            <div class="row grid_view">
-                                <div class="item col-xs-12">
-                                    <div class="boutique_item">
-                                        <div class="picture_block"></div>
-                                        <div class="name_block">
-                                            <a href="#">
-                                                <i class="item_icon"></i>
-                                                <span>Bangkok Tshirts</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item col-xs-12">
-                                    <div class="boutique_item">
-                                        <div class="picture_block"></div>
-                                        <div class="name_block">
-                                            <a href="#">
-                                                <i class="item_icon"></i>
-                                                <span>Bangkok Tshirts</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item col-xs-12">
-                                    <div class="boutique_item">
-                                        <div class="picture_block"></div>
-                                        <div class="name_block">
-                                            <a href="#">
-                                                <i class="item_icon"></i>
-                                                <span>Bangkok Tshirts</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item col-xs-12">
-                                    <div class="boutique_item">
-                                        <div class="picture_block"></div>
-                                        <div class="name_block">
-                                            <a href="#">
-                                                <i class="item_icon"></i>
-                                                <span>Bangkok Tshirts</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item col-xs-12">
-                                    <div class="boutique_item">
-                                        <div class="picture_block"></div>
-                                        <div class="name_block">
-                                            <a href="#">
-                                                <i class="item_icon"></i>
-                                                <span>Bangkok Tshirts</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item col-xs-12">
-                                    <div class="boutique_item">
-                                        <div class="picture_block"></div>
-                                        <div class="name_block">
-                                            <a href="#">
-                                                <i class="item_icon"></i>
-                                                <span>Bangkok Tshirts</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item col-xs-12">
-                                    <div class="boutique_item">
-                                        <div class="picture_block"></div>
-                                        <div class="name_block">
-                                            <a href="#">
-                                                <i class="item_icon"></i>
-                                                <span>Bangkok Tshirts</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item col-xs-12">
-                                    <div class="boutique_item">
-                                        <div class="picture_block"></div>
-                                        <div class="name_block">
-                                            <a href="#">
-                                                <i class="item_icon"></i>
-                                                <span>Bangkok Tshirts</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item col-xs-12">
-                                    <div class="boutique_item">
-                                        <div class="picture_block"></div>
-                                        <div class="name_block">
-                                            <a href="#">
-                                                <i class="item_icon"></i>
-                                                <span>Bangkok Tshirts</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row thumbnail_view hidden">
-                                <div class="item col-md-4 col-sm-6 col-xs-12">
-                                    <div class="boutique_item">
-                                        <div class="picture_block"></div>
-                                        <div class="name_block">
-                                            <a href="#">
-                                                <i class="item_icon"></i>
-                                                <span>Bangkok Tshirts</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item col-md-4 col-sm-6 col-xs-12">
-                                    <div class="boutique_item">
-                                        <div class="picture_block"></div>
-                                        <div class="name_block">
-                                            <a href="#">
-                                                <i class="item_icon"></i>
-                                                <span>Bangkok Tshirts</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item col-md-4 col-sm-6 col-xs-12">
-                                    <div class="boutique_item">
-                                        <div class="picture_block"></div>
-                                        <div class="name_block">
-                                            <a href="#">
-                                                <i class="item_icon"></i>
-                                                <span>Bangkok Tshirts</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item col-md-4 col-sm-6 col-xs-12">
-                                    <div class="boutique_item">
-                                        <div class="picture_block"></div>
-                                        <div class="name_block">
-                                            <a href="#">
-                                                <i class="item_icon"></i>
-                                                <span>Bangkok Tshirts</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item col-md-4 col-sm-6 col-xs-12">
-                                    <div class="boutique_item">
-                                        <div class="picture_block"></div>
-                                        <div class="name_block">
-                                            <a href="#">
-                                                <i class="item_icon"></i>
-                                                <span>Bangkok Tshirts</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item col-md-4 col-sm-6 col-xs-12">
-                                    <div class="boutique_item">
-                                        <div class="picture_block"></div>
-                                        <div class="name_block">
-                                            <a href="#">
-                                                <i class="item_icon"></i>
-                                                <span>Bangkok Tshirts</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item col-md-4 col-sm-6 col-xs-12">
-                                    <div class="boutique_item">
-                                        <div class="picture_block"></div>
-                                        <div class="name_block">
-                                            <a href="#">
-                                                <i class="item_icon"></i>
-                                                <span>Bangkok Tshirts</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item col-md-4 col-sm-6 col-xs-12">
-                                    <div class="boutique_item">
-                                        <div class="picture_block"></div>
-                                        <div class="name_block">
-                                            <a href="#">
-                                                <i class="item_icon"></i>
-                                                <span>Bangkok Tshirts</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item col-md-4 col-sm-6 col-xs-12">
-                                    <div class="boutique_item">
-                                        <div class="picture_block"></div>
-                                        <div class="name_block">
-                                            <a href="#">
-                                                <i class="item_icon"></i>
-                                                <span>Bangkok Tshirts</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <ul class="pagination">
-                                    <li>
-                                        <a href="#" aria-label="Previous">
-                                            <span aria-hidden="true">&laquo;</span>
-                                        </a>
-                                    </li>
-                                    <li><a href="#">1</a></li>
-                                    <li class="active"><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">19</a></li>
-                                    <li>
-                                        <a href="#" aria-label="Next">
-                                            <span aria-hidden="true">&raquo;</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                        <h4>Summer Line</h4>
+                        <div class="content_block">
+                            <p>
+                                Lorem ipsum dolor sit amet, id eam option vocibus nostrum. Per ancillae maluisset cu. Bonorum
+                                corrumpit id eos, ei vel iracundia eloquentiam. An mel velit euismod inermis, vis eu convenire
+                                delicatissimi. Tamquam dignissim ei eum, eu his nemore tritani. Eos ea unum vocent tincidunt,
+                                usu ei modus nostro delenit. Ceteros phaedrum elaboraret nam ea, ad debet graecis vis.
+
+                            </p>
+                            <p>Pro ex aperiri mnesarchum omittantur, in sit malis voluptatum. Mea debet propriae tincidunt et,
+                                civibus abhorreant quo cu, per te eius dicant melius. Duo ei facete omittam. Sea equidem nusquam
+                                appareat cu, qui ut magna graece veritus. Cibo aliquid verterem id nam. Sapientem sententiae
+                                ullamcorper est at, id eam dico scripserit disputando, no movet decore nam.</p>
+                            <p>
+                                Eam te verterem reformidans, ne eos tempor petentium. Vel enim etiam at, eos eros vitae graece
+                                ea. Illud porro option quo ei. Eam stet iudico percipitur id.
+                            </p>
+                            <p>
+                                Id eum nisl reprehendunt. Ea eam alia utroque omnesque, laudem graece epicurei ius ad. An sit
+                                vero malorum, unum soluta ceteros vim in, idque euismod ei pri. Stet esse verterem mel ex. Ut
+                                iudico commune vis, nam in gloriatur vituperata. Ludus omittantur cu duo. Euismod labores
+                                nostrum in sit, ius veri ipsum cu.
+                            </p>
+                            <p>
+                                Te fastidii recusabo sit. An qui modus veniam sententiae. Nec et ancillae omnesque, ei erat
+                                dictas persecuti mel. In vim hinc argumentum, percipitur intellegam repudiandae id eum, eu eos
+                                nusquam vituperatoribus. Quas perpetua in ius. Dico vidit fabellas vix an, ne dicit putent
+                                aliquip quo.
+                            </p>
                         </div>
                     </div>
                 </div>

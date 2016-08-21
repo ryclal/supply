@@ -42,8 +42,8 @@ $(document).ready(function () {
             active_element.removeClass('active');
             prev_element.addClass('active');
 
-            $('.product_side ' + '.' + active_value).removeClass('hidden');
-            $('.product_side ' + '.' + prev_value).addClass('hidden');
+            $('.product_side ' + '.' + active_value).toggleClass('hidden');
+            $('.product_side ' + '.' + prev_value).toggleClass('hidden');
         }
         return false;
     });
@@ -53,16 +53,22 @@ $(document).ready(function () {
 
     $(".color_list label").click(function () {
 
-        $(".color_list").addClass('darker');
+        var color_list_items = $(".color_list");
+
+        color_list_items.addClass('darker');
         $(this).toggleClass('active');
 
+        if ($(".color_list label.active").length == 0) {
+            color_list_items.removeClass('darker');
+        }
     });
 
+    // Search input
     $('.search_trigger').unbind().on('click', function () {
-        $(this).parents('#search_b').toggleClass('expand');
+        $(this).parents('.search_b').toggleClass('expand');
     });
 
-
+    // Price Range
     var slider_b = $('#slider');
     slider_b.slider({
         range: true,
