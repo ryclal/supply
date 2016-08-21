@@ -8,13 +8,12 @@ html, body
 {
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
-    //background-color: $grey_f5;
     position: relative;
-    //scrollbar-highlight-color: $grey_5d;
-    //scrollbar-face-color: _rgba($grey_5d,.3);
-    //scrollbar-track-color: _rgba($grey_5d,0);
-    //scrollbar-arrow-color: _rgba($grey_f5,.1);
-    //-webkit-overflow-scrolling: touch;
+    scrollbar-highlight-color: $grey_80;
+    scrollbar-face-color: _rgba($grey_80,.3);
+    scrollbar-track-color: _rgba($grey_80,0);
+    scrollbar-arrow-color: _rgba($grey_80,.1);
+    -webkit-overflow-scrolling: touch;
 
     &.modal-opened {
         overflow: hidden;
@@ -22,18 +21,18 @@ html, body
 
 }
 
-//
-//::-webkit-scrollbar
-//{
-//    width: 5px;
-//    background-color: $grey_f5;
-//}
-//
-//
-//::-webkit-scrollbar-thumb
-//{
-//    background-color: $grey_5d;
-//}
+
+::-webkit-scrollbar
+{
+    width: 5px;
+    background-color: $grey_f0;
+}
+
+
+::-webkit-scrollbar-thumb
+{
+    background-color: $grey_80;
+}
 
 a,
 a:hover,
