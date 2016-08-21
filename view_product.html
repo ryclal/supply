@@ -222,7 +222,9 @@
                         </ul>
                     </li>
                     <li class="icons"><a href="#"><span class="wishlist_icon" title="Wishlist"></span></a></li>
-                    <li class="icons"><a href="#"><span class="cart_icon has_product" data-product="1" title="Cart"></span></a></li>
+                    <li class="icons"><a href="#" class="cart_open_trigger"><span class="cart_icon has_product" data-product="1"
+                                                        title="Cart"></span></a>
+                    </li>
                 </ul>
             </div>
             <div class="collapse navbar-collapse" id="website_navbar_collapse">
@@ -247,7 +249,8 @@
                         </ul>
                     </li>
                     <li class="icons"><a href="#"><span class="wishlist_icon" title="Wishlist"></span></a></li>
-                    <li class="icons"><a href="#"><span class="cart_icon has_product" data-product="1" title="Cart"></span></a></li>
+                    <li class="icons"><a href="#" class="cart_open_trigger"><span class="cart_icon has_product" data-product="1"
+                                                        title="Cart"></span></a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-left">
                     <li class="dropdown women_dropdown">
@@ -434,6 +437,53 @@
             </div>
         </div>
     </nav>
+    <div class="cart_block">
+        <div class="container">
+            <div class="cart_modal">
+                <button type="button" class="close" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <div class="cart_header">
+                    <i class="cart"></i>
+                </div>
+                <div class="cart_body">
+                    <div class="cart_elements">
+                        <div class="t_head">
+                            <span>Your Order</span>
+                            <span>Price</span>
+                        </div>
+                        <div class="t_body">
+                            <div class="name">
+                                <div class="photo"></div>
+                                <div class="product_name">Hamilton Chic Dress</div>
+                            </div>
+                            <div class="price">$45</div>
+                        </div>
+                        <div class="t_body">
+                            <div class="name">
+                                <div class="photo"></div>
+                                <div class="product_name">Hamilton Chic Dress</div>
+                            </div>
+                            <div class="price">$45</div>
+                        </div>
+                        <div class="t_body">
+                            <div class="name">
+                                <div class="photo"></div>
+                                <div class="product_name">Hamilton Chic Dress</div>
+                            </div>
+                            <div class="price">$45</div>
+                        </div>
+                    </div>
+                    <div class="total_price text-right">Total<span>$70</span></div>
+                </div>
+                <div class="cart_footer">
+                    <a href="#" class="back">
+                        Continue Shopping
+                    </a>
+                    <a href="#" class="btn_checkout">Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
 <main class="product_page">
     <section class="section_1">
@@ -444,14 +494,16 @@
                         <div class="col-sm-2">
                             <div class="row">
                                 <div class="photo_list">
-                                    <div class="photo p1 active" data-target="#product_carousel" data-slide-to="0"></div>
+                                    <div class="photo p1 active" data-target="#product_carousel"
+                                         data-slide-to="0"></div>
                                     <div class="photo p2" data-target="#product_carousel" data-slide-to="1"></div>
                                     <div class="photo p3" data-target="#product_carousel" data-slide-to="2"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-5">
-                            <div id="product_carousel" data-interval="false" class="carousel slide" data-ride="carousel">
+                            <div id="product_carousel" data-interval="false" class="carousel slide"
+                                 data-ride="carousel">
                                 <div class="carousel-inner" role="listbox">
                                     <div class="item active">
                                         <div class="big_photo"></div>

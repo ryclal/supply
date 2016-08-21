@@ -1,6 +1,9 @@
 @import "modal";
+
+
 header
 {
+    position: relative;
     &.index_page
     {
         .website_head
@@ -103,8 +106,10 @@ header
                             color: $black_2a;
                         }
 
-                        &.active {
-                            a{
+                        &.active
+                        {
+                            a
+                            {
                                 font-weight: 700;
                             }
                         }
@@ -212,19 +217,20 @@ header
 
                                 &.has_product
                                 {
-                                    &:after{
+                                    &:after
+                                    {
                                         position: absolute;
-                                        content:attr(data-product);
+                                        content: attr(data-product);
                                         width: 20px;
                                         height: 20px;
                                         text-align: center;
-                                        @include font-details(10px,'OpenSans',700);
+                                        @include font-details(10px, 'OpenSans', 700);
                                         padding-top: 4px;
-                                        color:#fff;
+                                        color: #fff;
                                         background: $red_fa;
-                                        left:calc(100% - 4px);
+                                        left: calc(100% - 4px);
                                         @include border-radius(50%);
-                                        bottom:calc(100% - 4px);
+                                        bottom: calc(100% - 4px);
                                     }
                                 }
                             }
@@ -459,8 +465,10 @@ header
                         }
                     }
 
-                    &.active {
-                        a{
+                    &.active
+                    {
+                        a
+                        {
                             font-weight: 700;
                         }
                     }
@@ -565,6 +573,8 @@ header
 
                     &.icons
                     {
+                        position: relative;
+
                         span
                         {
                             width: 16px;
@@ -585,22 +595,24 @@ header
 
                             &.has_product
                             {
-                                &:after{
+                                &:after
+                                {
                                     position: absolute;
-                                    content:attr(data-product);
+                                    content: attr(data-product);
                                     width: 20px;
                                     height: 20px;
                                     text-align: center;
-                                    @include font-details(10px,'OpenSans',700);
+                                    @include font-details(10px, 'OpenSans', 700);
                                     padding-top: 4px;
-                                    color:#fff;
+                                    color: #fff;
                                     background: $red_fa;
-                                    left:calc(100% - 4px);
+                                    left: calc(100% - 4px);
                                     @include border-radius(50%);
-                                    bottom:calc(100% - 4px);
+                                    bottom: calc(100% - 4px);
                                 }
                             }
                         }
+
                     }
 
                 }
@@ -729,5 +741,193 @@ header
 
         }
     }
+
+
+    .cart_block
+    {
+        position: absolute;
+        width: 100%;
+        top:0;
+        left:0;
+
+
+        .container
+        {
+            position: relative;
+        }
+
+        .cart_modal
+        {
+            position: absolute;
+            width: 486px;
+            top: 89px;
+            right: 0;
+            padding: 10px 58px 28px;
+            background: $green_0a;
+            z-index: 999;
+            opacity: 0;
+            pointer-events: none;
+            @include transition(transform .3s linear, opacity .5s ease-in-out);
+
+            @media (max-width: 599px)
+            {
+                width: 380px;
+                padding: 10px 28px 28px;
+            }
+
+            &.open{
+                pointer-events: initial;
+                opacity: 1;
+                @include transform(translateY(40px));
+            }
+
+            .close{
+                position: absolute;
+                color:#fff;
+                right:18px;
+                opacity: 1;
+                top:6px;
+
+
+                &:hover{
+                    color:#fff;
+                    opacity: 1;
+                }
+
+                &:focus{
+                    outline:0!important;
+                }
+            }
+
+            .cart_header
+            {
+                height: 19px;
+            }
+
+            .cart_body
+            {
+                margin-top: 30px;
+
+                .cart_elements
+                {
+                    width: 100%;
+
+                    .t_head
+                    {
+                        margin-bottom: 26px;
+                        overflow: hidden;
+
+                        span
+                        {
+                            @include font-details(14px, 'OpenSans', 700);
+                            color: $green_94;
+                            line-height: 1.2;
+                            float:left;
+
+                            &:last-child
+                            {
+                                float:right;
+                                text-align: right;
+                            }
+                        }
+
+                    }
+                    .t_body
+                    {
+                        margin-bottom: 7px;
+                        overflow: hidden;
+
+                        .name
+                        {
+                            display: inline-block;
+                            float:left;
+                            .photo
+                            {
+                                display: inline-block;
+                                width: 24px;
+                                height: 24px;
+                                border: 1px solid #fff;
+                                background: img_url('women_item.png') no-repeat center;
+                                background-size: contain;
+                                margin-right: 6px;
+                            }
+
+                            .product_name
+                            {
+                                @include font-details(14px, 'OpenSans', 400);
+                                color: #fff;
+                                vertical-align: top;
+                                margin-top: 4px;
+                                display: inline-block;
+                                line-height: 1.2;
+                                text-align: left;
+                            }
+                        }
+
+                        .price
+                        {
+                            @include font-details(14px, 'OpenSans', 400);
+                            color: #fff;
+                            line-height: 1.2;
+                            display: inline-block;
+                            text-align: right;
+                            float:right;
+                            margin-top: 4px;
+                        }
+
+                    }
+                }
+
+                .total_price
+                {
+                    @include font-details(14px, 'OpenSans', 700);
+                    line-height: 1.2;
+                    color: $green_94;
+
+                    span {
+                        margin-left: 10px;
+                        @include font-details(14px, 'OpenSans', 400);
+                        color: #fff;
+                        line-height: 1.2;
+
+                    }
+                }
+            }
+
+            .cart_footer
+            {
+                overflow: hidden;
+                margin-top: 23px;
+                .back
+                {
+                    float: left;
+                    color:#fff;
+                    @include font-details(12px,'OpenSans',400);
+                    line-height: 1.2;
+                    vertical-align: top;
+                    margin-top: 8px;
+
+                    i{
+
+                    }
+                }
+
+                .btn_checkout{
+                    float:right;
+                    width: 73px;
+                    background:$red_fa;
+                    color:#fff;
+                    @include font-details(12px,'OpenSans',400);
+                    line-height: 1.2;
+                    text-align: center;
+                    padding:8px 0 6px;
+
+
+                }
+            }
+        }
+    }
+
+
 }
 
