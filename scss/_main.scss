@@ -497,6 +497,8 @@
     }
     @include pagination;
 }
+
+
 main
 {
     min-height: calc(100vh - 336px);
@@ -1227,7 +1229,7 @@ main
                     margin-top: 16px;
                     .item
                     {
-                        @include blog-content(true,'blog_item.png');
+                        @include blog-content(true, 'blog_item.png');
                     }
                 }
 
@@ -1235,7 +1237,8 @@ main
                 {
                     margin-top: 10px;
 
-                    .item{
+                    .item
+                    {
 
                         .person_item
                         {
@@ -1245,7 +1248,8 @@ main
                             {
                                 margin-bottom: 10px;
 
-                                .name{
+                                .name
+                                {
                                     display: inline-block;
                                     margin-right: 15px;
                                     @include font-details(14px, 'OpenSans', 700);
@@ -1256,7 +1260,8 @@ main
                                 .review_block
                                 {
                                     display: inline-block;
-                                    span{
+                                    span
+                                    {
                                         display: inline-block;
                                         color: $grey_97;
                                         vertical-align: middle;
@@ -1264,13 +1269,12 @@ main
 
                                         &.active
                                         {
-                                            color:$gold_d9;
+                                            color: $gold_d9;
                                         }
                                     }
                                 }
 
-                                @media (max-width: 767px)
-                                {
+                                @media (max-width: 767px) {
                                     text-align: center;
                                 }
 
@@ -1286,7 +1290,6 @@ main
                                     margin-bottom: 0;
                                 }
                             }
-
 
                         }
                     }
@@ -1314,14 +1317,14 @@ main
                     background-size: cover;
                 }
 
-                h4 {
+                h4
+                {
                     margin-top: 36px;
                     @include font-details(14px, 'OpenSans', 700);
                     line-height: 1.2;
                     color: $black_28;
                     text-align: center;
                     margin-bottom: 16px;
-
                 }
                 .content_block
                 {
@@ -1346,7 +1349,6 @@ main
 
     }
 
-
     &.look_book_item
     {
         background: #fff;
@@ -1357,7 +1359,8 @@ main
             {
                 border-top: 1px solid $grey_97;
 
-                .container{
+                .container
+                {
                     height: calc(100vh - 130px);
                     position: relative;
                 }
@@ -1367,7 +1370,7 @@ main
                     width: 100%;
                     position: absolute;
                     height: 100%;
-                    left:0;
+                    left: 0;
                 }
 
             }
@@ -1382,7 +1385,6 @@ main
                     margin-top: 56px;
                     margin-bottom: 46px;
                     text-align: center;
-
                 }
 
                 .item
@@ -1414,6 +1416,453 @@ main
 
                     @media (max-width: 599px) {
                         width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    &.product_page
+    {
+        background: #fff;
+
+        section
+        {
+            &.section_1
+            {
+                border-top: 1px solid $grey_97;
+                padding-top: 50px;
+                padding-bottom: 50px;
+
+                h2
+                {
+                    @include h2;
+                    @include font-details(25px, 'OpenSans', 700);
+                    text-align: center;
+                    margin-top: 50px;
+                    margin-bottom: 50px;
+                }
+
+                .item
+                {
+                    @include tab-content(true, 'women_item.png');
+
+                    .item_block
+                    {
+                        border: 1px solid $grey_97;
+                    }
+
+                    @media (max-width: 599px) {
+                        width: 100%;
+                    }
+                }
+
+                .product_block_details
+                {
+                    .photo_list
+                    {
+                        width: 140px;
+                        height: 460px;
+                        @include margin_left_right(auto);
+
+                        .photo
+                        {
+                            width: 140px;
+                            height: 135px;
+                            margin-bottom: 27px;
+                            background: no-repeat center;
+                            background-size: contain;
+                            opacity: .6;
+                            @include transition(opacity .3s linear);
+
+                            &:hover{
+                                opacity: 1;
+                            }
+
+                            &:last-child
+                            {
+                                margin-bottom: 0;
+                            }
+
+                            &.p1, &.p2, &.p3
+                            {
+                                background-image: img_url('women_item.png');
+                            }
+
+                            &.active{
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                    .big_photo
+                    {
+                        width: 100%;
+                        height: 460px;
+                        background: img_url('women_item_large.png') no-repeat center;
+                        background-size: cover;
+
+                        @media (min-width: 768px) and (max-width: 991px) {
+                            margin-left: 15px;
+                        }
+                    }
+
+                    .product_name_block
+                    {
+                        overflow: hidden;
+
+                        .product_name
+                        {
+                            display: inline-block;
+                            float: left;
+                            @include font-details(25px, 'OpenSans', 600);
+                            line-height: 1.2;
+                            color: $black_2a;
+                        }
+
+                        .product_price
+                        {
+                            display: inline-block;
+                            float: right;
+                            @include font-details(25px, 'OpenSans', 700);
+                            line-height: 1.2;
+                            color: $red_d6;
+                            vertical-align: top;
+                        }
+                    }
+
+                    .product_boutique
+                    {
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        i
+                        {
+                            width: 22px;
+                            height: 22px;
+                            background: img_url('store_black.png') no-repeat center;
+                            background-size: auto;
+                            display: inline-block;
+                            margin-right: 8px;
+                            vertical-align: middle;
+                            margin-top: -2px;
+                        }
+                        span
+                        {
+                            @include font-details(10px, 'OpenSans', 600);
+                            line-height: 1.2;
+                            color: $black_28;
+                        }
+                    }
+
+                    .review_block
+                    {
+
+                        span
+                        {
+                            display: inline-block;
+                            color: $grey_97;
+                            vertical-align: middle;
+                            margin-top: -2px;
+
+                            &.active
+                            {
+                                color: $gold_d9;
+                            }
+                        }
+                        p
+                        {
+                            display: inline-block;
+                            color: $gold_d9;
+                            margin-left: 6px;
+                            @include font-details(10px, 'OpenSans', 600);
+                            line-height: 1.2;
+                        }
+                    }
+
+                    .product_desc
+                    {
+                        @include font-details(14px, 'OpenSans', 400);
+                        color: $black_2a;
+                        margin-top: 20px;
+                        margin-bottom: 28px;
+                    }
+
+                    form
+                    {
+                        h4
+                        {
+                            @include font-details(14px, 'OpenSans', 600);
+                            line-height: 1.2;
+                            color: $black_2a;
+                            margin-bottom: 11px;
+                            margin-top: 11px;
+                            text-transform: uppercase;
+                        }
+
+                        .colour_block
+                        {
+                            margin-bottom: 7px;
+                            .color_list
+                            {
+                                display: inline-block;
+
+                                &.darker
+                                {
+                                    .color
+                                    {
+                                        opacity: 0.1;
+                                    }
+
+                                    .active
+                                    {
+                                        opacity: 1;
+                                    }
+                                }
+
+                                .color
+                                {
+                                    width: 32px;
+                                    height: 32px;
+                                    @include border-radius(50%);
+                                    border: 1px solid $grey_97;
+                                    position: relative;
+                                    display: inline-block;
+                                    margin-right: 7px;
+                                    cursor: pointer;
+                                    margin-bottom: 7px;
+
+                                    &:after
+                                    {
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                        top: 0;
+                                        @include border-radius(50%);
+                                        content: '';
+                                        left: 0;
+                                        background: transparent;
+                                        border: 1px solid #fff;
+                                    }
+
+                                    &:last-child
+                                    {
+                                        margin-right: 0;
+                                    }
+
+                                    &.c1
+                                    {
+                                        background: #C90000;
+                                    }
+                                    &.c2
+                                    {
+                                        background: #090909;
+                                    }
+                                    &.c3
+                                    {
+                                        background: #FAE400;
+                                    }
+                                    &.c4
+                                    {
+                                        background: #227DE3;
+                                    }
+                                }
+                            }
+                        }
+
+                        .size_block
+                        {
+                            margin-bottom: 14px;
+                            .size_list
+                            {
+                                display: inline-block;
+
+                                .size
+                                {
+                                    width: 32px;
+                                    height: 32px;
+                                    cursor: pointer;
+                                    @include border-radius(50%);
+                                    border: 1px solid $grey_97;
+                                    position: relative;
+                                    display: inline-block;
+                                    margin-right: 7px;
+                                    margin-bottom: 7px;
+                                    text-align: center;
+                                    padding-top: 8px;
+                                    @include font-details(10px, 'OpenSans', 400);
+                                    color: $black_2a;
+
+                                    &.active
+                                    {
+                                        background: $black_2a;
+                                        color: #fff;
+                                    }
+                                    &:last-child
+                                    {
+                                        margin-right: 0;
+                                    }
+                                }
+                            }
+                        }
+
+                        .question_block
+                        {
+                            margin-bottom: 23px;
+                            a
+                            {
+                                i
+                                {
+                                    width: 22px;
+                                    height: 22px;
+                                    background: img_url('message.png') no-repeat center;
+                                    background-size: contain;
+                                    display: inline-block;
+                                    margin-right: 8px;
+                                    vertical-align: middle;
+                                    margin-top: -2px;
+                                }
+                                span
+                                {
+                                    @include font-details(10px, 'OpenSans', 400);
+                                    line-height: 1.2;
+                                    color: $black_28;
+                                }
+                            }
+                        }
+
+                        .quantity_block
+                        {
+                            vertical-align: top;
+                            .quantity_input
+                            {
+                                margin-right: 10px;
+                                display: inline-block;
+                                width: 61px;
+                                position: relative;
+
+                                .input
+                                {
+                                    width: 100%;
+                                    @include font-details(12px, 'OpenSans', 600);
+                                    color: $black_2a;
+                                    text-align: left;
+                                    padding: 10px 0 8px 12px;
+                                    background: transparent;
+                                    border: 1px solid $grey_97;
+                                }
+
+                                span
+                                {
+                                    position: absolute;
+                                    width: 10px;
+                                    height: 10px;
+                                    cursor: pointer;
+                                    right: 9px;
+                                    z-index: 3;
+                                    background: no-repeat center;
+                                    background-size: auto;
+
+                                    &.down
+                                    {
+                                        top: auto;
+                                        bottom: 6px;
+                                        background-image: img_url('down_a.png');
+                                    }
+                                    &.up
+                                    {
+                                        top: 6px;
+                                        background-image: img_url('up_a.png');
+                                    }
+                                }
+
+                            }
+                            .btn_submit
+                            {
+                                width: 160px;
+                                @include font-details(12px, 'OpenSans', 600);
+                                color: $black_2a;
+                                text-transform: uppercase;
+                                text-align: center;
+                                padding: 10px 0 8px;
+                                background: transparent;
+                                border: 1px solid $grey_97;
+
+                                &:focus
+                                {
+                                    outline: 0 !important;
+                                }
+
+                            }
+                        }
+                    }
+
+                    @media (min-width: 600px) and (max-width: 767px) {
+                        .photo_list
+                        {
+                            height: 140px;
+                            width: 100%;
+                            margin-bottom: 30px;
+                            text-align: center;
+                            @include margin_left_right(auto);
+
+                            .photo
+                            {
+                                display: inline-block;
+                                margin-right: 27px;
+                                margin-bottom: 27px;
+
+                                &:last-child
+                                {
+                                    margin-right: 0;
+                                    margin-bottom: 27px;
+                                }
+                            }
+                        }
+
+                        .product_attributes
+                        {
+                            margin-top: 40px;
+                            text-align: center;
+
+                            .product_desc
+                            {
+                                padding-left: 10px;
+                                padding-right: 10px;
+                            }
+
+                        }
+                    }
+
+                    @media (max-width: 599px)
+                    {
+                        .product_attributes
+                        {
+                            margin-top: 40px;
+                            text-align: center;
+                        }
+                        .photo_list
+                        {
+                            height: 125px;
+                            width: 100%;
+                            margin-bottom: 30px;
+                            text-align: center;
+                            @include margin_left_right(auto);
+
+                            .photo
+                            {
+                                display: inline-block;
+                                margin-right: 7px;
+                                width: 120px;
+                                height: 120px;
+                                margin-bottom: 7px;
+
+                                &:last-child
+                                {
+                                    margin-right: 0;
+                                    margin-bottom: 7px;
+                                }
+                            }
+                        }
                     }
                 }
             }

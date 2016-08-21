@@ -103,6 +103,12 @@ header
                             color: $black_2a;
                         }
 
+                        &.active {
+                            a{
+                                font-weight: 700;
+                            }
+                        }
+
                         &.language_dropdown
                         {
 
@@ -202,6 +208,25 @@ header
                             .cart_icon
                             {
                                 background-image: img_url('cart.png');
+                                position: relative;
+
+                                &.has_product
+                                {
+                                    &:after{
+                                        position: absolute;
+                                        content:attr(data-product);
+                                        width: 20px;
+                                        height: 20px;
+                                        text-align: center;
+                                        @include font-details(10px,'OpenSans',700);
+                                        padding-top: 4px;
+                                        color:#fff;
+                                        background: $red_fa;
+                                        left:calc(100% - 4px);
+                                        @include border-radius(50%);
+                                        bottom:calc(100% - 4px);
+                                    }
+                                }
                             }
                         }
                     }
@@ -433,6 +458,12 @@ header
                             }
                         }
                     }
+
+                    &.active {
+                        a{
+                            font-weight: 700;
+                        }
+                    }
                 }
 
             }
@@ -551,6 +582,24 @@ header
                         .cart_icon
                         {
                             background-image: img_url('cart.png');
+
+                            &.has_product
+                            {
+                                &:after{
+                                    position: absolute;
+                                    content:attr(data-product);
+                                    width: 20px;
+                                    height: 20px;
+                                    text-align: center;
+                                    @include font-details(10px,'OpenSans',700);
+                                    padding-top: 4px;
+                                    color:#fff;
+                                    background: $red_fa;
+                                    left:calc(100% - 4px);
+                                    @include border-radius(50%);
+                                    bottom:calc(100% - 4px);
+                                }
+                            }
                         }
                     }
 

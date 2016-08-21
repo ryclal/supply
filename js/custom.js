@@ -51,7 +51,7 @@ $(document).ready(function () {
 
     //Colors checkbox
 
-    $(".color_list label").click(function () {
+    $(".color_list label").on('click',function () {
 
         var color_list_items = $(".color_list");
 
@@ -62,6 +62,92 @@ $(document).ready(function () {
             color_list_items.removeClass('darker');
         }
     });
+    //Product colors
+    $('.product_color_list .color').on('click',function () {
+
+        var color_items = $(".product_color_list");
+        color_items.addClass('darker');
+
+        old_active_item = $(".product_color_list .active");
+        old_active_item.not(this).removeClass('active');
+
+        $(this).toggleClass('active');
+        if($(this).hasClass('active'))
+        {
+            var active_color = $(this).attr('data-color-id');
+            $('.product_color_list .color_input').val(active_color);
+        }
+        else
+        {
+            color_items.removeClass('darker');
+            $('.product_color_list .color_input').val("");
+        }
+    });
+
+    //Product size
+    $('.size_list .size').on('click',function () {
+
+        old_active_item = $(".size_list .active");
+        old_active_item.not(this).removeClass('active');
+
+       $(this).toggleClass('active');
+
+        if($(this).hasClass('active'))
+        {
+            var active_color = $(this).attr('data-size');
+            $('.size_list .size_input').val(active_color);
+        }
+        else
+        {
+            $('.size_list .size_input').val("");
+        }
+
+    });
+
+    // Quantity
+    $('.quantity_input .up').on('click',function () {
+        var value = parseInt($('.quantity_input_val').val()),
+            max = $('.quantity_input').attr('data-max'),
+            input = $('.quantity_input .input');
+
+        if (value < max) {
+            value += 1;
+            input.text(value);
+            $('.quantity_input_val').val(value);
+        }
+        else {
+            return false;
+        }
+    });
+    $('.quantity_input .down').on('click',function () {
+
+        var value = parseInt($('.quantity_input_val').val()),
+            max = $('.quantity_input').attr('data-max'),
+            input = $('.quantity_input .input');
+
+        if (value > 1) {
+            value = value -  1;
+            input.text(value);
+            $('.quantity_input_val').val(value);
+        }
+        else {
+            return false;
+        }
+    });
+
+    //Carousel product photo
+    $('.photo_list .photo').on('click',function(){
+        if (!$(this).hasClass('active')){
+            $('.photo_list .photo').removeClass('active');
+            $(this).addClass('active');
+        }
+        else {
+            return false;
+        }
+    });
+
+
+
 
     // Search input
     $('.search_trigger').unbind().on('click', function () {

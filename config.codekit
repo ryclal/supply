@@ -115,6 +115,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/down_a.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 159,
+		"inputAbbreviatedPath": "\/img\/down_a.png",
+		"outputAbbreviatedPath": "\/img\/down_a.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/facebook.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -177,6 +188,17 @@
 		"initialSize": 2411,
 		"inputAbbreviatedPath": "\/img\/mastercard.png",
 		"outputAbbreviatedPath": "\/img\/mastercard.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/message.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 596,
+		"inputAbbreviatedPath": "\/img\/message.png",
+		"outputAbbreviatedPath": "\/img\/message.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -313,6 +335,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/up_a.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 158,
+		"inputAbbreviatedPath": "\/img\/up_a.png",
+		"outputAbbreviatedPath": "\/img\/up_a.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/visa.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -342,6 +375,17 @@
 		"initialSize": 95746,
 		"inputAbbreviatedPath": "\/img\/women_item.png",
 		"outputAbbreviatedPath": "\/img\/women_item.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/women_item_large.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 283566,
+		"inputAbbreviatedPath": "\/img\/women_item_large.png",
+		"outputAbbreviatedPath": "\/img\/women_item_large.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -650,6 +694,15 @@
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 1,
 		"useLibsass": 1
+		},
+	"\/view_product.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/view_product.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/women_items.html": {
 		"fileType": 8192,
