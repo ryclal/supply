@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Supply Apparel | Checkout </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+    <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="index_page">
+    <div class="container-fluid website_head">
+        <div class="row">
+            <div class="container">
+                <a href="index.html">
+                    <div class="logo"></div>
+                </a>
+                <div class="auth_section">
+                    <a href="#" class="btn_create_boutique">Create a boutique</a>
+
+                    <a href="#" class="btn_auth">User Name</a>
+                    <a href="index.html" class="btn_auth btn_logout">Logout</a>
+
+                    <a href="#" class="btn_auth hidden" data-toggle="modal" data-target="#registerModal">Sign Up</a>
+                    <a href="#" class="btn_auth hidden" data-toggle="modal" data-target="#loginModal">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#website_navbar_collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul class="mobile_right_nav visible-xs">
+                    <li class="dropdown language_dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">English <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">French</a></li>
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">German</a></li>
+                            <li><a href="#">Arabian</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown currency_dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">USD <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">EUR</a></li>
+                            <li><a href="#">USD</a></li>
+                            <li><a href="#">GBP</a></li>
+                        </ul>
+                    </li>
+                    <li class="icons"><a href="#"><span class="wishlist_icon" title="Wishlist"></span></a></li>
+                    <li class="icons"><a href="#" class="cart_open_trigger"><span class="cart_icon has_product"
+                                                                                  data-product="1"
+                                                                                  title="Cart"></span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="website_navbar_collapse">
+                <ul class="nav navbar-nav navbar-right hidden-xs">
+                    <li class="dropdown language_dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">English <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">French</a></li>
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">German</a></li>
+                            <li><a href="#">Arabian</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown currency_dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">USD <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">EUR</a></li>
+                            <li><a href="#">USD</a></li>
+                            <li><a href="#">GBP</a></li>
+                        </ul>
+                    </li>
+                    <li class="icons"><a href="#"><span class="wishlist_icon" title="Wishlist"></span></a></li>
+                    <li class="icons"><a href="#" class="cart_open_trigger"><span class="cart_icon has_product"
+                                                                                  data-product="1"
+                                                                                  title="Cart"></span></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="dropdown women_dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">Women</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <ul class="list-unstyled">
+                                    <li><a class="" href="#">Coats & Jackets</a></li>
+                                    <li><a class="" href="#">Dresses</a></li>
+                                    <li><a class="" href="#">Jeans</a></li>
+                                    <li><a class="" href="#">Jumpsuits</a></li>
+                                    <li><a class="" href="#">Shirts & Blouses</a></li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li><a class="" href="#">Tops & T-Shirts</a></li>
+                                    <li><a class="" href="#">Trousers & Leggings</a></li>
+                                    <li><a class="" href="#">Shorts & skirts</a></li>
+                                    <li><a class="" href="#">Lingerie & Nightware</a></li>
+                                    <li><a class="" href="#">Shoes</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown men_dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">Men</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <ul class="list-unstyled">
+                                    <li><a class="" href="#">Coats & Jackets</a></li>
+                                    <li><a class="" href="#">Hats & Caps</a></li>
+                                    <li><a class="" href="#">Jeans</a></li>
+                                    <li><a class="" href="#">Sweatshirts</a></li>
+                                    <li><a class="" href="#">Shirts</a></li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li><a class="" href="#">T-Shirts & Polos</a></li>
+                                    <li><a class="" href="#">Suits & Blazers</a></li>
+                                    <li><a class="" href="#">Shorts & skirts</a></li>
+                                    <li><a class="" href="#">Brief & Underwear</a></li>
+                                    <li><a class="" href="#">Shoes</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown kids_dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">Kids</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <ul class="list-unstyled col-sm-6 with_divider no_margin">
+                                    <div class="row">
+                                        <li>
+                                            <h2>Girls</h2>
+                                            <ul class="list-unstyled col-md-6 col-sm-12 no_margin">
+                                                <li><a class="" href="#">Coats & Jackets</a></li>
+                                                <li><a class="" href="#">Dresses</a></li>
+                                                <li><a class="" href="#">Jeans</a></li>
+                                                <li><a class="" href="#">Jumpsuits</a></li>
+                                                <li><a class="" href="#">Pajamas</a></li>
+                                            </ul>
+                                            <ul class="list-unstyled col-md-6 col-sm-12 no_margin">
+                                                <li><a class="" href="#">T-Shits</a></li>
+                                                <li><a class="" href="#">Bottoms</a></li>
+                                                <li><a class="" href="#">Shorts & Skirts</a></li>
+                                                <li><a class="" href="#">Sweaters</a></li>
+                                                <li><a class="" href="#">Shoes</a></li>
+                                            </ul>
+                                        </li>
+                                    </div>
+
+                                </ul>
+                                <ul class="list-unstyled col-sm-6  no_margin">
+                                    <div class="row">
+                                        <li>
+                                            <h2>Boys</h2>
+                                            <ul class="list-unstyled col-md-6 col-sm-12 no_margin">
+                                                <li><a class="" href="#">Coats & Jackets</a></li>
+                                                <li><a class="" href="#">Hats & Caps</a></li>
+                                                <li><a class="" href="#">Sweatshirts</a></li>
+                                                <li><a class="" href="#">Shirts</a></li>
+                                            </ul>
+                                            <ul class="list-unstyled col-md-6 col-sm-12 no_margin">
+                                                <li><a class="" href="#">T-Shirts & Polos</a></li>
+                                                <li><a class="" href="#">Suits & Blazers</a></li>
+                                                <li><a class="" href="#">Shorts & Trousers</a></li>
+                                                <li><a class="" href="#">Brief & Underwear</a></li>
+                                                <li><a class="" href="#">Shoes</a></li>
+                                            </ul>
+                                        </li>
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown boutiques_dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">Boutiques</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <ul class="list-unstyled col-md-6 col-sm-7 with_divider no_margin">
+                                    <li>
+                                        <div class="row">
+                                            <ul class="list-unstyled with_divider col-sm-6 no_margin">
+                                                <h2>Boutique Type</h2>
+                                                <li><a class="" href="#">Own Labels</a></li>
+                                                <li><a class="" href="#">Pre-owned</a></li>
+                                                <li><a class="" href="#">Multi Brand</a></li>
+                                            </ul>
+                                            <ul class="list-unstyled col-sm-6 no_margin">
+                                                <h2>Categories</h2>
+                                                <li><a class="" href="#">Men</a></li>
+                                                <li><a class="" href="#">Women</a></li>
+                                                <li><a class="" href="#">Kids</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled col-md-6 col-sm-5 no_margin">
+                                    <li>
+                                        <h2>Featured Boutiques</h2>
+                                        <ul class="list-unstyled col-md-6 col-sm-12 no_margin">
+                                            <li><a class="" href="#">Labels & Love</a></li>
+                                            <li><a class="" href="#">Forever 21</a></li>
+                                            <li><a class="" href="#">Brown Leather</a></li>
+
+                                        </ul>
+                                        <ul class="list-unstyled col-md-6 col-sm-12 no_margin">
+                                            <li><a class="" href="#">Sophia & Sons</a></li>
+                                            <li><a class="" href="#">Trouser Hub</a></li>
+                                            <li><a class="" href="#">T-shirt Bangkok</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown look_dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">Look Books</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <ul class="list-unstyled col-md-6 col-sm-7 with_divider no_margin">
+                                    <li>
+                                        <div class="row">
+                                            <ul class="list-unstyled with_divider col-sm-6  no_margin">
+                                                <h2>Boutique Type</h2>
+                                                <li><a class="" href="#">Own Labels</a></li>
+                                                <li><a class="" href="#">Pre-owned</a></li>
+                                                <li><a class="" href="#">Multi Brand</a></li>
+                                            </ul>
+                                            <ul class="list-unstyled col-sm-6  no_margin">
+                                                <h2>Categories</h2>
+                                                <li><a class="" href="#">Men</a></li>
+                                                <li><a class="" href="#">Women</a></li>
+                                                <li><a class="" href="#">Kids</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled col-md-6 col-sm-5 no_margin">
+                                    <li>
+                                        <h2>Featured Look Books</h2>
+                                        <ul class="list-unstyled col-md-6 col-sm-12 no_margin">
+                                            <li><a class="" href="#">Labels & Love</a></li>
+                                            <li><a class="" href="#">Forever 21</a></li>
+                                            <li><a class="" href="#">Brown Leather</a></li>
+
+                                        </ul>
+                                        <ul class="list-unstyled col-md-6 col-sm-12 no_margin">
+                                            <li><a class="" href="#">Sophia & Sons</a></li>
+                                            <li><a class="" href="#">Trouser Hub</a></li>
+                                            <li><a class="" href="#">T-shirt Bangkok</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="cart_block">
+        <div class="container">
+            <div class="cart_modal">
+                <button type="button" class="close" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <div class="cart_header">
+                    <i class="cart"></i>
+                </div>
+                <div class="cart_body">
+                    <div class="cart_elements">
+                        <div class="t_head">
+                            <span>Your Order</span>
+                            <span>Price</span>
+                        </div>
+                        <div class="t_body">
+                            <div class="name">
+                                <div class="photo"></div>
+                                <div class="product_name">Hamilton Chic Dress</div>
+                            </div>
+                            <div class="price">$45</div>
+                        </div>
+                        <div class="t_body">
+                            <div class="name">
+                                <div class="photo"></div>
+                                <div class="product_name">Hamilton Chic Dress</div>
+                            </div>
+                            <div class="price">$45</div>
+                        </div>
+                        <div class="t_body">
+                            <div class="name">
+                                <div class="photo"></div>
+                                <div class="product_name">Hamilton Chic Dress</div>
+                            </div>
+                            <div class="price">$45</div>
+                        </div>
+                    </div>
+                    <div class="total_price text-right">Total<span>$70</span></div>
+                </div>
+                <div class="cart_footer">
+                    <a href="#" class="back">
+                        Continue Shopping
+                    </a>
+                    <a href="checkout_step_1.html" class="btn_checkout">Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="checkout checkout_step_2">
+    <section class="section_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div class="row">
+                        <div class="checkout_block">
+                            <div class="checkout_header">
+                                <div class="title">Checkout</div>
+                                <div class="breadcrumb_block">
+                                    <div class="step">Shipping</div>
+                                    >
+                                    <div class="step active">Payment Method</div>
+                                    >
+                                    <div class="step">Cofirmation</div>
+                                </div>
+                                <div class="close_button"><span></span></div>
+                            </div>
+                            <div class="col-sm-push-6 col-sm-6 cart_preview_block">
+                                <div class="row">
+                                    <div class="product_block">
+                                        <div class="product_item">
+                                            <div class="photo"></div>
+                                            <div class="details">
+                                                <div class="name">The Twill Snap Backpack</div>
+                                                <div class="type">Reverse Denim + Brown Leather</div>
+                                                <div class="quantity">Quantity: 1</div>
+                                            </div>
+                                            <div class="price">$235</div>
+                                        </div>
+                                        <div class="product_item">
+                                            <div class="photo"></div>
+                                            <div class="details">
+                                                <div class="name">The Twill Snap Backpack</div>
+                                                <div class="type">Reverse Denim + Brown Leather</div>
+                                                <div class="quantity">Quantity: 1</div>
+                                            </div>
+                                            <div class="price">$235</div>
+                                        </div>
+                                    </div>
+                                    <div class="price_block">
+                                        <div class="subtotal">
+                                            <div class="property">Subtotal</div>
+                                            <div class="value">$398</div>
+                                        </div>
+                                        <div class="shipping">
+                                            <div class="property">Shipping</div>
+                                            <div class="value">Free</div>
+                                        </div>
+                                        <div class="taxes">
+                                            <div class="property">Taxes</div>
+                                            <div class="value">12.12</div>
+                                        </div>
+                                    </div>
+                                    <div class="total_block">
+                                        <div class="property">Total</div>
+                                        <div class="value">$410.12</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-pull-6 col-sm-6 step_block">
+                                <div class="row">
+                                    <ul class="nav nav-tabs  step2_tab" role="tablist">
+                                        <li role="presentation" class="card active"><a href="#card" aria-controls="card"
+                                                                                  role="tab" data-toggle="tab"></a>
+                                        </li>
+                                        <li role="presentation" class="paypal"><a href="#paypal" aria-controls="paypal" role="tab"
+                                                                   data-toggle="tab"></a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane active" id="card">
+                                            <form action="" method="post">
+                                                <fieldset class="main_field">
+                                                    <legend>Card</legend>
+                                                    <fieldset class="field">
+                                                        <legend>Name on Card</legend>
+                                                        <input type="text" name="name" id="name"
+                                                               placeholder="Full Name"/>
+                                                    </fieldset>
+                                                    <fieldset class="field number_block">
+                                                        <input type="text" name="card_number" id="card_number"
+                                                               placeholder="1111-1111-1111-1112"/>
+                                                    </fieldset>
+                                                    <fieldset class="field cvc_block">
+                                                        <input type="text" class="expiration" name="expiration"
+                                                               id="expiration"
+                                                               placeholder="MM/YY"/>
+                                                        <input type="text" class="cvc" name="cvc" id="cvc"
+                                                               placeholder="CVC"/>
+                                                    </fieldset>
+                                                    <a href="#" class="btn_info"><i></i>
+                                                        <span>Your payment information is encrypted</span></a>
+                                                    <a href="checkout_step_2.html" class="btn_step">Continue</a>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane" id="paypal">
+                                            <form action="" method="post">
+                                                <fieldset class="main_field">
+                                                    <legend>Paypal</legend>
+                                                    <fieldset class="field email_block">
+                                                        <input type="text" name="paypal_email" id="paypal_email"
+                                                               placeholder="Paypal Email"/>
+                                                    </fieldset>
+                                                    <a href="#" class="btn_info"><i></i>
+                                                        <span>Your payment information is encrypted</span></a>
+                                                    <a href="checkout_step_3.html" class="btn_step">Continue</a>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 col-xs-4 menu_quick_links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-2  col-xs-4 menu_browsing">
+                <h3>Browsing Menu</h3>
+                <ul>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">Boutiques</a></li>
+                    <li><a href="#">Look Books</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-2 col-xs-4 menu_help">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Track Orders</a></li>
+                    <li><a href="#">FAQ's</a></li>
+                    <li><a href="#">Shipping & Delivery</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-2 col-xs-4 menu_social">
+                <h3>Connect with Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Google +</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4 col-xs-8  menu_payments_newsletter">
+                <h3>Newsletter Sign Up</h3>
+                <div class="newsletter_block">
+                    <p>Subscribe to our newsletter to get the latest news about
+                        our sales and promotions</p>
+                    <form action="" method="post">
+                        <input type="email" name="email" placeholder="Your Email Address"/>
+                        <input type="submit" value="Submit"/>
+                    </form>
+                </div>
+                <div class="payments_block">
+                    <div class="payment visa"></div>
+                    <div class="payment mastercard"></div>
+                    <div class="payment paypal"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/base-min.js"></script>
+</body>
+</html>

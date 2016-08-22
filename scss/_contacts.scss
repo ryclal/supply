@@ -1,0 +1,134 @@
+main{
+    &.contact_us
+    {
+        background: $grey_ec;
+        section
+        {
+            &.section_1
+            {
+                border-top: 1px solid $grey_97;
+                padding-top: 25px;
+                padding-bottom: 43px;
+            }
+        }
+    }
+    .contact_block
+    {
+        @include box-shadow(0 2px 4px 0 rgba(0, 0, 0, .27));
+        width: 618px;
+        overflow: hidden;
+        @include margin_left_right(auto);
+        background: #fff;
+
+        .contact_header
+        {
+            position: relative;
+            width: 100%;
+            background: #fff;
+            border-bottom: 1px solid _rgba($grey_97, .2);
+
+            .title
+            {
+                padding: 10px 0 9px 10px;
+                @include font-details(18px, 'OpenSans', 400);
+                color: $grey_5e;
+                line-height: 1.2;
+                display: inline-block;
+            }
+            .close_button
+            {
+                position: absolute;
+                right: 10px;
+                top: 0;
+            }
+        }
+
+        .contact_form
+        {
+            padding: 34px 15px 46px;
+
+            form{
+                @include margin_left_right(12px);
+            }
+
+            input,textarea
+            {
+                color: $grey_77;
+                @include font-details(14px, 'OpenSans', 400);
+                border: 1px solid _rgba($grey_97, .2);
+                @include placeholder(_rgba($grey_97, .5), left);
+
+                &:focus{
+                    outline:0!important;
+                }
+
+            }
+
+            input{
+                margin-bottom: 18px;
+                width: 65%;
+                padding: 13px 12px 11px;
+                min-width: 250px;
+                line-height: 1.2;
+            }
+
+            textarea
+            {
+                width: 100%;
+                height: 140px;
+                padding: 12px 12px 10px;
+                margin-bottom: 31px;
+            }
+
+            .btn_send
+            {
+                width: 220px;
+                display: block;
+                @include border-radius(2px);
+                border:none;
+                background: $red_fa;
+                text-align: center;
+                @include font-details(16px, 'OpenSans', 600);
+                line-height: 1.2;
+                color: #fff;
+                padding: 14px 0 12px;
+            }
+        }
+
+        .confirmation_block
+        {
+            padding-top: 109px;
+            padding-bottom: 184px;
+
+            .icon{
+                width: 36px;
+                height: 36px;
+                @include margin_left_right(auto);
+                margin-bottom: 25px;
+
+                span{
+                    color:$green_0a;
+                }
+            }
+
+            .title{
+                @include font-details(25px,'OpenSans',400);
+                line-height: 1.2;
+                text-align: center;
+                color:$black_28;
+                margin-bottom:14px;
+
+            }
+
+            .desc{
+                @include font-details(14px,'OpenSans',400);
+                text-align: center;
+                color:$black_28;
+                max-width: 460px;
+                line-height: 23px;
+                @include margin_left_right(auto);
+            }
+
+        }
+    }
+}

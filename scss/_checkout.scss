@@ -1,0 +1,598 @@
+main
+{
+    &.checkout
+    {
+        background: $grey_ec;
+        section
+        {
+            &.section_1
+            {
+                border-top: 1px solid $grey_97;
+                padding-top: 25px;
+                padding-bottom: 43px;
+            }
+        }
+        .checkout_block
+        {
+            @include box-shadow(0 2px 4px 0 rgba(0, 0, 0, .27));
+            overflow: hidden;
+            width: 618px;
+            @include margin_left_right(auto);
+            background: $grey_fa;
+
+            .checkout_header
+            {
+                position: relative;
+                width: 100%;
+                background: #fff;
+                border-bottom: 1px solid _rgba($grey_97, .2);
+
+                .title
+                {
+                    padding: 10px 0 9px 10px;
+                    @include font-details(18px, 'OpenSans', 400);
+                    color: $grey_5e;
+                    line-height: 1.2;
+                    display: inline-block;
+                    margin-right: 12px;
+                }
+                .breadcrumb_block
+                {
+                    display: inline-block;
+                    color: $grey_ac;
+                    vertical-align: top;
+                    margin-top: 10px;
+
+                    .step
+                    {
+                        display: inline-block;
+                        position: relative;
+                        @include font-details(12px, 'OpenSans', 400);
+                        line-height: 1.2;
+                        color: $grey_ac;
+
+                        &:last-child
+                        {
+                            margin-right: 0;
+
+                            &:after
+                            {
+                                display: none;
+                            }
+                        }
+
+                        &.active
+                        {
+                            color: $black_28;
+                        }
+                        &:focus
+                        {
+                            outline: 0 !important;
+                        }
+                    }
+                }
+
+                .close_button
+                {
+                    position: absolute;
+                    right: 10px;
+                    top: 0;
+                }
+            }
+
+            .step_block
+            {
+                padding-top: 17px;
+                background: #fff;
+
+                fieldset
+                {
+                    border: none;
+                    border-top: 1px solid _rgba($grey_97, .2);
+                    margin: 0 15px;
+                    @include border-radius(2px);
+                    padding: 0;
+
+                    .field
+                    {
+                        border: 1px solid _rgba($grey_97, .2);
+                        margin: 0 0 16px;
+
+                        &:first-of-type
+                        {
+                            margin-top: 15px;
+                        }
+
+                        input
+                        {
+                            width: 100%;
+                            background: transparent;
+                            border: none;
+
+                            &:focus
+                            {
+                                outline: 0 !important;
+                            }
+
+                        }
+                        input
+                        {
+                            color: $grey_77;
+                            @include font-details(14px, 'OpenSans', 400);
+                            line-height: 1.2;
+                            margin-top: 3px;
+                            @include placeholder(_rgba($grey_97, .5), left);
+                            padding: 6px 12px 4px;
+                        }
+
+                    }
+
+                    legend
+                    {
+                        border: none;
+                        width: auto;
+                        margin-left: 8px;
+                        padding: 0 11px;
+                        color: $grey_77;
+                        margin-bottom: 0;
+                        @include font-details(16px, 'OpenSans', 400);
+                        line-height: 1.2;
+                    }
+
+                    select + span
+                    {
+                        background: transparent;
+                        border: none;
+                        color: $grey_77;
+                        @include font-details(14px, 'OpenSans', 400);
+                        line-height: 1.2;
+                        width: 100%;
+                        margin-top: 3px;
+                        padding: 6px 12px 4px;
+
+                        &:focus
+                        {
+                            outline: 0 !important;
+                        }
+
+                    }
+                }
+
+                .btn_step
+                {
+                    width: 100%;
+                    @include font-details(14px, 'OpenSans', 600);
+                    line-height: 1.2;
+                    color: #fff;
+                    display: block;
+                    margin-top: 45px;
+                    margin-bottom: 37px;
+                    background: $red_fa;
+                    border: none;
+                    text-align: center;
+                    @include border-radius(2px);
+                    padding: 15px 0 13px;
+                }
+            }
+
+            .cart_preview_block
+            {
+                border-left: 1px solid _rgba($grey_97, .2);
+
+                .product_block
+                {
+                    padding-top: 15px;
+                    max-height: 283px;
+                    min-height: 283px;
+                    overflow-y: auto;
+                    overflow-x: hidden;
+
+                    .product_item
+                    {
+                        position: relative;
+                        padding: 10px;
+
+                        &:after
+                        {
+                            position: absolute;
+                            width: calc(100% - 8px);
+                            left: 4px;
+                            bottom: 0;
+                            content: '';
+                            height: 1px;
+                            background: _rgba($grey_97, .2);
+                        }
+                        &:last-child
+                        {
+                            &:after
+                            {
+                                display: none;
+                            }
+                        }
+
+                        .photo
+                        {
+                            display: inline-block;
+                            width: 47px;
+                            border: 1px solid $grey_e3;
+                            height: 47px;
+                            background: $grey_f3 img_url('product_item.png') no-repeat center;
+                            background-size: contain;
+                            @include border-radius(1px);
+                            margin-right: 1px;
+                        }
+                        .details
+                        {
+                            display: inline-block;
+                            vertical-align: top;
+                            margin-top: 1px;
+
+                            .name
+                            {
+                                @include font-details(12px, 'OpenSans', 400);
+                                line-height: 1.2;
+                                color: $grey_77;
+                                margin-bottom: 2px;
+                            }
+                            .type
+                            {
+                                color: $grey_9b;
+                                @include font-details(10px, 'OpenSans', 400);
+                                line-height: 1.2;
+                                margin-bottom: 2px;
+                            }
+                            .quantity
+                            {
+                                color: $grey_9b;
+                                @include font-details(10px, 'OpenSans', 400);
+                                line-height: 1.2;
+                            }
+                        }
+                        .price
+                        {
+                            float: right;
+                            @include font-details(12px, 'OpenSans', 400);
+                            line-height: 1.2;
+                            color: $grey_77;
+                            margin-right: 6px;
+                            text-align: right;
+                        }
+                    }
+                }
+                .price_block, .total_block
+                {
+                    .property
+                    {
+                        @include font-details(12px, 'OpenSans', 400);
+                        line-height: 1.2;
+                        color: $grey_77;
+                        float: left;
+                    }
+
+                    .value
+                    {
+                        @include font-details(12px, 'OpenSans', 400);
+                        line-height: 1.2;
+                        color: $grey_77;
+                        float: right;
+                        text-align: right;
+                    }
+                }
+
+                .price_block
+                {
+                    border-top: 1px solid _rgba($grey_97, .2);
+                    border-bottom: 1px solid _rgba($grey_97, .2);
+                    @include margin_left_right(10px);
+
+                    .subtotal, .shipping, .taxes
+                    {
+                        overflow: hidden;
+                    }
+
+                    .subtotal
+                    {
+                        margin-top: 9px;
+                        margin-bottom: 5px;
+                    }
+
+                    .shipping
+                    {
+                        margin-bottom: 5px;
+                    }
+
+                    .taxes
+                    {
+                        margin-bottom: 6px;
+                    }
+
+                }
+                .total_block
+                {
+                    @include margin_left_right(10px);
+                    padding-top: 13px;
+                    overflow: hidden;
+                    padding-bottom: 42px;
+                }
+            }
+
+        }
+
+        &.checkout_step_2
+        {
+
+            .checkout_block
+            {
+                .step_block
+                {
+                    padding-top: 16px;
+                    .step2_tab
+                    {
+                        border-bottom: none;
+                        margin-bottom: 29px;
+                        @include margin_left_right(15px);
+
+                        li
+                        {
+                            padding: 0;
+                            margin-right: 17px;
+                            position: relative;
+                            @include border-radius(0);
+                            display: inline-block;
+                            float: none;
+
+                            a
+                            {
+                                margin: 0;
+                                line-height: 1.2;
+                                border: none;
+
+                                &:hover
+                                {
+                                    border-color: transparent;
+                                }
+                            }
+
+                            &.active
+                            {
+                                &.card
+                                {
+                                    a:after
+                                    { opacity: 1; }
+                                }
+                                &.paypal
+                                {
+                                    a:after
+                                    { opacity: 1; }
+                                }
+                                a
+                                {
+                                    border: none;
+                                }
+                            }
+
+                            &:last-child
+                            {
+                                margin-right: 0;
+                            }
+
+                            &.card
+                            {
+                                a
+                                {
+                                    width: 102px;
+                                    height: 38px;
+                                    padding: 0;
+                                    position: relative;
+                                    background: img_url('credit_card.png') no-repeat center;
+                                    background-size: cover;
+
+                                    &:after
+                                    {
+                                        position: absolute;
+                                        width: 14px;
+                                        height: 14px;
+                                        content: '';
+                                        left: calc(50% - 7px);
+                                        bottom: -6px;
+                                        background: $blue_00;
+                                        opacity: 0;
+                                        @include rotate(45deg);
+                                        @include transition(opacity .2s linear);
+                                    }
+                                }
+                            }
+                            &.paypal
+                            {
+                                a
+                                {
+                                    width: 59px;
+                                    height: 38px;
+                                    padding: 0;
+                                    background: img_url('paypal_card.png') no-repeat center;
+                                    background-size: cover;
+                                    position: relative;
+
+                                    &:after
+                                    {
+                                        position: absolute;
+                                        width: 14px;
+                                        height: 14px;
+                                        content: '';
+                                        left: calc(50% - 7px);
+                                        bottom: -6px;
+                                        background: #084380;
+                                        opacity: 0;
+                                        @include rotate(45deg);
+                                        @include transition(opacity .2s linear);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    fieldset
+                    {
+                        .field
+                        {
+                            &:first-of-type
+                            {
+                                margin-bottom: 17px;
+                            }
+
+                            &.number_block
+                            {
+                                margin-bottom: 15px;
+
+                                input
+                                {
+                                    padding: 10px 12px 9px;
+                                    @include border-radius(2px);
+                                }
+                            }
+                            &.cvc_block
+                            {
+                                border-color: transparent;
+                                vertical-align: top;
+                                border: none;
+                                margin-bottom: 25px;
+                                input
+                                {
+                                    padding: 12px 12px 10px;
+                                    margin-top: 0;
+                                    border: 1px solid _rgba($grey_97, .2);
+                                    @include border-radius(2px);
+                                }
+
+                                .expiration
+                                {
+                                    width: 149px;
+                                }
+
+                                .cvc
+                                {
+                                    float: right;
+                                    width: 112px;
+                                }
+                            }
+
+                            &.email_block
+                            {
+                                margin-bottom: 143px;
+                                margin-top: 18px;
+
+                                input
+                                {
+                                    padding: 10px 12px 9px;
+                                    @include border-radius(2px);
+                                }
+                            }
+                        }
+
+                        .btn_info
+                        {
+                            span
+                            {
+                                color: $grey_77;
+                                @include font-details(12px, 'OpenSans', 400);
+                                line-height: 1.2;
+                                vertical-align: top;
+                                margin-top: 5px;
+                            }
+
+                            i
+                            {
+                                width: 19px;
+                                height: 19px;
+                                display: inline-block;
+                                margin-right: 3px;
+                            }
+                        }
+
+                        .btn_step
+                        {
+                            margin-top: 9px;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        &.checkout_step_3
+        {
+            .confirmation_block
+            {
+                background: #fff;
+                width: 100%;
+                padding-top: 59px;
+                padding-bottom: 97px;
+
+                .icon{
+                    width: 36px;
+                    height: 36px;
+                    @include margin_left_right(auto);
+                    margin-bottom: 25px;
+
+                    span{
+                        color:$green_0a;
+                    }
+                }
+
+                .title{
+                    @include font-details(25px,'OpenSans',400);
+                    line-height: 1.2;
+                    text-align: center;
+                    color:$black_28;
+                    margin-bottom:14px;
+
+                }
+
+                .desc{
+                    @include font-details(14px,'OpenSans',400);
+                    text-align: center;
+                    color:$black_28;
+                    max-width: 460px;
+                    line-height: 23px;
+                    @include margin_left_right(auto);
+                }
+
+                .btn_step
+                {
+                    width: 300px;
+                    @include font-details(14px, 'OpenSans', 600);
+                    line-height: 1.2;
+                    color: #fff;
+                    display: block;
+                    margin-top: 24px;
+                    background: $red_fa;
+                    border: none;
+                    text-align: center;
+                    @include border-radius(2px);
+                    padding: 15px 0 13px;
+                    @include margin_left_right(auto);
+                }
+
+            }
+        }
+
+    }
+}
+
+
+.ui-menu .ui-menu-item-wrapper
+{
+    color: $grey_77;
+    @include font-details(14px, 'OpenSans', 400);
+    line-height: 1.2;
+    opacity: .8;
+    padding: 6px 0 4px 12px;
+}
+
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover
+{
+    border-color: transparent;
+    background: #fff;
+    opacity: 1;
+}

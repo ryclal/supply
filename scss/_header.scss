@@ -40,9 +40,13 @@ header
                     color: white;
                     text-align: center;
                     background: $red_fa;
-                    margin: 20px 42px 20px auto;
+                    margin: 20px 34px 20px auto;
                     @include border-radius(8px);
                     padding: 13px 18px 11px;
+                }
+                .btn_boutique_name
+                {
+                    background: $green_00;
                 }
 
                 .btn_auth
@@ -57,6 +61,11 @@ header
 
                     &:last-child
                     {
+                        margin-right: 0;
+                    }
+
+                    &.btn_logout{
+                        color:$gold_ce;
                         margin-right: 0;
                     }
                 }

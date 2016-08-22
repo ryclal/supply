@@ -40,7 +40,7 @@ a:focus,
 a:active
 {
     text-decoration: none;
-    outline: none !important;
+    outline:0!important;
     cursor: pointer;
     @include box-shadow(none);
 }

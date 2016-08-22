@@ -1475,7 +1475,8 @@ main
                             opacity: .6;
                             @include transition(opacity .3s linear);
 
-                            &:hover{
+                            &:hover
+                            {
                                 opacity: 1;
                             }
 
@@ -1489,7 +1490,8 @@ main
                                 background-image: img_url('women_item.png');
                             }
 
-                            &.active{
+                            &.active
+                            {
                                 opacity: 1;
                             }
                         }
@@ -1833,8 +1835,7 @@ main
                         }
                     }
 
-                    @media (max-width: 599px)
-                    {
+                    @media (max-width: 599px) {
                         .product_attributes
                         {
                             margin-top: 40px;
@@ -1869,3 +1870,7 @@ main
         }
     }
 }
+
+
+@import "checkout";
+@import "contacts";

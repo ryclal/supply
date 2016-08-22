@@ -180,7 +180,7 @@ $(document).ready(function () {
     $('.slider_block .second_value').text("$" + slider_b.slider("values", 1));
 
 
-    $("#filter_select,#filter_select_1").selectmenu();
+    $("#filter_select,#filter_select_1,#checkout_select_step_1").selectmenu();
 
 
 //Modal open
