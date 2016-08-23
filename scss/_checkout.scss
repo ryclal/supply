@@ -105,24 +105,20 @@ main
 
                         input
                         {
+                            color: $grey_77;
+                            @include font-details(14px, 'OpenSans', 400);
+                            line-height: 1.2;
                             width: 100%;
                             background: transparent;
                             border: none;
+                            margin-top: 3px;
+                            @include placeholder(_rgba($grey_97, .5), left);
+                            padding: 6px 12px 4px;
 
                             &:focus
                             {
                                 outline: 0 !important;
                             }
-
-                        }
-                        input
-                        {
-                            color: $grey_77;
-                            @include font-details(14px, 'OpenSans', 400);
-                            line-height: 1.2;
-                            margin-top: 3px;
-                            @include placeholder(_rgba($grey_97, .5), left);
-                            padding: 6px 12px 4px;
                         }
 
                     }

@@ -51,6 +51,13 @@ a:active
     box-shadow: none;
 }
 
+input,textarea,select
+{
+    &:focus{
+        outline:0!important;
+    }
+}
+
 
 
 

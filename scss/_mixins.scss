@@ -444,7 +444,7 @@
                 position: relative;
                 @include font-details(14px, 'OpenSans', 700);
                 line-height: 1.2;
-                color:$black_28;
+                color: $black_28;
                 text-align: center;
                 margin-bottom: 9px;
             }
@@ -453,7 +453,7 @@
             {
                 @include font-details(14px, 'OpenSans', 400);
                 line-height: 1.2;
-                color:$black_28;
+                color: $black_28;
                 text-align: center;
             }
 
@@ -461,271 +461,313 @@
     }
 }
 
-    @mixin btn_show_more() {
-        position: relative;
-        display: block;
-        margin: 0 auto 70px;
-        @include font-details(16px, 'OpenSans', 600);
-        line-height: 1.2;
-        color: $black_4a;
-        background: #fff;
-        text-align: center;
-        width: 200px;
-        @include border-radius(7px);
-        padding: 13px 20px 11px;
-        border: 1px solid $grey_97;
-        @include transition(color .3s ease-in, background .3s ease-out, border-color .3s linear);
 
-        &:hover
-        {
-            background: $black_4a;
-            color: #fff;
-            border-color: $black_4a;
-        }
+@mixin btn_show_more() {
+    position: relative;
+    display: block;
+    margin: 0 auto 70px;
+    @include font-details(16px, 'OpenSans', 600);
+    line-height: 1.2;
+    color: $black_4a;
+    background: #fff;
+    text-align: center;
+    width: 200px;
+    @include border-radius(7px);
+    padding: 13px 20px 11px;
+    border: 1px solid $grey_97;
+    @include transition(color .3s ease-in, background .3s ease-out, border-color .3s linear);
+
+    &:hover
+    {
+        background: $black_4a;
+        color: #fff;
+        border-color: $black_4a;
     }
+}
 
-    @mixin boutique_tab-content($has_image,$image:null,$type:'list') {
 
-        .boutique_item
+@mixin boutique_tab-content($has_image,$image:null,$type:'list') {
+
+    .boutique_item
+    {
+        @if ($type == 'list')
         {
+            width: 100%;
+            height: 340px;
+        }
+        @if ($type == 'thumb')
+        {
+            width: 220px;
+            height: 220px;
+        }
+        margin: 0 auto 52px;
+        cursor: pointer;
+
+        .picture_block
+        {
+            position: relative;
             @if ($type == 'list')
             {
-                width: 100%;
-                height: 340px;
+                height: 280px;
             }
             @if ($type == 'thumb')
             {
-                width: 220px;
-                height: 220px;
+                height: 160px;
             }
-            margin: 0 auto 52px;
-            cursor: pointer;
-
-            .picture_block
+            background: no-repeat center;
+            background-size: cover;
+            @if $has_image == true
             {
-                position: relative;
-                @if ($type == 'list')
-                {
-                    height: 280px;
-                }
-                @if ($type == 'thumb')
-                {
-                    height: 160px;
-                }
-                background: no-repeat center;
-                background-size: cover;
-                @if $has_image == true
-                {
-                    background-image: img_url('#{$image}');
-                }
-            }
-            .name_block
-            {
-                position: relative;
-                height: 60px;
-                background: #fff;
-                text-align: center;
-                border: 1px solid $grey_97;
-                div
-                {
-                    display: block;
-                    padding-top: 20px;
-                    padding-bottom: 18px;
-
-                    i
-                    {
-                        width: 22px;
-                        height: 22px;
-                        background: img_url('store_black.png') no-repeat center;
-                        background-size: auto;
-                        display: inline-block;
-                        margin-right: 8px;
-                        vertical-align: middle;
-                        margin-left: 5px;
-                        margin-top: -4px;
-                    }
-                    span
-                    {
-                        @include font-details(16px, 'OpenSans', 600);
-                        line-height: 1.2;
-                        color: $black_4a;
-                        text-transform: uppercase;
-                    }
-                }
+                background-image: img_url('#{$image}');
             }
         }
-
-    }
-
-    @mixin look_tab-content($has_image,$image:null) {
-        .look_item
+        .name_block
         {
-            margin: 0 auto 52px;
-            height: 317px;
-            width: 300px;
-
-            .picture_block
-            {
-                position: relative;
-                height: 257px;
-                background: no-repeat center;
-                background-size: cover;
-                @if $has_image == true
-                {
-                    background-image: img_url('#{$image}');
-                }
-            }
-
-            .name_block
-            {
-                position: relative;
-                height: 60px;
-                background: $black_4a;
-                text-align: center;
-                border: 1px solid $black_4a;
-
-                div
-                {
-                    padding-top: 20px;
-                    padding-bottom: 18px;
-
-                    i
-                    {
-                        width: 22px;
-                        height: 22px;
-                        background: img_url('store.png') no-repeat center;
-                        background-size: auto;
-                        display: inline-block;
-                        margin-right: 8px;
-                        vertical-align: middle;
-                        margin-left: 5px;
-                        margin-top: -4px;
-                    }
-                    span
-                    {
-                        @include font-details(16px, 'OpenSans', 600);
-                        line-height: 1.2;
-                        color: #fff;
-                        text-transform: uppercase;
-                    }
-                }
-            }
-        }
-    }
-
-    @mixin footer_h3() {
-        $left: 10px;
-        @include font-details(14px, 'OpenSans', 700);
-        text-transform: uppercase;
-        line-height: 1.2;
-        color: #fff;
-        margin-left: $left;
-        margin-top: 0;
-        margin-bottom: 14px;
-
-        @media (min-width: 992px) and (max-width: 1200px) {
-            font-size: 13px;
-        }
-    }
-
-    @mixin footer_menu_item() {
-        $left: 10px;
-        h3
-        {
-            @include footer_h3;
-        }
-        ul
-        {
-            padding-left: 0;
-            margin-left: $left;
-            list-style: none;
-            li
-            {
-                margin-top: 0;
-                margin-bottom: 8px;
-                a
-                {
-                    padding: 0;
-                    @include font-details(14px, 'OpenSans', 600);
-                    line-height: 1.2;
-                    color: $grey_c6;
-                }
-            }
-        }
-    }
-
-    @include keyframes(spin)
-    {
-        0%
-        { @include rotate(0deg); }
-        100%
-        { @include rotate(360deg); }
-    }
-
-    @mixin pagination() {
-        .pagination
-        {
+            position: relative;
+            height: 60px;
             background: #fff;
-            @include border-radius(0);
             text-align: center;
-            display: block;
-            margin-bottom: 110px;
-            @include margin_left_right(auto);
-
-            li
+            border: 1px solid $grey_97;
+            div
             {
-                margin-right: 2px;
-                display: inline-block;
-                vertical-align: middle;
+                display: block;
+                padding-top: 20px;
+                padding-bottom: 18px;
 
-                a
+                i
                 {
-                    background: #fff;
-                    border: none;
-                    line-height: 1.2;
-                    padding: 4px 8px;
-                    @include border-radius(50%);
-                    @include font-details(14px, 'OpenSans', 400);
-                    color: $black_4a;
-
-                    &:hover, &:focus
-                    {
-                        background: #fff;
-                        border: none;
-                    }
+                    width: 22px;
+                    height: 22px;
+                    background: img_url('store_black.png') no-repeat center;
+                    background-size: auto;
+                    display: inline-block;
+                    margin-right: 8px;
+                    vertical-align: middle;
+                    margin-left: 5px;
+                    margin-top: -4px;
                 }
                 span
                 {
-                    visibility: hidden;
-                }
-                &.disabled
-                {
-                    span
-                    {
-                        pointer-events: none;
-                    }
+                    @include font-details(16px, 'OpenSans', 600);
+                    line-height: 1.2;
+                    color: $black_4a;
+                    text-transform: uppercase;
                 }
             }
+        }
+    }
 
-            .active
+}
+
+
+@mixin look_tab-content($has_image,$image:null) {
+    .look_item
+    {
+        margin: 0 auto 52px;
+        height: 317px;
+        width: 300px;
+
+        .picture_block
+        {
+            position: relative;
+            height: 257px;
+            background: no-repeat center;
+            background-size: cover;
+            @if $has_image == true
             {
-                a
-                {
-                    color: #fff;
-                    background: $red_fa;
+                background-image: img_url('#{$image}');
+            }
+        }
 
-                    &:hover, &:focus
-                    {
-                        background: $red_fa;
-                        border: none;
-                    }
+        .name_block
+        {
+            position: relative;
+            height: 60px;
+            background: $black_4a;
+            text-align: center;
+            border: 1px solid $black_4a;
+
+            div
+            {
+                padding-top: 20px;
+                padding-bottom: 18px;
+
+                i
+                {
+                    width: 22px;
+                    height: 22px;
+                    background: img_url('store.png') no-repeat center;
+                    background-size: auto;
+                    display: inline-block;
+                    margin-right: 8px;
+                    vertical-align: middle;
+                    margin-left: 5px;
+                    margin-top: -4px;
+                }
+                span
+                {
+                    @include font-details(16px, 'OpenSans', 600);
+                    line-height: 1.2;
+                    color: #fff;
+                    text-transform: uppercase;
                 }
             }
+        }
+    }
+}
 
-            li:first-child
+
+@mixin footer_h3() {
+    $left: 10px;
+    @include font-details(14px, 'OpenSans', 700);
+    text-transform: uppercase;
+    line-height: 1.2;
+    color: #fff;
+    margin-left: $left;
+    margin-top: 0;
+    margin-bottom: 14px;
+
+    @media (min-width: 992px) and (max-width: 1200px) {
+        font-size: 13px;
+    }
+}
+
+
+@mixin footer_menu_item() {
+    $left: 10px;
+    h3
+    {
+        @include footer_h3;
+    }
+    ul
+    {
+        padding-left: 0;
+        margin-left: $left;
+        list-style: none;
+        li
+        {
+            margin-top: 0;
+            margin-bottom: 8px;
+            a
+            {
+                padding: 0;
+                @include font-details(14px, 'OpenSans', 600);
+                line-height: 1.2;
+                color: $grey_c6;
+            }
+        }
+    }
+}
+
+
+@include keyframes(spin)
+{
+    0%
+    { @include rotate(0deg); }
+    100%
+    { @include rotate(360deg); }
+}
+
+
+@mixin pagination() {
+    .pagination
+    {
+        background: #fff;
+        @include border-radius(0);
+        text-align: center;
+        display: block;
+        margin-bottom: 110px;
+        @include margin_left_right(auto);
+
+        li
+        {
+            margin-right: 2px;
+            display: inline-block;
+            vertical-align: middle;
+
+            a
+            {
+                background: #fff;
+                border: none;
+                line-height: 1.2;
+                padding: 4px 8px;
+                @include border-radius(50%);
+                @include font-details(14px, 'OpenSans', 400);
+                color: $black_4a;
+
+                &:hover, &:focus
+                {
+                    background: #fff;
+                    border: none;
+                }
+            }
+            span
+            {
+                visibility: hidden;
+            }
+            &.disabled
+            {
+                span
+                {
+                    pointer-events: none;
+                }
+            }
+        }
+
+        .active
+        {
+            a
+            {
+                color: #fff;
+                background: $red_fa;
+
+                &:hover, &:focus
+                {
+                    background: $red_fa;
+                    border: none;
+                }
+            }
+        }
+
+        li:first-child
+        {
+            position: relative;
+
+            a
             {
                 position: relative;
+                width: 24px;
+                padding: 0;
+                color: transparent;
+                height: 24px;
 
+                &:before
+                {
+                    position: absolute;
+                    content: '';
+                    width: 6px;
+                    top: calc(50% - 2px);
+                    left: calc(50% - 1px);
+                    height: 2px;
+                    @include transform(rotate(-45deg));
+                    background: $black_4a;
+                }
+
+                &:after
+                {
+                    position: absolute;
+                    content: '';
+                    width: 6px;
+                    top: calc(50% + 2px);
+                    height: 2px;
+                    left: calc(50% - 1px);
+                    @include transform(rotate(225deg));
+                    background: $black_4a;
+                }
+            }
+
+            &.disabled
+            {
                 a
                 {
                     position: relative;
@@ -743,7 +785,7 @@
                         left: calc(50% - 1px);
                         height: 2px;
                         @include transform(rotate(-45deg));
-                        background: $black_4a;
+                        background: rgba(74, 74, 74, .2);
                     }
 
                     &:after
@@ -755,52 +797,49 @@
                         height: 2px;
                         left: calc(50% - 1px);
                         @include transform(rotate(225deg));
-                        background: $black_4a;
-                    }
-                }
-
-                &.disabled
-                {
-                    a
-                    {
-                        position: relative;
-                        width: 24px;
-                        padding: 0;
-                        color: transparent;
-                        height: 24px;
-
-                        &:before
-                        {
-                            position: absolute;
-                            content: '';
-                            width: 6px;
-                            top: calc(50% - 2px);
-                            left: calc(50% - 1px);
-                            height: 2px;
-                            @include transform(rotate(-45deg));
-                            background: rgba(74, 74, 74, .2);
-                        }
-
-                        &:after
-                        {
-                            position: absolute;
-                            content: '';
-                            width: 6px;
-                            top: calc(50% + 2px);
-                            height: 2px;
-                            left: calc(50% - 1px);
-                            @include transform(rotate(225deg));
-                            background: rgba(74, 74, 74, .2);
-                        }
+                        background: rgba(74, 74, 74, .2);
                     }
                 }
             }
+        }
 
-            li:last-child
+        li:last-child
+        {
+            position: relative;
+
+            a
             {
+                color: transparent;
                 position: relative;
-
-                a
+                width: 24px;
+                padding: 0;
+                height: 24px;
+                &:before
+                {
+                    position: absolute;
+                    content: '';
+                    width: 6px;
+                    top: calc(50% - 2px);
+                    left: calc(50% - 1px);
+                    height: 2px;
+                    @include transform(rotate(45deg));
+                    background: rgba(74, 74, 74, 1);
+                }
+                &:after
+                {
+                    position: absolute;
+                    content: '';
+                    width: 6px;
+                    top: calc(50% + 2px);
+                    height: 2px;
+                    left: calc(50% - 1px);
+                    @include transform(rotate(-45deg));
+                    background: rgba(74, 74, 74, 1);
+                }
+            }
+            &.disabled
+            {
+                span
                 {
                     color: transparent;
                     position: relative;
@@ -816,7 +855,7 @@
                         left: calc(50% - 1px);
                         height: 2px;
                         @include transform(rotate(45deg));
-                        background: rgba(74, 74, 74, 1);
+                        background: rgba(74, 74, 74, .2);;
                     }
                     &:after
                     {
@@ -827,125 +866,169 @@
                         height: 2px;
                         left: calc(50% - 1px);
                         @include transform(rotate(-45deg));
-                        background: rgba(74, 74, 74, 1);
-                    }
-                }
-                &.disabled
-                {
-                    span
-                    {
-                        color: transparent;
-                        position: relative;
-                        width: 24px;
-                        padding: 0;
-                        height: 24px;
-                        &:before
-                        {
-                            position: absolute;
-                            content: '';
-                            width: 6px;
-                            top: calc(50% - 2px);
-                            left: calc(50% - 1px);
-                            height: 2px;
-                            @include transform(rotate(45deg));
-                            background: rgba(74, 74, 74, .2);;
-                        }
-                        &:after
-                        {
-                            position: absolute;
-                            content: '';
-                            width: 6px;
-                            top: calc(50% + 2px);
-                            height: 2px;
-                            left: calc(50% - 1px);
-                            @include transform(rotate(-45deg));
-                            background: rgba(74, 74, 74, .2);;
-                        }
+                        background: rgba(74, 74, 74, .2);;
                     }
                 }
             }
         }
     }
+}
 
-    @mixin checkbox_one_column($colors:false) {
-        .checkbox
+
+@mixin checkbox_one_column($colors:false) {
+    .checkbox
+    {
+        margin: 7px auto;
+
+        label
         {
-            margin: 7px auto;
-
-            label
+            display: inline-block;
+            @if ($colors == false)
             {
-                display: inline-block;
-                @if ($colors == false)
-                {
-                    padding-left: 28px;
-                } @else
-                {
-                    padding-left: 14px;
-                }
-                @include font-details(10px, 'OpenSans', 400);
-                color: $black_4a;
-                position: relative;
-                line-height: 1.2;
-                margin-top: 0;
-                float: left;
-                cursor: pointer;
-                text-transform: uppercase;
-
-                @if ($colors == false)
-                {
-
-                    &:before
-                    {
-                        position: absolute;
-                        width: 20px;
-                        height: 20px;
-                        top: -4px;
-                        left: 0;
-                        content: '';
-                        background: none;
-                        border: 1px solid $grey_df;
-                    }
-                } @else
-                {
-                    &:before
-                    {
-                        position: absolute;
-                        width: 6px;
-                        height: 6px;
-                        @include border-radius(50%);
-                        top: 3px;
-                        left: 0;
-                        content: '';
-                        background: red;
-                    }
-                }
-
-            }
-            input
+                padding-left: 28px;
+            } @else
             {
-                display: inline-block;
-                width: auto;
-                opacity: 0;
-                cursor: pointer;
-                position: absolute;
-                @include box-shadow(none);
-                border: none;
-                margin-left: 0;
-                margin-top: 5px;
+                padding-left: 14px;
             }
+            @include font-details(10px, 'OpenSans', 300);
+            color: $black_4a;
+            position: relative;
+            line-height: 1.2;
+            margin-top: 0;
+            float: left;
+            cursor: pointer;
+            text-transform: uppercase;
 
             @if ($colors == false)
             {
-                input:checked + label:before
+
+                &:before
                 {
-                    border-color: $grey_df;
-                    background: $grey_df img_url('check.png') no-repeat 50% 50%;
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    top: -4px;
+                    left: 0;
+                    content: '';
+                    background: none;
+                    @include border-radius(4px);
+                    border: 1px solid $grey_df;
                 }
+            } @else
+            {
+                &:before
+                {
+                    position: absolute;
+                    width: 6px;
+                    height: 6px;
+                    @include border-radius(50%);
+                    top: 3px;
+                    left: 0;
+                    content: '';
+                    background: red;
+                }
+            }
+
+        }
+
+        input
+        {
+            display: inline-block;
+            width: auto;
+            opacity: 0;
+            cursor: pointer;
+            position: absolute;
+            @include box-shadow(none);
+            border: none;
+            margin-left: 0;
+            margin-top: 5px;
+        }
+
+        @if ($colors == false)
+        {
+            input:checked + label:before
+            {
+                border-color: $grey_df;
+                background: $grey_df img_url('check.png') no-repeat 50% 50%;
             }
         }
     }
+}
 
+@mixin switch_element($transition_time) {
+    $switchTransition: #{$transition_time} ease-out;
 
+    .switch
+    {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: 30px;
+        height: 14px;
+        padding: 0;
+        background-color: transparent;
+        @include border-radius(6px);
+        cursor: pointer;
+    }
+
+    .switch-input
+    {
+        position: absolute;
+        top: 0;
+        margin-top: 0;
+        left: 0;
+        opacity: 0;
+
+        &:checked + .switch-label
+        {
+            background: _rgba($green_0a,.4);
+        }
+
+        &:checked ~ .switch-handle
+        {
+            left: 13px;
+            background: $green_0a;
+            @include box-shadow(0px 1px 3px 0px rgba(33, 33, 33, .35));
+        }
+
+    }
+
+    .switch-label
+    {
+        position: relative;
+        display: block;
+        margin: 0;
+        width: 30px;
+        height: 14px;
+        background: _rgba($grey_ac,.4);
+        @include border-radius(6px);
+        @include transition(opacity $switchTransition, background $switchTransition);
+    }
+
+    .switch-handle
+    {
+        position: absolute !important;
+        top: -4px;
+        left: -4px;
+        width: 21px;
+        height: 21px;
+        @include border-radius(50%);
+        background: $grey_ac;
+        @include box-shadow(0px 1px 3px 0px rgba(33, 33, 33, .35));
+        @include transition(left #{$switchTransition});
+    }
+
+    .checkbox_label
+    {
+        line-height: 1;
+        letter-spacing: 0;
+        @include font-details(14px,'OpenSans',400);
+        text-transform: capitalize;
+        color: $black_4a;
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+}
 
 
 

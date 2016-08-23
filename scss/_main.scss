@@ -198,7 +198,7 @@
                 @include box-shadow(none);
                 border: 1px solid $grey_97;
                 padding: 7px 10px 5px;
-                @include font-details(12px, 'OpenSans', 400);
+                @include font-details(12px, 'OpenSans', 300);
                 color: $black_4a;
                 width: 130px;
                 text-transform: uppercase;
@@ -227,7 +227,7 @@
             {
                 float: right;
                 margin-top: 10px;
-                @include font-details(12px, 'OpenSans', 400);
+                @include font-details(12px, 'OpenSans', 300);
                 color: $black_4a;
                 line-height: 1.2;
                 text-align: right;
@@ -473,7 +473,7 @@
                 }
                 .first_value, .second_value
                 {
-                    @include font-details(10px, 'OpenSans', 400);
+                    @include font-details(10px, 'OpenSans', 300);
                     color: $black_4a;
                     line-height: 1.2;
                     position: absolute;
@@ -1209,7 +1209,7 @@ main
                                 {
                                     height: 42px;
 
-                                    a
+                                    div
                                     {
                                         padding-top: 11px;
                                         padding-bottom: 9px;
@@ -1704,7 +1704,10 @@ main
                                     {
                                         margin-right: 0;
                                     }
+
                                 }
+
+
                             }
                         }
 
