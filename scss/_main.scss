@@ -495,6 +495,7 @@
             text-align: center;
         }
     }
+
     @include pagination;
 }
 
@@ -1874,3 +1875,4 @@ main
 
 @import "checkout";
 @import "contacts";
+@import "owner_page";

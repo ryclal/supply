@@ -46,7 +46,14 @@ header
                 }
                 .btn_boutique_name
                 {
+                    @extend .btn_create_boutique;
                     background: $green_00;
+                    margin-right: 30px;
+                }
+                .logged
+                {
+                    display: inline-block;
+                    margin-left: -4px;
                 }
 
                 .btn_auth
@@ -70,12 +77,56 @@ header
                     }
                 }
 
+
                 @media (max-width: 599px) {
                     float: none;
                     text-align: center;
                     @include margin_left_right(auto);
                 }
             }
+
+            @media (max-width: 699px)
+            {
+                &.owner_section
+                {
+                    .logo{
+                        float: none;
+                        text-align: center;
+                        @include margin_left_right(auto);
+                    }
+                    .auth_section
+                    {
+                        float: none;
+                        text-align: center;
+                        @include margin_left_right(auto);
+                    }
+                }
+            }
+
+            @media (max-width: 599px)
+            {
+                &.owner_section
+                {
+                    .auth_section
+                    {
+                        .btn_create_boutique{
+                            margin-right: 0;
+                        }
+                        .btn_boutique_name
+                        {
+                            margin-right: 30px;
+                        }
+
+                        .logged
+                        {
+                            display: block;
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+
+
         }
 
         .navbar
