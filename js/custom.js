@@ -64,14 +64,17 @@ $(document).ready(function () {
     });
 
     //Add product checkbox switch
-    if ($('.switch-input').is(':checked')) {
+    var input_switch = $('.switch-input');
+
+    if (input_switch.is(':checked')) {
         $('.discount_block input').removeAttr('disabled');
     }
+
     else {
         $('.discount_block input').attr('disabled', 'disabled');
     }
 
-    $('.switch-input').click(function () {
+    input_switch.on('click',function () {
         if ($(this).is(':checked')) {
             $('.discount_block input').removeAttr('disabled');
         }
@@ -80,38 +83,55 @@ $(document).ready(function () {
         }
     });
 
-    //Add shipping checkbox radio
-    if ($('.charged_shipping').is(':checked')) {
-
-        $('.radio_block .input_block input').removeAttr('disabled');
-    }
-    else {
-        $('.radio_block .input_block input').attr('disabled', 'disabled');
-    }
-
-    $('.charged_shipping').click(function () {
-        if ($(this).is(':checked')) {
-            $('.radio_block .input_block input').removeAttr('disabled');
-        }
-        else {
-            $('.radio_block .input_block input').attr('disabled', 'disabled');
-        }
-    });
     var inputs_disable = $('.international_block .radio_block  input,.international_block .delivery_block input');
+
     // Product availability for shipping worldwide
     if ($('.international_shipping').is(':checked')) {
         inputs_disable.attr('disabled', 'disabled');
     }
-    else {
+    else
+    {
         inputs_disable.removeAttr('disabled');
     }
-    $('.international_shipping').click(function () {
+
+    $('.international_shipping').on('click',function () {
         if ($(this).is(':checked')) {
             inputs_disable.attr('disabled', 'disabled');
         }
-        else
-            inputs_disable.removeAttr('disabled');
+        else {
+            if($('#intern_charged_value').is(':checked')){
+
+                inputs_disable.removeAttr('disabled');
+            }
+            else
+            {
+                inputs_disable.not('#intern_charged_value').removeAttr('disabled')
+            }
+
+        }
     });
+
+
+    //Add shipping checkbox radio
+    var radio_button = $('.charged_shipping');
+
+    if (radio_button.not(':checked') && $('.international_shipping').not(':checked')) {
+        $('.radio_block .input_block input').attr('disabled', 'disabled');
+    }
+
+    $('.radio_block .radio input').on('change',function () {
+        var radio_btn = $(this).parent().children('.charged_shipping');
+        var input_blocks = $(this).parents('.radio_block').children('.input_block').children('input');
+        if (radio_btn.is(':checked')) {
+            input_blocks.removeAttr('disabled').val('');
+        }
+        else{
+            input_blocks.attr('disabled', 'disabled');
+        }
+    });
+
+
+
 
 
 //Product colors

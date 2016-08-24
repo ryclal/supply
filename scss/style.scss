@@ -57,6 +57,10 @@ input,textarea,select
         outline:0!important;
     }
 }
+[disabled]
+{
+    opacity: .4;
+}
 
 
 

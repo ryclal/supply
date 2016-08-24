@@ -17,6 +17,14 @@ main
             border-top: 1px solid $grey_97;
             padding-top: 24px;
 
+            form
+            {
+                @media (max-width: 767px)
+                {
+                    padding-left: 10px;
+                }
+            }
+
             .border_has
             {
                 border-top: 1px solid $grey_97
@@ -168,6 +176,7 @@ main
                 {
                     display: inline-block;
                     margin-bottom: 0;
+                    max-width: 380px;
 
                     .size
                     {
@@ -223,6 +232,7 @@ main
                 .color_list
                 {
                     display: inline-block;
+                    max-width: 380px;
 
                     &.darker
                     {
@@ -344,6 +354,17 @@ main
                     padding: 15px 0 13px;
                 }
             }
+
+            @media (max-width: 700px)
+            {
+                &.description_block
+                {
+                    textarea
+                    {
+                        width: 380px;
+                    }
+                }
+            }
         }
     }
 
@@ -421,6 +442,7 @@ main
                 }
 
             }
+
             &.shipping_block
             {
                 h3
@@ -621,33 +643,98 @@ main
                     }
                 }
             }
-        }
-        .btn_pusblish
-        {
-            width: 220px;
-            @include font-details(16px, 'OpenSans', 400);
-            line-height: 1.2;
-            color: #fff;
-            display: inline-block;
-            margin-bottom: 125px;
-            margin-top:70px;
-            background: $red_fa;
-            border: none;
-            text-align: center;
-            @include border-radius(2px);
-            padding: 15px 0 13px;
-            margin-right: 20px;
-            vertical-align: top;
+
+            @media (max-width: 767px)
+            {
+                &.discounts_block
+                {
+                    text-align: center;
+                    .price_block
+                    {
+                        margin-bottom: 30px;
+                        display: block;
+                        margin-right: 0;
+                    }
+                    .sale_block
+                    {
+                        display: block;
+                        margin-bottom: 30px;
+                        margin-right: 0;
+                    }
+                }
+                &.shipping_block
+                {
+                    text-align: center;
+
+                    p {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+
+                    .local_block,.international_block
+                    {
+                        .radio_block
+                        {
+                            display: block;
+                            margin-right: 0;
+                        }
+                    }
+                    .international_block
+                    {
+                        h4 {
+                            .checkbox
+                            {
+                                display: block;
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+
+
+                }
+            }
         }
 
-        .btn_add_publish
+        .buttons_block
         {
-            @extend .btn_pusblish;
-            width: 300px;
-            background: $green_0a;
-            margin-right: 0;
+            margin-top:70px;
+            margin-bottom: 105px;
+
+            .btn_pusblish
+            {
+                width: 220px;
+                @include font-details(16px, 'OpenSans', 400);
+                line-height: 1.2;
+                color: #fff;
+                display: inline-block;
+                background: $red_fa;
+                border: none;
+                margin-bottom: 20px;
+                text-align: center;
+                @include border-radius(2px);
+                padding: 15px 0 13px;
+                margin-right: 20px;
+                vertical-align: top;
+            }
+
+            .btn_add_publish
+            {
+                @extend .btn_pusblish;
+                width: 300px;
+                background: $green_0a;
+                margin-right: 0;
+
+
+            }
+
+            @media (max-width: 767px)
+            {
+                text-align: center;
+            }
 
         }
 
     }
 }
+
+
