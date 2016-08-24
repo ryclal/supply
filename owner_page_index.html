@@ -4,13 +4,178 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Supply Apparel | Checkout </title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+    <title>Supply Apparel</title>
+
     <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div id="loginModal" class="modal fade login_modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <a href="#" class="btn_facebook">
+                    <i></i>
+                    <span>Log in with Facebook</span>
+                </a>
+            </div>
+            <div class="form-group">
+                <a href="#" class="btn_google">
+                    <i></i>
+                    <span>Log in with Google</span>
+                </a>
+            </div>
+            <div class="form-group">
+                <div class="divider_line">or</div>
+            </div>
+            <div class="form-group email_block">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Email Address" name="email">
+                    <div class="input-group-addon"><i class="email_icon"></i></div>
+                </div>
+            </div>
+            <div class="form-group password_block">
+                <div class="input-group">
+                    <input type="password" class="form-control" placeholder="Password" name="password">
+                    <div class="input-group-addon"><i class="password_icon"></i></div>
+                </div>
+            </div>
+            <div class="form-group forgot_pass_block">
+                <div class="checkbox">
+                    <input name="remember" id="check_item" type="checkbox">
+                    <label for="check_item">Remember me</label>
+                </div>
+                <a href="#" class="btn_forgot_pass fourth_modal open_modal" data-modal="loginModal">Forgot
+                    password?</a>
+            </div>
+            <div class="form-group submit_block">
+                <button type="submit" class="btn_login">Log In</button>
+            </div>
+            <div class="form-group sign_up_block">
+                <p>Don't have an account?</p>
+                <a href="#" class="btn_signup seconds_modal open_modal" data-modal="loginModal">Sign Up</a>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="registerModal" class="modal fade register_modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <a href="#" class="btn_facebook">
+                    <i></i>
+                    <span>Log in with Facebook</span>
+                </a>
+            </div>
+            <div class="form-group">
+                <a href="#" class="btn_google">
+                    <i></i>
+                    <span>Log in with Google</span>
+                </a>
+            </div>
+            <div class="form-group">
+                <div class="divider_line">or</div>
+            </div>
+            <div class="form-group submit_block">
+                <a href="#" data-modal="registerModal" class="btn_login third_modal open_modal">Sign up with email</a>
+            </div>
+            <div class="form-group agrement_block">
+                <p>
+                    By signing up, I agree to Supply Apparel’s
+                    <a href="#">Terms of Service</a>,
+                    <a href="#">Payment Terms</a>, <a href="#">Privacy Policy</a>, and <a href="#">Refund Policy</a>.
+                </p>
+            </div>
+            <div class="form-group sign_up_block">
+                <p>Already a member?</p>
+                <a href="#" data-modal="registerModal" class="btn_signup first_modal open_modal">Log in</a>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="register_mail_Modal" class="modal fade register_mail_modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="form-group first_block">
+                <p>
+                    Sign up with
+                    <a href="#">Facebook</a> or
+                    <a href="#">Google</a>
+                </p>
+            </div>
+            <div class="form-group">
+                <div class="divider_line">or</div>
+            </div>
+            <div class="form-group name_block">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Full name" name="name">
+                    <div class="input-group-addon"><i class="name_icon"></i></div>
+                </div>
+            </div>
+            <div class="form-group email_block">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Email Address" name="email">
+                    <div class="input-group-addon"><i class="email_icon"></i></div>
+                </div>
+            </div>
+            <div class="form-group password_block">
+                <div class="input-group">
+                    <input type="password" class="form-control" placeholder="Password" name="password">
+                    <div class="input-group-addon"><i class="password_icon"></i></div>
+                </div>
+            </div>
+            <div class="form-group date_block">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Data of Birth" name="birthdate">
+                    <div class="input-group-addon"><i class="date_icon"></i></div>
+                </div>
+            </div>
+            <div class="form-group agrement_block">
+                <p>
+                    By signing up, I agree to Supply Apparel’s
+                    <a href="#">Terms of Service</a>,
+                    <a href="#">Payment Terms</a>, <a href="#">Privacy Policy</a>, and <a href="#">Refund Policy</a>.
+                </p>
+            </div>
+            <div class="form-group submit_block">
+                <button type="submit" class="btn_login">Sign up with email</button>
+            </div>
+
+            <div class="form-group sign_up_block">
+                <p>Already a member?</p>
+                <a href="#" data-modal="register_mail_Modal" class="btn_signup first_modal open_modal">Log in</a>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="reset_password_modal" class="modal fade reset_password_modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="form-group title_block">
+                <span>Reset Password</span>
+            </div>
+            <div class="form-group first_block">
+                <p>
+                    Enter the email address associated with your account, and we’ll email you a link to reset your
+                    password.
+                </p>
+            </div>
+            <div class="form-group email_block">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Email Address" name="email">
+                    <div class="input-group-addon"><i class="email_icon"></i></div>
+                </div>
+            </div>
+            <div class="form-group sign_up_block">
+                <button type="button" class="btn_login btn_send">Send Reset Link</button>
+                <div class="loader"></div>
+                <a href="reset__password_page.html" class="btn_login btn_sent">
+                    <i class="glyphicon glyphicon-ok"></i> Email Sent
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
 <header class="index_page">
     <div class="container-fluid website_head">
         <div class="row">
@@ -20,12 +185,8 @@
                 </a>
                 <div class="auth_section">
                     <a href="#" class="btn_create_boutique">Create a boutique</a>
-
-                    <a href="#" class="btn_auth">User Name</a>
-                    <a href="index.html" class="btn_auth btn_logout">Logout</a>
-
-                    <a href="#" class="btn_auth hidden" data-toggle="modal" data-target="#registerModal">Sign Up</a>
-                    <a href="#" class="btn_auth hidden" data-toggle="modal" data-target="#loginModal">Login</a>
+                    <a href="#" class="btn_auth" data-toggle="modal" data-target="#registerModal">Sign Up</a>
+                    <a href="#" class="btn_auth" data-toggle="modal" data-target="#loginModal">Login</a>
                 </div>
             </div>
         </div>
@@ -61,10 +222,7 @@
                         </ul>
                     </li>
                     <li class="icons"><a href="#"><span class="wishlist_icon" title="Wishlist"></span></a></li>
-                    <li class="icons"><a href="#" class="cart_open_trigger"><span class="cart_icon has_product"
-                                                                                  data-product="1"
-                                                                                  title="Cart"></span></a>
-                    </li>
+                    <li class="icons"><a href="#"><span class="cart_icon" data-product="1" title="Cart"></span></a></li>
                 </ul>
             </div>
             <div class="collapse navbar-collapse" id="website_navbar_collapse">
@@ -89,9 +247,7 @@
                         </ul>
                     </li>
                     <li class="icons"><a href="#"><span class="wishlist_icon" title="Wishlist"></span></a></li>
-                    <li class="icons"><a href="#" class="cart_open_trigger"><span class="cart_icon has_product"
-                                                                                  data-product="1"
-                                                                                  title="Cart"></span></a></li>
+                    <li class="icons"><a href="#"><span class="cart_icon" data-product="1" title="Cart"></span></a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-left">
                     <li class="dropdown women_dropdown">
@@ -278,167 +434,108 @@
             </div>
         </div>
     </nav>
-    <div class="cart_block">
-        <div class="container">
-            <div class="cart_modal">
-                <button type="button" class="close" aria-label="Close"><span
-                        aria-hidden="true">&times;</span></button>
-                <div class="cart_header">
-                    <i class="cart fa fa-shopping-cart"></i>
-                </div>
-                <div class="cart_body">
-                    <div class="cart_elements">
-                        <div class="t_head">
-                            <span>Your Order</span>
-                            <span>Price</span>
-                        </div>
-                        <div class="t_body">
-                            <div class="name">
-                                <div class="photo"></div>
-                                <div class="product_name">Hamilton Chic Dress</div>
-                            </div>
-                            <div class="price">$45</div>
-                        </div>
-                        <div class="t_body">
-                            <div class="name">
-                                <div class="photo"></div>
-                                <div class="product_name">Hamilton Chic Dress</div>
-                            </div>
-                            <div class="price">$45</div>
-                        </div>
-                        <div class="t_body">
-                            <div class="name">
-                                <div class="photo"></div>
-                                <div class="product_name">Hamilton Chic Dress</div>
-                            </div>
-                            <div class="price">$45</div>
-                        </div>
-                    </div>
-                    <div class="total_price text-right">Total<span>$70</span></div>
-                </div>
-                <div class="cart_footer">
-                    <a href="#" class="back">
-                        <i class="fa fa-angle-left"></i>
-                        <span>Continue Shopping</span>
-                    </a>
-                    <a href="checkout_step_1.html" class="btn_checkout">Checkout</a>
-                </div>
-            </div>
-        </div>
-    </div>
 </header>
-<main class="checkout checkout_step_2">
+<main class="owner_landing_page">
     <section class="section_1">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+                <div class="col-md-5 col-md-offset-7">
+                    <div class="content_block">
+                        <h2>Sell your Products to Millions Around The World</h2>
+                        <p>
+                            Setup your very own online store in less than a minute and increase your earning potential
+                            with our thriving community of buyers.
+                        </p>
+                        <a href="#" class="btn_create_boutique">Create A Boutique</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section_2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 col-md-12 col-sm-offset-0">
                     <div class="row">
-                        <div class="checkout_block">
-                            <div class="checkout_header">
-                                <div class="title">Checkout</div>
-                                <div class="breadcrumb_block">
-                                    <div class="step">Shipping</div>
-                                    >
-                                    <div class="step active">Payment Method</div>
-                                    >
-                                    <div class="step">Cofirmation</div>
-                                </div>
-                                <div class="close_button"><span></span></div>
+                        <div class="col-sm-4">
+                            <div class="information_item">
+                                <div class="icon safety"></div>
+                                <h4>Trust & Safety</h4>
+                                <p>We have your best interest and financial safety in mind so you can sell on our
+                                    marketplace
+                                    effortlessly.</p>
                             </div>
-                            <div class="col-sm-push-6 col-sm-6 col-xs-push-6 col-xs-6 cart_preview_block">
-                                <div class="row">
-                                    <div class="product_block">
-                                        <div class="product_item">
-                                            <div class="photo"></div>
-                                            <div class="details">
-                                                <div class="name">The Twill Snap Backpack</div>
-                                                <div class="type">Reverse Denim + Brown Leather</div>
-                                                <div class="quantity">Quantity: 1</div>
-                                            </div>
-                                            <div class="price">$235</div>
-                                        </div>
-                                        <div class="product_item">
-                                            <div class="photo"></div>
-                                            <div class="details">
-                                                <div class="name">The Twill Snap Backpack</div>
-                                                <div class="type">Reverse Denim + Brown Leather</div>
-                                                <div class="quantity">Quantity: 1</div>
-                                            </div>
-                                            <div class="price">$235</div>
-                                        </div>
-                                    </div>
-                                    <div class="price_block">
-                                        <div class="subtotal">
-                                            <div class="property">Subtotal</div>
-                                            <div class="value">$398</div>
-                                        </div>
-                                        <div class="shipping">
-                                            <div class="property">Shipping</div>
-                                            <div class="value">Free</div>
-                                        </div>
-                                        <div class="taxes">
-                                            <div class="property">Taxes</div>
-                                            <div class="value">12.12</div>
-                                        </div>
-                                    </div>
-                                    <div class="total_block">
-                                        <div class="property">Total</div>
-                                        <div class="value">$410.12</div>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="information_item">
+                                <div class="icon logistics"></div>
+                                <h4>100% Logistics Assistance</h4>
+                                <p>
+                                    We help you update the logistics of every sale, keeping you and your customers
+                                    informed
+                                    throughout the process.
+                                </p>
                             </div>
-                            <div class="col-sm-pull-6 col-sm-6 col-xs-pull-6 col-xs-6 step_block">
-                                <div class="row">
-                                    <ul class="nav nav-tabs  step2_tab" role="tablist">
-                                        <li role="presentation" class="card active"><a href="#card" aria-controls="card"
-                                                                                  role="tab" data-toggle="tab"></a>
-                                        </li>
-                                        <li role="presentation" class="paypal"><a href="#paypal" aria-controls="paypal" role="tab"
-                                                                   data-toggle="tab"></a></li>
-                                    </ul>
-                                    <div class="tab-content">
-                                        <div role="tabpanel" class="tab-pane active" id="card">
-                                            <form action="" method="post">
-                                                <fieldset class="main_field">
-                                                    <legend>Card</legend>
-                                                    <fieldset class="field">
-                                                        <legend>Name on Card</legend>
-                                                        <input type="text" name="name" id="name"
-                                                               placeholder="Full Name"/>
-                                                    </fieldset>
-                                                    <fieldset class="field number_block">
-                                                        <input type="text" name="card_number" id="card_number"
-                                                               placeholder="1111-1111-1111-1112"/>
-                                                    </fieldset>
-                                                    <fieldset class="field cvc_block">
-                                                        <input type="text" class="expiration" name="expiration"
-                                                               id="expiration"
-                                                               placeholder="MM/YY"/>
-                                                        <input type="text" class="cvc" name="cvc" id="cvc"
-                                                               placeholder="CVC"/>
-                                                    </fieldset>
-                                                    <a href="#" class="btn_info"><i></i>
-                                                        <span>Your payment information is encrypted</span></a>
-                                                    <a href="checkout_step_3.html" class="btn_step">Continue</a>
-                                                </fieldset>
-                                            </form>
-                                        </div>
-                                        <div role="tabpanel" class="tab-pane" id="paypal">
-                                            <form action="" method="post">
-                                                <fieldset class="main_field">
-                                                    <legend>Paypal</legend>
-                                                    <fieldset class="field email_block">
-                                                        <input type="text" name="paypal_email" id="paypal_email"
-                                                               placeholder="Paypal Email"/>
-                                                    </fieldset>
-                                                    <a href="#" class="btn_info"><i></i>
-                                                        <span>Your payment information is encrypted</span></a>
-                                                    <a href="checkout_step_3.html" class="btn_step">Continue</a>
-                                                </fieldset>
-                                            </form>
-                                        </div>
-                                    </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="information_item">
+                                <div class="icon secure"></div>
+                                <h4>Secure Payments</h4>
+                                <p>
+                                    Every payment made on our platform is secured so you can grow your business while we
+                                    do all
+                                    the heavy lifting.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section_3">
+        <div class="container">
+            <div class="row">
+                <h2>Image Guidelines</h2>
+                <h5>It’s easy to create a boutique and begin selling on our marketplace.<br/>
+                    Use our simple image guidelines below when you’re uploading your apparel.
+                </h5>
+                <div class="col-lg-10 col-lg-offset-1 col-md-12 col-sm-offset-0">
+                    <div class="row">
+                        <div class="col-sm-4 item">
+                            <div class="item_block">
+                                <div class="item_header">
+                                    <i class="icon"></i>
+                                    <span>Apparel on models with natural background</span>
                                 </div>
+                                <div class="item_body"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 item">
+                            <div class="item_block">
+                                <div class="item_header">
+                                    <i class="icon"></i>
+                                    <span>Apparel on models with studio background</span>
+                                </div>
+                                <div class="item_body"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 item">
+                            <div class="item_block">
+                                <div class="item_header">
+                                    <i class="icon"></i>
+                                    <span>Apparel on models with studio background</span>
+                                </div>
+                                <div class="item_body"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="big_block">
+                                <h2>Increase your earning potential.</h2>
+                                <a href="#" class="btn_create_boutique">Create A Boutique</a>
+                                <div class="icon"></div>
                             </div>
                         </div>
                     </div>

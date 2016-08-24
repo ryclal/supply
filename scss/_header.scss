@@ -862,6 +862,11 @@ header
             .cart_header
             {
                 height: 19px;
+
+                i{
+                    color:#fff;
+                    font-size: 14px;
+                }
             }
 
             .cart_body
@@ -961,15 +966,23 @@ header
                 .back
                 {
                     float: left;
-                    color:#fff;
-                    @include font-details(12px,'OpenSans',400);
-                    line-height: 1.2;
                     vertical-align: top;
                     margin-top: 8px;
 
-                    i{
-
+                    i
+                    {
+                        font-size: 12px;
+                        color: #fff;
                     }
+
+                    span
+                    {
+                        color:#fff;
+                        @include font-details(12px,'OpenSans',400);
+                        line-height: 1.2;
+                        position: relative;
+                    }
+
                 }
 
                 .btn_checkout{

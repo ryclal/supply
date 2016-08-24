@@ -35,11 +35,15 @@ main{
                 line-height: 1.2;
                 display: inline-block;
             }
+
             .close_button
             {
                 position: absolute;
-                right: 10px;
-                top: 0;
+                right: 15px;
+                top: 12px;
+                width:16px;
+                height: 16px;
+                background: img_url('close_icon.png') no-repeat center;
             }
         }
 
@@ -105,10 +109,7 @@ main{
                 height: 36px;
                 @include margin_left_right(auto);
                 margin-bottom: 25px;
-
-                span{
-                    color:$green_0a;
-                }
+                background: img_url('confirmation.png') no-repeat center;
             }
 
             .title{
