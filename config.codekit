@@ -92,6 +92,42 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/create_boutique_step_1.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/create_boutique_step_1.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/create_boutique_step_2.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/create_boutique_step_2.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/create_boutique_step_3.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/create_boutique_step_3.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/create_boutique_step_4.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/create_boutique_step_4.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/css\/style.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -100,6 +136,39 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/img\/black_kids.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 321,
+		"inputAbbreviatedPath": "\/img\/black_kids.png",
+		"outputAbbreviatedPath": "\/img\/black_kids.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/black_men.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 292,
+		"inputAbbreviatedPath": "\/img\/black_men.png",
+		"outputAbbreviatedPath": "\/img\/black_men.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/black_woman.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 381,
+		"inputAbbreviatedPath": "\/img\/black_woman.png",
+		"outputAbbreviatedPath": "\/img\/black_woman.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/img\/blog_item.png": {
 		"fileType": 32768,
@@ -207,6 +276,17 @@
 		"initialSize": 1101,
 		"inputAbbreviatedPath": "\/img\/confirmation.png",
 		"outputAbbreviatedPath": "\/img\/confirmation.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/country.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 632,
+		"inputAbbreviatedPath": "\/img\/country.png",
+		"outputAbbreviatedPath": "\/img\/country.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -431,6 +511,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/red_kids.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 488,
+		"inputAbbreviatedPath": "\/img\/red_kids.png",
+		"outputAbbreviatedPath": "\/img\/red_kids.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/red_men.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 422,
+		"inputAbbreviatedPath": "\/img\/red_men.png",
+		"outputAbbreviatedPath": "\/img\/red_men.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/red_woman.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 586,
+		"inputAbbreviatedPath": "\/img\/red_woman.png",
+		"outputAbbreviatedPath": "\/img\/red_woman.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/safety.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -526,6 +639,50 @@
 		"initialSize": 502,
 		"inputAbbreviatedPath": "\/img\/social\/twitter.png",
 		"outputAbbreviatedPath": "\/img\/social\/twitter.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/social_page\/facebook.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1358,
+		"inputAbbreviatedPath": "\/img\/social_page\/facebook.png",
+		"outputAbbreviatedPath": "\/img\/social_page\/facebook.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/social_page\/instagram.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1544,
+		"inputAbbreviatedPath": "\/img\/social_page\/instagram.png",
+		"outputAbbreviatedPath": "\/img\/social_page\/instagram.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/social_page\/pinterest.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1652,
+		"inputAbbreviatedPath": "\/img\/social_page\/pinterest.png",
+		"outputAbbreviatedPath": "\/img\/social_page\/pinterest.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/social_page\/twitter.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1476,
+		"inputAbbreviatedPath": "\/img\/social_page\/twitter.png",
+		"outputAbbreviatedPath": "\/img\/social_page\/twitter.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -689,12 +846,127 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/libs\/jquery\/jquery_ui.js": {
+	"\/libs\/jquery_ui\/images\/ui-icons_444444_256x240.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7006,
+		"inputAbbreviatedPath": "\/libs\/jquery_ui\/images\/ui-icons_444444_256x240.png",
+		"outputAbbreviatedPath": "\/libs\/jquery_ui\/images\/ui-icons_444444_256x240.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/libs\/jquery_ui\/images\/ui-icons_555555_256x240.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7074,
+		"inputAbbreviatedPath": "\/libs\/jquery_ui\/images\/ui-icons_555555_256x240.png",
+		"outputAbbreviatedPath": "\/libs\/jquery_ui\/images\/ui-icons_555555_256x240.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/libs\/jquery_ui\/images\/ui-icons_777620_256x240.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4676,
+		"inputAbbreviatedPath": "\/libs\/jquery_ui\/images\/ui-icons_777620_256x240.png",
+		"outputAbbreviatedPath": "\/libs\/jquery_ui\/images\/ui-icons_777620_256x240.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/libs\/jquery_ui\/images\/ui-icons_777777_256x240.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7013,
+		"inputAbbreviatedPath": "\/libs\/jquery_ui\/images\/ui-icons_777777_256x240.png",
+		"outputAbbreviatedPath": "\/libs\/jquery_ui\/images\/ui-icons_777777_256x240.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/libs\/jquery_ui\/images\/ui-icons_cc0000_256x240.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4632,
+		"inputAbbreviatedPath": "\/libs\/jquery_ui\/images\/ui-icons_cc0000_256x240.png",
+		"outputAbbreviatedPath": "\/libs\/jquery_ui\/images\/ui-icons_cc0000_256x240.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/libs\/jquery_ui\/images\/ui-icons_ffffff_256x240.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6313,
+		"inputAbbreviatedPath": "\/libs\/jquery_ui\/images\/ui-icons_ffffff_256x240.png",
+		"outputAbbreviatedPath": "\/libs\/jquery_ui\/images\/ui-icons_ffffff_256x240.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/libs\/jquery_ui\/jquery-ui.min.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/libs\/jquery_ui\/jquery-ui.min.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/libs\/jquery_ui\/jquery-ui.min.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/libs\/jquery\/jquery_ui.js",
-		"outputAbbreviatedPath": "\/libs\/jquery\/min\/Jquery_ui.min.js",
+		"inputAbbreviatedPath": "\/libs\/jquery_ui\/jquery-ui.min.js",
+		"outputAbbreviatedPath": "\/libs\/jquery_ui\/min\/jquery-ui.min.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/libs\/semantic\/css\/dropdown.min.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/libs\/semantic\/css\/dropdown.min.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/libs\/semantic\/css\/transition.min.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/libs\/semantic\/css\/transition.min.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/libs\/semantic\/js\/dropdown.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/libs\/semantic\/js\/dropdown.min.js",
+		"outputAbbreviatedPath": "\/libs\/semantic\/js\/min\/dropdown.min.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/libs\/semantic\/js\/transition.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/libs\/semantic\/js\/transition.min.js",
+		"outputAbbreviatedPath": "\/libs\/semantic\/js\/min\/transition.min.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -723,6 +995,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/mens_page.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/owner_boutique_page_empty.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/owner_boutique_page_empty.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

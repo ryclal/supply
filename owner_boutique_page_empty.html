@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Supply Apparel | Checkout </title>
+    <title>Supply Apparel </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -18,12 +18,8 @@
                 </a>
                 <div class="auth_section">
                     <a href="#" class="btn_create_boutique">Create a boutique</a>
-
-                    <a href="#" class="btn_auth">User Name</a>
-                    <a href="index.html" class="btn_auth btn_logout">Logout</a>
-
-                    <a href="#" class="btn_auth hidden" data-toggle="modal" data-target="#registerModal">Sign Up</a>
-                    <a href="#" class="btn_auth hidden" data-toggle="modal" data-target="#loginModal">Login</a>
+                    <a href="#" class="btn_auth" data-toggle="modal" data-target="#registerModal">Sign Up</a>
+                    <a href="#" class="btn_auth" data-toggle="modal" data-target="#loginModal">Login</a>
                 </div>
             </div>
         </div>
@@ -59,10 +55,7 @@
                         </ul>
                     </li>
                     <li class="icons"><a href="#"><span class="wishlist_icon" title="Wishlist"></span></a></li>
-                    <li class="icons"><a href="#" class="cart_open_trigger"><span class="cart_icon has_product"
-                                                                                  data-product="1"
-                                                                                  title="Cart"></span></a>
-                    </li>
+                    <li class="icons"><a href="#"><span class="cart_icon" title="Cart"></span></a></li>
                 </ul>
             </div>
             <div class="collapse navbar-collapse" id="website_navbar_collapse">
@@ -87,9 +80,7 @@
                         </ul>
                     </li>
                     <li class="icons"><a href="#"><span class="wishlist_icon" title="Wishlist"></span></a></li>
-                    <li class="icons"><a href="#" class="cart_open_trigger"><span class="cart_icon has_product"
-                                                                                  data-product="1"
-                                                                                  title="Cart"></span></a></li>
+                    <li class="icons"><a href="#"><span class="cart_icon" title="Cart"></span></a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-left">
                     <li class="dropdown women_dropdown">
@@ -186,7 +177,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="dropdown boutiques_dropdown">
+                    <li class="dropdown boutiques_dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                            aria-haspopup="true" aria-expanded="false">Boutiques</a>
                         <ul class="dropdown-menu">
@@ -276,82 +267,86 @@
             </div>
         </div>
     </nav>
-    <div class="cart_block">
+</header>
+<main class="boutique_empty_page">
+    <section class="section_1 owner_menu">
         <div class="container">
-            <div class="cart_modal">
-                <button type="button" class="close" aria-label="Close"><span
-                        aria-hidden="true">&times;</span></button>
-                <div class="cart_header">
-                    <i class="cart fa fa-shopping-cart"></i>
-                </div>
-                <div class="cart_body">
-                    <div class="cart_elements">
-                        <div class="t_head">
-                            <span>Your Order</span>
-                            <span>Price</span>
-                        </div>
-                        <div class="t_body">
-                            <div class="name">
-                                <div class="photo"></div>
-                                <div class="product_name">Hamilton Chic Dress</div>
-                            </div>
-                            <div class="price">$45</div>
-                        </div>
-                        <div class="t_body">
-                            <div class="name">
-                                <div class="photo"></div>
-                                <div class="product_name">Hamilton Chic Dress</div>
-                            </div>
-                            <div class="price">$45</div>
-                        </div>
-                        <div class="t_body">
-                            <div class="name">
-                                <div class="photo"></div>
-                                <div class="product_name">Hamilton Chic Dress</div>
-                            </div>
-                            <div class="price">$45</div>
-                        </div>
-                    </div>
-                    <div class="total_price text-right">Total<span>$70</span></div>
-                </div>
-                <div class="cart_footer">
-                    <a href="#" class="back">
-                        <i class="fa fa-angle-left"></i>
-                        <span>Continue Shopping</span>
-                    </a>
-                    <a href="checkout_step_1.html" class="btn_checkout">Checkout</a>
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0">
+
                 </div>
             </div>
         </div>
-    </div>
-</header>
-<main class="checkout checkout_step_3">
-    <section class="section_1">
+    </section>
+    <section class="section_2">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
-                    <div class="row">
-                        <div class="checkout_block">
-                            <div class="checkout_header">
-                                <div class="title">Checkout</div>
-                                <div class="breadcrumb_block">
-                                    <div class="step">Shipping</div>
-                                    >
-                                    <div class="step">Payment Method</div>
-                                    >
-                                    <div class="step active">Cofirmation</div>
+                <h2>Bangkok TShirts</h2>
+                <h5>Bangkok TShirts is a luxury retail chain of high quality tshirts that are available to be purchased
+                    anywhere around the world <br/>
+                    The brand has won many awards and is one of the premier apparel brands in the world.</h5>
+            </div>
+            <div class="row">
+                <div class="social_block">
+                    <a href="#" class="social insta"></a>
+                    <a href="#" class="social fb"></a>
+                    <a href="#" class="social tw"></a>
+                    <a href="#" class="social pt"></a>
+                </div>
+                <div class="followers_number">0 Followers</div>
+            </div>
+            <div class="row">
+                <ul class="nav nav-tabs boutique_tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#products_tab" aria-controls="products" role="tab"
+                           data-toggle="tab">Products</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#look_books" aria-controls="look" role="tab" data-toggle="tab">Look Books</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#blog_tab" aria-controls="blog" role="tab"
+                           data-toggle="tab">Blog</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#review_tab" aria-controls="review" role="tab"
+                           data-toggle="tab">Reviews</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0">
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="products_tab">
+                            <h4>Starting by adding apparel to your collection</h4>
+                            <div class="row">
+                                <div class="item empty col-md-3 col-sm-4 col-xs-6">
+                                    <div class="add_item"></div>
                                 </div>
-                                <div class="close_button"><span></span></div>
                             </div>
-                            <div class="confirmation_block">
-                                <div class="icon"><span></span></div>
-                                <div class="title">Thank you for shopping</div>
-                                <div class="desc">
-                                    Your order has been sent to the boutique and you should receive a confirmation email
-                                    soon. Once your order has been shipped, you will be sent a tracking number to track
-                                    your order. Continue shopping for the best apparel!
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="look_books">
+                            <h4>Starting by adding apparel to your collection</h4>
+                            <div class="row">
+                                <div class="item empty col-md-3 col-sm-4 col-xs-6">
+                                    <div class="add_item"></div>
                                 </div>
-                                <a href="contact_us.html" class="btn_step">Continue</a>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="blog_tab">
+                            <h4>Starting by adding apparel to your collection</h4>
+                            <div class="row">
+                                <div class="item empty col-md-3 col-sm-4 col-xs-6">
+                                    <div class="add_item"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="review_tab">
+                        </div>
+                        <h4>Starting by adding apparel to your collection</h4>
+                        <div class="row">
+                            <div class="item empty col-md-3 col-sm-4 col-xs-6">
+                                <div class="add_item"></div>
                             </div>
                         </div>
                     </div>

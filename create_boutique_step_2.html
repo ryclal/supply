@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Supply Apparel | Checkout </title>
+    <title>Supply Apparel</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -18,12 +18,8 @@
                 </a>
                 <div class="auth_section">
                     <a href="#" class="btn_create_boutique">Create a boutique</a>
-
-                    <a href="#" class="btn_auth">User Name</a>
-                    <a href="index.html" class="btn_auth btn_logout">Logout</a>
-
-                    <a href="#" class="btn_auth hidden" data-toggle="modal" data-target="#registerModal">Sign Up</a>
-                    <a href="#" class="btn_auth hidden" data-toggle="modal" data-target="#loginModal">Login</a>
+                    <a href="#" class="btn_auth" data-toggle="modal" data-target="#registerModal">Sign Up</a>
+                    <a href="#" class="btn_auth" data-toggle="modal" data-target="#loginModal">Login</a>
                 </div>
             </div>
         </div>
@@ -59,10 +55,7 @@
                         </ul>
                     </li>
                     <li class="icons"><a href="#"><span class="wishlist_icon" title="Wishlist"></span></a></li>
-                    <li class="icons"><a href="#" class="cart_open_trigger"><span class="cart_icon has_product"
-                                                                                  data-product="1"
-                                                                                  title="Cart"></span></a>
-                    </li>
+                    <li class="icons"><a href="#"><span class="cart_icon" data-product="1" title="Cart"></span></a></li>
                 </ul>
             </div>
             <div class="collapse navbar-collapse" id="website_navbar_collapse">
@@ -87,9 +80,7 @@
                         </ul>
                     </li>
                     <li class="icons"><a href="#"><span class="wishlist_icon" title="Wishlist"></span></a></li>
-                    <li class="icons"><a href="#" class="cart_open_trigger"><span class="cart_icon has_product"
-                                                                                  data-product="1"
-                                                                                  title="Cart"></span></a></li>
+                    <li class="icons"><a href="#"><span class="cart_icon" data-product="1" title="Cart"></span></a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-left">
                     <li class="dropdown women_dropdown">
@@ -276,83 +267,43 @@
             </div>
         </div>
     </nav>
-    <div class="cart_block">
-        <div class="container">
-            <div class="cart_modal">
-                <button type="button" class="close" aria-label="Close"><span
-                        aria-hidden="true">&times;</span></button>
-                <div class="cart_header">
-                    <i class="cart fa fa-shopping-cart"></i>
-                </div>
-                <div class="cart_body">
-                    <div class="cart_elements">
-                        <div class="t_head">
-                            <span>Your Order</span>
-                            <span>Price</span>
-                        </div>
-                        <div class="t_body">
-                            <div class="name">
-                                <div class="photo"></div>
-                                <div class="product_name">Hamilton Chic Dress</div>
-                            </div>
-                            <div class="price">$45</div>
-                        </div>
-                        <div class="t_body">
-                            <div class="name">
-                                <div class="photo"></div>
-                                <div class="product_name">Hamilton Chic Dress</div>
-                            </div>
-                            <div class="price">$45</div>
-                        </div>
-                        <div class="t_body">
-                            <div class="name">
-                                <div class="photo"></div>
-                                <div class="product_name">Hamilton Chic Dress</div>
-                            </div>
-                            <div class="price">$45</div>
-                        </div>
-                    </div>
-                    <div class="total_price text-right">Total<span>$70</span></div>
-                </div>
-                <div class="cart_footer">
-                    <a href="#" class="back">
-                        <i class="fa fa-angle-left"></i>
-                        <span>Continue Shopping</span>
-                    </a>
-                    <a href="checkout_step_1.html" class="btn_checkout">Checkout</a>
-                </div>
-            </div>
-        </div>
-    </div>
 </header>
-<main class="checkout checkout_step_3">
+<main class="owner_create_step_2">
     <section class="section_1">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+                <div class="col-lg-10 col-lg-offset-1 col-md-12 col-sm-offset-0">
                     <div class="row">
-                        <div class="checkout_block">
-                            <div class="checkout_header">
-                                <div class="title">Checkout</div>
-                                <div class="breadcrumb_block">
-                                    <div class="step">Shipping</div>
-                                    >
-                                    <div class="step">Payment Method</div>
-                                    >
-                                    <div class="step active">Cofirmation</div>
-                                </div>
-                                <div class="close_button"><span></span></div>
+                        <div class="col-md-3 left_bar">
+                            <div class="menu_block">
+                                <div class="item active"><span>Profile</span> <i class="icon"></i></div>
+                                <div class="item"><span>Contact Details</span><i class="icon"></i></div>
                             </div>
-                            <div class="confirmation_block">
-                                <div class="icon"><span></span></div>
-                                <div class="title">Thank you for shopping</div>
-                                <div class="desc">
-                                    Your order has been sent to the boutique and you should receive a confirmation email
-                                    soon. Once your order has been shipped, you will be sent a tracking number to track
-                                    your order. Continue shopping for the best apparel!
-                                </div>
-                                <a href="contact_us.html" class="btn_step">Continue</a>
+                        </div>
+                        <div class="col-md-9 right_bar">
+                            <h2>Your Boutique's Profile</h2>
+                            <h5>Introduce your boutique to our community</h5>
+                            <div class="progress_block">
+                                <span>0% completed</span>
+                                <div class="progress_input step_1"></div>
                             </div>
+                            <form action="" method="post" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <h3>BOUTIQUE NAME</h3>
+                                    <input type="text" name="boutique_name" id="boutique_name"
+                                           placeholder="Give your boutique a unique name"/>
+                                </div>
+                                <div class="form-group">
+                                    <h3>ENTER A DESCRIPTION FOR YOUR BOUTIQUE</h3>
+                                    <textarea name="boutique_description" id="boutique_description"></textarea>
+                                </div>
+                                <div class="form-group file_block">
+                                    <h3>UPLOAD A COVER PHOTO FOR YOUR BOUTIQUE (minimum size 1440 x 500 px)</h3>
+                                    <label for="boutique_photo"></label>
+                                    <input type="file" name="photo" id="boutique_photo" hidden/>
+                                </div>
+                                <a href="create_boutique_step_3.html" class="btn-step">Next</a>
+                            </form>
                         </div>
                     </div>
                 </div>

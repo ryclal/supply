@@ -1,4 +1,6 @@
 //Utilities import
+@import "../libs/jquery_ui/jquery-ui.min.css";
+@import "../libs/bootstrap/css/bootstrap.min.css";
 @import "variables";
 @import "utils";
 
@@ -53,6 +55,7 @@ a:active
 
 input,textarea,select
 {
+    //@include box-shadow(0 0 0px 1000px #fff inset);
     &:focus{
         outline:0!important;
     }

@@ -246,8 +246,40 @@ $('.slider_block .first_value').text("$" + slider_b.slider("values", 0));
 $('.slider_block .second_value').text("$" + slider_b.slider("values", 1));
 
 
-$("#filter_select,#filter_select_1,#checkout_select_step_1").selectmenu();
+$("#filter_select,#filter_select_1,#checkout_select_step_1,#create_boutique_country,#country_prefix").selectmenu();
 
+//Boutique Type select
+    $('.boutique_type_select .type').on('click',function()
+    {
+        var item = $(this),
+            value = item.attr('data-type');
+        $('.boutique_type_select .type.active').removeClass('active');
+        item.toggleClass('active');
+
+        if ($(this).hasClass('active'))
+        {
+            $('.boutique_type_select #boutique_type').val(value);
+        }
+        else {
+            $('.boutique_type_select #boutique_type').val("");
+        }
+    });
+//Product type select
+    $('.product_type_select .type').on('click',function()
+    {
+        var item = $(this),
+            value = item.attr('data-type');
+        $('.product_type_select .type.active').removeClass('active');
+        item.toggleClass('active');
+
+        if ($(this).hasClass('active'))
+        {
+            $('.product_type_select #product_type').val(value);
+        }
+        else {
+            $('.product_type_select #product_type').val("");
+        }
+    });
 
 //Modal open
 $('.open_modal').on('click', function () {
