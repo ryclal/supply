@@ -5,10 +5,175 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Supply Apparel</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div id="loginModal" class="modal fade login_modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <a href="#" class="btn_facebook">
+                    <i></i>
+                    <span>Log in with Facebook</span>
+                </a>
+            </div>
+            <div class="form-group">
+                <a href="#" class="btn_google">
+                    <i></i>
+                    <span>Log in with Google</span>
+                </a>
+            </div>
+            <div class="form-group">
+                <div class="divider_line">or</div>
+            </div>
+            <div class="form-group email_block">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Email Address" name="email">
+                    <div class="input-group-addon"><i class="email_icon"></i></div>
+                </div>
+            </div>
+            <div class="form-group password_block">
+                <div class="input-group">
+                    <input type="password" class="form-control" placeholder="Password" name="password">
+                    <div class="input-group-addon"><i class="password_icon"></i></div>
+                </div>
+            </div>
+            <div class="form-group forgot_pass_block">
+                <div class="checkbox">
+                    <input name="remember" id="check_item" type="checkbox">
+                    <label for="check_item">Remember me</label>
+                </div>
+                <a href="#" class="btn_forgot_pass fourth_modal open_modal" data-modal="loginModal">Forgot
+                    password?</a>
+            </div>
+            <div class="form-group submit_block">
+                <button type="submit" class="btn_login">Log In</button>
+            </div>
+            <div class="form-group sign_up_block">
+                <p>Don't have an account?</p>
+                <a href="#" class="btn_signup seconds_modal open_modal" data-modal="loginModal">Sign Up</a>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="registerModal" class="modal fade register_modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <a href="#" class="btn_facebook">
+                    <i></i>
+                    <span>Log in with Facebook</span>
+                </a>
+            </div>
+            <div class="form-group">
+                <a href="#" class="btn_google">
+                    <i></i>
+                    <span>Log in with Google</span>
+                </a>
+            </div>
+            <div class="form-group">
+                <div class="divider_line">or</div>
+            </div>
+            <div class="form-group submit_block">
+                <a href="#" data-modal="registerModal" class="btn_login third_modal open_modal">Sign up with email</a>
+            </div>
+            <div class="form-group agrement_block">
+                <p>
+                    By signing up, I agree to Supply Apparel’s
+                    <a href="#">Terms of Service</a>,
+                    <a href="#">Payment Terms</a>, <a href="#">Privacy Policy</a>, and <a href="#">Refund Policy</a>.
+                </p>
+            </div>
+            <div class="form-group sign_up_block">
+                <p>Already a member?</p>
+                <a href="#" data-modal="registerModal" class="btn_signup first_modal open_modal">Log in</a>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="register_mail_Modal" class="modal fade register_mail_modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="form-group first_block">
+                <p>
+                    Sign up with
+                    <a href="#">Facebook</a> or
+                    <a href="#">Google</a>
+                </p>
+            </div>
+            <div class="form-group">
+                <div class="divider_line">or</div>
+            </div>
+            <div class="form-group name_block">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Full name" name="name">
+                    <div class="input-group-addon"><i class="name_icon"></i></div>
+                </div>
+            </div>
+            <div class="form-group email_block">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Email Address" name="email">
+                    <div class="input-group-addon"><i class="email_icon"></i></div>
+                </div>
+            </div>
+            <div class="form-group password_block">
+                <div class="input-group">
+                    <input type="password" class="form-control" placeholder="Password" name="password">
+                    <div class="input-group-addon"><i class="password_icon"></i></div>
+                </div>
+            </div>
+            <div class="form-group date_block">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Data of Birth" name="birthdate">
+                    <div class="input-group-addon"><i class="date_icon"></i></div>
+                </div>
+            </div>
+            <div class="form-group agrement_block">
+                <p>
+                    By signing up, I agree to Supply Apparel’s
+                    <a href="#">Terms of Service</a>,
+                    <a href="#">Payment Terms</a>, <a href="#">Privacy Policy</a>, and <a href="#">Refund Policy</a>.
+                </p>
+            </div>
+            <div class="form-group submit_block">
+                <button type="submit" class="btn_login">Sign up with email</button>
+            </div>
+
+            <div class="form-group sign_up_block">
+                <p>Already a member?</p>
+                <a href="#" data-modal="register_mail_Modal" class="btn_signup first_modal open_modal">Log in</a>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="reset_password_modal" class="modal fade reset_password_modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="form-group title_block">
+                <span>Reset Password</span>
+            </div>
+            <div class="form-group first_block">
+                <p>
+                    Enter the email address associated with your account, and we’ll email you a link to reset your
+                    password.
+                </p>
+            </div>
+            <div class="form-group email_block">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Email Address" name="email">
+                    <div class="input-group-addon"><i class="email_icon"></i></div>
+                </div>
+            </div>
+            <div class="form-group sign_up_block">
+                <button type="button" class="btn_login btn_send">Send Reset Link</button>
+                <div class="loader"></div>
+                <a href="reset__password_page.html" class="btn_login btn_sent">
+                    <i class="glyphicon glyphicon-ok"></i> Email Sent
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
 <header class="index_page">
     <div class="container-fluid website_head">
         <div class="row">
@@ -268,80 +433,124 @@
         </div>
     </nav>
 </header>
-<main class="owner_create_step_4">
+<main class="owner_landing_page">
+    <section class="section_0 owner_menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0">
+                    <ul class="list-inline account_menu">
+                        <li>
+                            <div class="icon"></div>
+                        </li>
+                        <li class="active"><a href="#"><i class="boutique"></i><span>Boutique</span></a></li>
+                        <li><a href="#"><i class="orders"></i><span>Orders</span></a></li>
+                        <li><a href="#"><i class="messages"></i><span>Messages</span></a></li>
+                        <li><a href="#"><i class="settings"></i><span>Settings</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="section_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-md-offset-7 col-xs-12 col-xs-offset-0">
+                    <div class="content_block">
+                        <h2>Sell your Products to Millions Around The World</h2>
+                        <p>
+                            Setup your very own online store in less than a minute and increase your earning potential
+                            with our thriving community of buyers.
+                        </p>
+                        <a href="create_boutique_step_1.html" class="btn_create_boutique">Create A Boutique</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section_2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 col-md-12 col-sm-offset-0">
                     <div class="row">
-                        <h2>Membership Packages</h2>
-                        <h5>You're almost there! Select the package that best suits you setup your boutique</h5>
-                        <div class="col-md-4 col-sm-6 col-xs-6 item">
-                            <div class="item_block">
-                                <div class="item_header free">
-                                    Free
-                                </div>
-                                <div class="item_body">
-                                    <div class="plan_features">
-                                        Unlimited products
-                                    </div>
-                                    <div class="plan_features">
-                                        1 look book
-                                    </div>
-                                    <div class="plan_features">
-                                        9am - 6pm customer support
-                                    </div>
-                                    <div class="plan_features">
-                                        <span>20% commission per purchase</span>
-                                        <a href="owner_boutique_page_empty.html" class="btn-select">Select</a>
-                                    </div>
-                                </div>
+                        <div class="col-sm-4">
+                            <div class="information_item">
+                                <div class="icon safety"></div>
+                                <h4>Trust & Safety</h4>
+                                <p>We have your best interest and financial safety in mind so you can sell on our
+                                    marketplace
+                                    effortlessly.</p>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6 col-xs-6 item">
-                            <div class="item_block">
-                                <div class="item_header">
-                                    <h3>$10</h3>
-                                    <p>per month</p>
-                                </div>
-                                <div class="item_body">
-                                    <div class="plan_features">
-                                        Unlimited products
-                                    </div>
-                                    <div class="plan_features">
-                                        3 look books
-                                    </div>
-                                    <div class="plan_features">
-                                        24 x 7 customer support
-                                    </div>
-                                    <div class="plan_features">
-                                        <span>15% commission per purchase</span>
-                                        <a href="#" class="btn-select">Select</a>
-                                    </div>
-                                </div>
+                        <div class="col-sm-4">
+                            <div class="information_item">
+                                <div class="icon logistics"></div>
+                                <h4>100% Logistics Assistance</h4>
+                                <p>
+                                    We help you update the logistics of every sale, keeping you and your customers
+                                    informed
+                                    throughout the process.
+                                </p>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6 col-xs-6 item">
+                        <div class="col-sm-4">
+                            <div class="information_item">
+                                <div class="icon secure"></div>
+                                <h4>Secure Payments</h4>
+                                <p>
+                                    Every payment made on our platform is secured so you can grow your business while we
+                                    do all
+                                    the heavy lifting.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section_3">
+        <div class="container">
+            <div class="row">
+                <h2>Image Guidelines</h2>
+                <h5>It’s easy to create a boutique and begin selling on our marketplace.<br/>
+                    Use our simple image guidelines below when you’re uploading your apparel.
+                </h5>
+                <div class="col-lg-10 col-lg-offset-1 col-md-12 col-sm-offset-0">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 item">
                             <div class="item_block">
                                 <div class="item_header">
-                                    <h3>$30</h3>
-                                    <p>per month</p>
+                                    <i class="icon"></i>
+                                    <span>Apparel on models with natural background</span>
                                 </div>
-                                <div class="item_body">
-                                    <div class="plan_features">
-                                        Unlimited products
-                                    </div>
-                                    <div class="plan_features">
-                                        Unlimited look books
-                                    </div>
-                                    <div class="plan_features">
-                                        24 x 7 customer support
-                                    </div>
-                                    <div class="plan_features">
-                                        <span>0% commission per purchase</span>
-                                        <a href="#" class="btn-select">Select</a>
-                                    </div>
+                                <div class="item_body"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4  col-sm-6 item">
+                            <div class="item_block">
+                                <div class="item_header">
+                                    <i class="icon"></i>
+                                    <span>Apparel on models with studio background</span>
                                 </div>
+                                <div class="item_body"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 item">
+                            <div class="item_block">
+                                <div class="item_header">
+                                    <i class="icon"></i>
+                                    <span>Apparel on models with studio background</span>
+                                </div>
+                                <div class="item_body"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="big_block">
+                                <h2>Increase your earning potential.</h2>
+                                <a href="create_boutique_step_1.html" class="btn_create_boutique">Create A Boutique</a>
+                                <div class="icon"></div>
                             </div>
                         </div>
                     </div>

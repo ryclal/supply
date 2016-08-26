@@ -190,14 +190,21 @@
 }
 
 
-@mixin tab-content($has_image,$image:null) {
+@mixin tab-content($has_image,$image:null,$action:false) {
     .item_block
     {
         position: relative;
         height: 372px;
         width: 220px;
         @include margin_left_right(auto);
-        margin-bottom: 48px;
+        @if ($action == false)
+        {
+            margin-bottom: 48px;
+        }
+        @else
+        {
+            margin-bottom: 25px;
+        }
 
         .item_header
         {
@@ -407,17 +414,68 @@
         }
 
     }
+    .item_actions
+    {
+        text-align: center;
+        @if ($action == true)
+        {
+            margin-bottom: 48px;
+        }
+        .btn-group
+        {
+            background: transparent;
+            @include border-radius(8px);
+            border:1px solid $grey_97;
+            width: 101px;
+
+            .btn_edit
+            {
+                display: inline-block;
+                padding: 5px 15px 3px 16px;
+                border-right:1px solid $grey_97;
+
+                i{
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    background: img_url('edit.png') no-repeat center;
+                    background-size: contain;
+                }
+            }
+            .btn_delete
+            {
+                display: inline-block;
+                padding: 5px 16px 3px 15px;
+
+                i{
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    background: img_url('delete.png') no-repeat center;
+                    background-size: contain;
+                }
+            }
+        }
+    }
 }
 
 
-@mixin blog-content($has_image,$image:null) {
+@mixin blog-content($has_image,$image:null,$action:false) {
     .blog_item
     {
-        margin: 0 auto 50px;
+        margin: 0 auto;
         height: 340px;
         width: 220px;
         position: relative;
         border: 1px solid $grey_97;
+        @if ($action == false)
+        {
+            margin-bottom: 50px;
+        }
+        @else
+        {
+            margin-bottom: 25px;
+        }
 
         .picture_block
         {
@@ -457,6 +515,50 @@
                 text-align: center;
             }
 
+        }
+    }
+
+    .item_actions
+    {
+        text-align: center;
+        @if ($action == true)
+        {
+            margin-bottom: 50px;
+        }
+        .btn-group
+        {
+            background: transparent;
+            @include border-radius(8px);
+            border:1px solid $grey_97;
+            width: 101px;
+
+            .btn_edit
+            {
+                display: inline-block;
+                padding: 5px 15px 3px 16px;
+                border-right:1px solid $grey_97;
+
+                i{
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    background: img_url('edit.png') no-repeat center;
+                    background-size: contain;
+                }
+            }
+            .btn_delete
+            {
+                display: inline-block;
+                padding: 5px 16px 3px 15px;
+
+                i{
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    background: img_url('delete.png') no-repeat center;
+                    background-size: contain;
+                }
+            }
         }
     }
 }
@@ -560,12 +662,20 @@
 }
 
 
-@mixin look_tab-content($has_image,$image:null) {
+@mixin look_tab-content($has_image,$image:null,$action:false) {
     .look_item
     {
-        margin: 0 auto 52px;
+        margin: 0 auto;
         height: 317px;
         width: 300px;
+        @if ($action == false)
+        {
+            margin-bottom: 52px;
+        }
+        @else
+        {
+            margin-bottom: 25px;
+        }
 
         .picture_block
         {
@@ -610,6 +720,50 @@
                     line-height: 1.2;
                     color: #fff;
                     text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    .item_actions
+    {
+        text-align: center;
+        @if ($action == true)
+        {
+            margin-bottom: 52px;
+        }
+        .btn-group
+        {
+            background: transparent;
+            @include border-radius(8px);
+            border:1px solid $grey_97;
+            width: 101px;
+
+            .btn_edit
+            {
+                display: inline-block;
+                padding: 5px 15px 3px 16px;
+                border-right:1px solid $grey_97;
+
+                i{
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    background: img_url('edit.png') no-repeat center;
+                    background-size: contain;
+                }
+            }
+            .btn_delete
+            {
+                display: inline-block;
+                padding: 5px 16px 3px 15px;
+
+                i{
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    background: img_url('delete.png') no-repeat center;
+                    background-size: contain;
                 }
             }
         }

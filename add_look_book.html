@@ -4,22 +4,30 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Supply Apparel</title>
+    <title>Supply Apparel </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="index_page">
-    <div class="container-fluid website_head">
+    <div class="container-fluid website_head owner_section">
         <div class="row">
             <div class="container">
                 <a href="index.html">
                     <div class="logo"></div>
                 </a>
                 <div class="auth_section">
+                    <a href="#" class="btn_boutique_name">Bangkok TShirts</a>
                     <a href="#" class="btn_create_boutique">Create a boutique</a>
-                    <a href="#" class="btn_auth" data-toggle="modal" data-target="#registerModal">Sign Up</a>
-                    <a href="#" class="btn_auth" data-toggle="modal" data-target="#loginModal">Login</a>
+
+                    <div class="logged">
+                        <a href="#" class="btn_auth">User Name</a>
+                        <a href="index.html" class="btn_auth btn_logout">Logout</a>
+                    </div>
+
+
+                    <a href="#" class="btn_auth hidden" data-toggle="modal" data-target="#registerModal">Sign Up</a>
+                    <a href="#" class="btn_auth hidden" data-toggle="modal" data-target="#loginModal">Login</a>
                 </div>
             </div>
         </div>
@@ -55,7 +63,10 @@
                         </ul>
                     </li>
                     <li class="icons"><a href="#"><span class="wishlist_icon" title="Wishlist"></span></a></li>
-                    <li class="icons"><a href="#"><span class="cart_icon" data-product="1" title="Cart"></span></a></li>
+                    <li class="icons"><a href="#" class="cart_open_trigger"><span class="cart_icon has_product"
+                                                                                  data-product="1"
+                                                                                  title="Cart"></span></a>
+                    </li>
                 </ul>
             </div>
             <div class="collapse navbar-collapse" id="website_navbar_collapse">
@@ -80,7 +91,9 @@
                         </ul>
                     </li>
                     <li class="icons"><a href="#"><span class="wishlist_icon" title="Wishlist"></span></a></li>
-                    <li class="icons"><a href="#"><span class="cart_icon" data-product="1" title="Cart"></span></a></li>
+                    <li class="icons"><a href="#" class="cart_open_trigger"><span class="cart_icon has_product"
+                                                                                  data-product="1"
+                                                                                  title="Cart"></span></a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-left">
                     <li class="dropdown women_dropdown">
@@ -267,84 +280,180 @@
             </div>
         </div>
     </nav>
-</header>
-<main class="owner_create_step_4">
-    <section class="section_1">
+    <div class="cart_block">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 col-md-12 col-sm-offset-0">
-                    <div class="row">
-                        <h2>Membership Packages</h2>
-                        <h5>You're almost there! Select the package that best suits you setup your boutique</h5>
-                        <div class="col-md-4 col-sm-6 col-xs-6 item">
-                            <div class="item_block">
-                                <div class="item_header free">
-                                    Free
-                                </div>
-                                <div class="item_body">
-                                    <div class="plan_features">
-                                        Unlimited products
-                                    </div>
-                                    <div class="plan_features">
-                                        1 look book
-                                    </div>
-                                    <div class="plan_features">
-                                        9am - 6pm customer support
-                                    </div>
-                                    <div class="plan_features">
-                                        <span>20% commission per purchase</span>
-                                        <a href="owner_boutique_page_empty.html" class="btn-select">Select</a>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="cart_modal">
+                <button type="button" class="close" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <div class="cart_header">
+                    <i class="cart"></i>
+                </div>
+                <div class="cart_body">
+                    <div class="cart_elements">
+                        <div class="t_head">
+                            <span>Your Order</span>
+                            <span>Price</span>
                         </div>
-                        <div class="col-md-4 col-sm-6 col-xs-6 item">
-                            <div class="item_block">
-                                <div class="item_header">
-                                    <h3>$10</h3>
-                                    <p>per month</p>
-                                </div>
-                                <div class="item_body">
-                                    <div class="plan_features">
-                                        Unlimited products
-                                    </div>
-                                    <div class="plan_features">
-                                        3 look books
-                                    </div>
-                                    <div class="plan_features">
-                                        24 x 7 customer support
-                                    </div>
-                                    <div class="plan_features">
-                                        <span>15% commission per purchase</span>
-                                        <a href="#" class="btn-select">Select</a>
-                                    </div>
-                                </div>
+                        <div class="t_body">
+                            <div class="name">
+                                <div class="photo"></div>
+                                <div class="product_name">Hamilton Chic Dress</div>
                             </div>
+                            <div class="price">$45</div>
                         </div>
-                        <div class="col-md-4 col-sm-6 col-xs-6 item">
-                            <div class="item_block">
-                                <div class="item_header">
-                                    <h3>$30</h3>
-                                    <p>per month</p>
-                                </div>
-                                <div class="item_body">
-                                    <div class="plan_features">
-                                        Unlimited products
-                                    </div>
-                                    <div class="plan_features">
-                                        Unlimited look books
-                                    </div>
-                                    <div class="plan_features">
-                                        24 x 7 customer support
-                                    </div>
-                                    <div class="plan_features">
-                                        <span>0% commission per purchase</span>
-                                        <a href="#" class="btn-select">Select</a>
-                                    </div>
-                                </div>
+                        <div class="t_body">
+                            <div class="name">
+                                <div class="photo"></div>
+                                <div class="product_name">Hamilton Chic Dress</div>
                             </div>
+                            <div class="price">$45</div>
+                        </div>
+                        <div class="t_body">
+                            <div class="name">
+                                <div class="photo"></div>
+                                <div class="product_name">Hamilton Chic Dress</div>
+                            </div>
+                            <div class="price">$45</div>
                         </div>
                     </div>
+                    <div class="total_price text-right">Total<span>$70</span></div>
+                </div>
+                <div class="cart_footer">
+                    <a href="#" class="back">
+                        Continue Shopping
+                    </a>
+                    <a href="checkout_step_1.html" class="btn_checkout">Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="add_look_book">
+    <section class="section_1">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <form action="" method="post">
+                        <div class="row">
+                            <div class="container">
+                                <div class="row">
+                                    <a href="owner_boutique_page_empty.html" class="back">
+                                        <i class="fa fa-angle-left"></i>
+                                        <span>Back to my account</span>
+                                    </a>
+                                    <div class="form-group name_block">
+                                        <h3>GIVE YOUR LOOK BOOK A NAME</h3>
+                                        <input type="text" name="name" id="name"/>
+                                        <div class="upload_block">
+                                            <input type="file" name="photo" id="look_book_file">
+                                            <label for="look_book_file">Upload Look Book</label>
+                                            <span>PDF / WORD</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group description_block">
+                                        <h3>ENTER A DESCRIPTION FOR YOUR LOOK BOOK (300
+                                            characters)</h3>
+                                        <textarea name="description" id="description"></textarea>
+                                    </div>
+                                    <div class="form-group gender_block">
+                                        <div class="col-xs-12">
+                                            <h3>Gender</h3>
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input name="filter" id="genre_item_1" type="checkbox">
+                                                        <label for="genre_item_1">Women</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input name="filter" id="genre_item_2" type="checkbox">
+                                                        <label for="genre_item_2">Men</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input name="filter" id="genre_item_3" type="checkbox">
+                                                        <label for="genre_item_3">Kids</label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="form-group category_block">
+                                        <h3>Category</h3>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input name="filter" id="product_item_1" type="checkbox">
+                                                    <label for="product_item_1">Coat's & Jackets</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input name="filter" id="product_item_2" type="checkbox">
+                                                    <label for="product_item_2">Dresses</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input name="filter" id="product_item_3" type="checkbox">
+                                                    <label for="product_item_3">Jeans</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input name="filter" id="product_item_4" type="checkbox">
+                                                    <label for="product_item_4">Jumpsuits</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input name="filter" id="product_item_10" type="checkbox">
+                                                    <label for="product_item_10">Shirts & Blouses</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input name="filter" id="product_item_9" type="checkbox">
+                                                    <label for="product_item_9">Tops & T-Shirts</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input name="filter" id="product_item_5" type="checkbox">
+                                                    <label for="product_item_5">Trousers & Leggings</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input name="filter" id="product_item_6" type="checkbox">
+                                                    <label for="product_item_6">Shorts & Skirts</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input name="filter" id="product_item_7" type="checkbox">
+                                                    <label for="product_item_7">Lingerie & Nightware</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input name="remember" id="product_item_8" type="checkbox">
+                                                    <label for="product_item_8">Shoes</label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="buttons_block">
+                                        <a href="owner_boutique_page_empty.html" class="btn_pusblish">Publish</a>
+                                        <a href="add_look_book.html" class="btn_add_publish">Publish & Add Another
+                                            Apparel</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

@@ -276,13 +276,13 @@
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 col-md-12 col-sm-offset-0">
                     <div class="row">
-                        <div class="col-md-3 left_bar">
+                        <div class="col-sm-3 col-xs-4 left_bar">
                             <div class="menu_block">
                                 <div class="item"><span>Profile</span> <i class="icon"></i></div>
                                 <div class="item active"><span>Contact Details</span><i class="icon"></i></div>
                             </div>
                         </div>
-                        <div class="col-md-9 right_bar">
+                        <div class="col-sm-9 col-xs-8 right_bar">
                             <h2>Your Boutique's Profile</h2>
                             <h5>Introduce your boutique to our community</h5>
                             <div class="progress_block">
@@ -294,15 +294,22 @@
                                     <h3>CONTACT NUMBER</h3>
                                     <div class="contact_number_block">
                                         <div class="country_prefix">
-                                            <!--<div class="ui dropdown">-->
-                                                <!--<i class="dropdown icon"></i>-->
-                                                <!--<div class="default text"></div>-->
-                                                <!--<div class="menu">-->
-                                                    <!--<div class="item" data-value="male">Male</div>-->
-                                                    <!--<div class="item" data-value="female">Female</div>-->
-                                                <!--</div>-->
-                                            <!--</div>-->
-                                            <input type="text" name="number_prefix" id="number_prefix"/>
+                                            <div class="ui selection dropdown" id="country_prefix_dropdown">
+                                                <i class="dropdown icon"></i>
+                                                <div class="default text">
+                                                    <div class="logo"
+                                                         style="background-image: url('img/icons/us.png')"></div>
+                                                </div>
+                                                <div class="menu">
+                                                    <div class="item" data-logo="img/icons/us.png" data-value="+1">
+                                                        <span>United States of America</span>
+                                                    </div>
+                                                    <div class="item" data-logo="img/icons/en.png" data-value="+373">
+                                                        <span>United States of America</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <input type="text" readonly placeholder="+1" name="number_prefix" id="number_prefix"/>
                                         </div>
                                         <input type="text" name="contact_number" id="contact_number"
                                                placeholder="000 - 000 - 0000"/>
@@ -310,7 +317,8 @@
                                 </div>
                                 <div class="form-group email_block">
                                     <h3>EMAIL ADDRESS</h3>
-                                    <input type="email" name="email_address" id="email_address" placeholder="boutique@email.com"/>
+                                    <input type="email" name="email_address" id="email_address"
+                                           placeholder="boutique@email.com"/>
                                 </div>
                                 <div class="form-group social_block">
                                     <h3>SOCIAL MEDIA PAGES</h3>
