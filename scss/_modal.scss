@@ -199,6 +199,7 @@
                 .input-group-addon
                 {
                     background: #fff;
+                    border:1px solid $grey_c8;
                     border-left-color: transparent;
                     @include border-radius(0);
 
@@ -848,6 +849,102 @@
                         margin-bottom: 0;
                     }
                 }
+
+            }
+        }
+    }
+
+    &.delete_account_modal
+    {
+        .modal-dialog
+        {
+            padding-top: 0;
+            top: calc(50% - 100px);
+
+            @media (max-height: 450px) {
+                top: 30px;
+            }
+
+            @media (max-width: 579px)
+            {
+                width: 340px!important;
+                left:calc(50% - 170px);
+            }
+
+            .form-group
+            {
+                margin-bottom: 17px;
+
+                &.title_block
+                {
+                    position: absolute;
+                    top: -1px;
+                    left: -1px;
+                    width: calc(100% + 2px);
+
+                    span
+                    {
+                        width: 100%;
+                        display: block;
+                        position: relative;
+                        @include font-details(16px, 'OpenSans', 600);
+                        color: $black_4a;
+                        line-height: 1.2;
+                        @include border-radius(8px);
+                        background: $grey_f7;
+                        padding: 15px 0 13px 20px;
+                        border: 1px solid $grey_4a;
+                    }
+                }
+
+                h4
+                {
+                    margin-top: 74px;
+                    @include font-details(13px, 'OpenSans', 600);
+                    line-height: 1.2;
+                    text-align: center;
+                    color: $black_4a;
+                    margin-bottom: 31px;
+                }
+
+                &.first_block
+                {
+                    margin-top: 0;
+                    margin-bottom:0;
+                    overflow: hidden;
+
+                    .btn_yes,.btn_no
+                    {
+                        @include font-details(14px, 'OpenSans', 600);
+                        line-height: 1.2;
+                        color: $black_4a;
+                        background: #fff;
+                        width: 140px;
+                        border: 1px solid $grey_97;
+                        float:left;
+                        margin-bottom: 10px;
+                        display: inline-block;
+                        text-align: center;
+                        padding: 16px 0 14px;
+                        @include transition(background .3s ease-out,color .3s ease-in,border-color .3s linear);
+
+                        &:hover
+                        {
+                            background: $red_fa;
+                            color:#fff;
+                            border-color:$red_fa;
+                        }
+                    }
+                    .btn_no
+                    {
+                        float:right;
+                        background: $red_fa;
+                        color:#fff;
+                        border-color: $red_fa;
+                    }
+
+                }
+
 
             }
         }

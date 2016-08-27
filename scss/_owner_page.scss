@@ -1034,6 +1034,11 @@ main
                 background: $grey_ec;
                 padding-top: 40px;
 
+                &.white_bg
+                {
+                    background: #fff;
+                }
+
                 h2
                 {
                     @include h2;
@@ -1625,6 +1630,7 @@ main
                         margin-top: 0;
                         margin-bottom: 20px;
                     }
+
                 }
 
                 .btn-step
@@ -2732,7 +2738,6 @@ main
                                     color: $black_28;
                                 }
 
-
                                 .review_block
                                 {
                                     display: inline-block;
@@ -2814,8 +2819,8 @@ main
                                 display: none;
                                 padding: 13px 12px 11px;
                                 border: 1px solid $grey_97;
-                                @include placeholder($grey_9b,'left');
-                                @include transition(height .3s linear,border .3s linear);
+                                @include placeholder($grey_9b, 'left');
+                                @include transition(height .3s linear, border .3s linear);
                             }
 
                             &.replied
@@ -2846,30 +2851,31 @@ main
                             {
                                 background: transparent;
                                 @include border-radius(8px);
-                                border:1px solid $grey_97;
+                                border: 1px solid $grey_97;
 
                                 .btn_reply
                                 {
                                     display: inline-block;
                                     padding: 5px 26px 3px 26px;
-                                    border-right:1px solid $grey_97;
+                                    border-right: 1px solid $grey_97;
 
-                                    i{
+                                    i
+                                    {
                                         display: inline-block;
                                         width: 16px;
                                         height: 16px;
-                                        margin-right:4px;
+                                        margin-right: 4px;
                                         vertical-align: middle;
                                         margin-top: -4px;
-                                        background:no-repeat center;
+                                        background: no-repeat center;
                                         background-size: contain;
-                                        background-image:  img_url('black_reply.png');
+                                        background-image: img_url('black_reply.png');
                                     }
 
                                     span
                                     {
-                                        @include font-details(14px,'OpenSans',400);
-                                        color:$black_4a;
+                                        @include font-details(14px, 'OpenSans', 400);
+                                        color: $black_4a;
                                         vertical-align: top;
                                         display: inline-block;
                                         @include transition(color .3s linear);
@@ -2877,7 +2883,8 @@ main
 
                                     &.active
                                     {
-                                        span {color:$red_fa;}
+                                        span
+                                        { color: $red_fa; }
 
                                         i
                                         {
@@ -2893,13 +2900,14 @@ main
                                     padding: 5px 31px 3px 31px;
                                     margin-left: -4px;
 
-                                    i{
+                                    i
+                                    {
                                         display: inline-block;
                                         width: 16px;
                                         height: 16px;
                                         vertical-align: middle;
                                         margin-top: -4px;
-                                        margin-right:4px;
+                                        margin-right: 4px;
                                         background: no-repeat center;
                                         background-size: contain;
                                         background-image: img_url('black_flag.png');
@@ -2907,8 +2915,8 @@ main
 
                                     span
                                     {
-                                        @include font-details(14px,'OpenSans',400);
-                                        color:$black_4a;
+                                        @include font-details(14px, 'OpenSans', 400);
+                                        color: $black_4a;
                                         display: inline-block;
                                         vertical-align: top;
                                         @include transition(color .3s linear);
@@ -2916,7 +2924,8 @@ main
 
                                     &.active
                                     {
-                                        span {color:$red_fa;}
+                                        span
+                                        { color: $red_fa; }
 
                                         i
                                         {
@@ -2965,12 +2974,12 @@ main
                     @include font-details(14px, 'OpenSans', 600);
                     line-height: 1.2;
                     color: $black_4a;
-                    margin-top:0;
+                    margin-top: 0;
                     margin-bottom: 19px;
                 }
 
                 .form-group
-                   {
+                {
                     margin-bottom: 0;
 
                     &.name_block
@@ -3001,22 +3010,20 @@ main
                                 width: 140px;
                                 display: inline-block;
                                 background: $red_fa;
-                                @include font-details(14px,'OpenSans',400);
-                                color:#fff;
-                                margin-right:15px;
+                                @include font-details(14px, 'OpenSans', 400);
+                                color: #fff;
+                                margin-right: 15px;
                                 line-height: 1.2;
                                 text-align: center;
                                 padding: 14px 0 12px;
-
                             }
                             span
                             {
                                 text-transform: uppercase;
-                                @include font-details(14px,'OpenSans',400);
-                                color:$black_4a;
+                                @include font-details(14px, 'OpenSans', 400);
+                                color: $black_4a;
                                 line-height: 1.2;
                                 vertical-align: middle;
-
                             }
                         }
 
@@ -3144,14 +3151,12 @@ main
                         text-align: center;
                     }
 
-                    @media (max-width: 479px)
-                    {
+                    @media (max-width: 479px) {
                         .btn_pusblish
                         {
                             margin-right: 0;
                         }
                     }
-
 
                 }
 
@@ -3198,7 +3203,7 @@ main
                     @include font-details(14px, 'OpenSans', 600);
                     line-height: 1.2;
                     color: $black_4a;
-                    margin-top:0;
+                    margin-top: 0;
                     margin-bottom: 19px;
                 }
 
@@ -3320,8 +3325,7 @@ main
                         text-align: center;
                     }
 
-                    @media (max-width: 479px)
-                    {
+                    @media (max-width: 479px) {
                         .btn_pusblish
                         {
                             margin-right: 0;
@@ -3517,13 +3521,12 @@ main
                     @include nav-tabs(219px);
                     text-align: center;
 
-                    @media (max-width: 510px)
-                    {
+                    @media (max-width: 510px) {
                         li
                         {
                             &:first-child
                             {
-                                margin-right:0;
+                                margin-right: 0;
                             }
                         }
                     }
@@ -3688,16 +3691,803 @@ main
                             }
                         }
 
-                        @media (max-width: 767px)
-                        {
-                            width:1000px;
+                        @media (max-width: 767px) {
+                            width: 1000px;
                         }
                     }
                 }
             }
         }
     }
+
+    &.boutique_settings
+    {
+        section
+        {
+            &.section_1
+            {
+                border-top: 1px solid $grey_97;
+
+                .account_menu
+                {
+                    padding: 24px 0 14px;
+                    margin-bottom: 0;
+
+                    li
+                    {
+                        display: inline-block;
+                        margin-right: 13px;
+                        padding: 0;
+                        margin-bottom: 8px;
+                        vertical-align: middle;
+                        position: relative;
+
+                        &:after
+                        {
+                            position: absolute;
+                            content: '';
+                            width: 1px;
+                            height: 100%;
+                            top: 0;
+                            right: -9px;
+                            background: $grey_97;
+                        }
+                        &:first-child
+                        {
+                            @media (max-width: 501px) {
+                                display: block;
+                            }
+                        }
+                        &:nth-child(3)
+                        {
+                            @media (max-width: 501px) {
+                                &:after
+                                {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        &:last-child, &:first-child
+                        {
+                            margin-right: 0;
+
+                            &:after
+                            {
+                                display: none;
+                            }
+                        }
+
+                        .icon
+                        {
+                            width: 152px;
+                            height: 33px;
+                            margin-right: 5px;
+                            position: relative;
+                            background: img_url('my_account.png') no-repeat center;
+                            background-size: auto;
+
+                            @media (min-width: 768px) and (max-width: 991px) {
+                                width: 32px;
+                                margin-right: 15px;
+                                background: img_url('my_account_small.png') no-repeat center;
+
+                                &:after
+                                {
+                                    position: absolute;
+                                    content: '';
+                                    right: -12px;
+                                    top: 14px;
+                                    border-top: 3px solid transparent;
+                                    border-left: 6px solid $black_28;
+                                    border-bottom: 3px solid transparent;
+                                }
+                            }
+                        }
+                        a
+                        {
+                            width: 140px;
+                            @include font-details(12px, 'OpenSans', 300);
+                            line-height: 1.2;
+                            color: $black_28;
+                            display: block;
+                            border: 1px solid $grey_97;
+                            padding: 4px 0 2px;
+                            text-align: center;
+
+                            i
+                            {
+                                display: inline-block;
+                                width: 20px;
+                                height: 20px;
+                                margin-right: 7px;
+                                margin-top: -1px;
+                                vertical-align: middle;
+                                background: no-repeat center;
+                                background-size: auto;
+                                $color: 'black';
+
+                                &.boutique
+                                {
+                                    background-image: img_url('#{$color}_boutique.png');
+                                }
+                                &.orders
+                                {
+                                    background-image: img_url('#{$color}_orders.png');
+                                }
+                                &.messages
+                                {
+                                    background-image: img_url('#{$color}_messages.png');
+                                }
+                                &.settings
+                                {
+                                    background-image: img_url('#{$color}_settings.png');
+                                }
+                            }
+
+                        }
+
+                        &.active
+                        {
+                            a
+                            {
+                                background: $black_28;
+                                border-color: $black_28;
+
+                                span
+                                {
+                                    color: #fff;
+                                }
+
+                                i
+                                {
+                                    $color: 'white';
+
+                                    &.boutique
+                                    {
+                                        background-image: img_url('#{$color}_boutique.png');
+                                    }
+                                    &.orders
+                                    {
+                                        background-image: img_url('#{$color}_orders.png');
+                                    }
+                                    &.messages
+                                    {
+                                        background-image: img_url('#{$color}_messages.png');
+                                    }
+                                    &.settings
+                                    {
+                                        background-image: img_url('#{$color}_settings.png');
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            &.section_2
+            {
+                padding-top: 32px;
+
+                .left_bar
+                {
+                    .settings_tabs
+                    {
+                        border-bottom: none;
+
+                        li
+                        {
+                            padding: 0;
+                            margin-bottom: 15px;
+                            position: relative;
+                            border: none;
+                            @include border-radius(0);
+
+                            a
+                            {
+                                overflow: hidden;
+                                border: none;
+                                width: 174px;
+                                padding: 0;
+                                span
+                                {
+                                    @include font-details(14px, 'OpenSans', 400);
+                                    line-height: 1.2;
+                                    text-transform: uppercase;
+                                    color: $black_4a;
+                                    float: left;
+                                }
+
+                                .icon
+                                {
+                                    width: 0;
+                                    height: 0;
+                                    display: inline-block;
+                                    float: right;
+                                    margin-top: 1px;
+                                    border-top: 7.5px solid transparent;
+                                    border-left: 14px solid $grey_85;
+                                    position: relative;
+                                    border-bottom: 7.5px solid transparent;
+
+                                    &:after
+                                    {
+                                        position: absolute;
+                                        content: '';
+                                        width: 0;
+                                        height: 0;
+                                        top: -6px;
+                                        left: -13px;
+                                        border-top: 6px solid transparent;
+                                        border-left: 11px solid $grey_cf;
+                                        border-bottom: 6px solid transparent;
+                                    }
+                                }
+
+                                &:hover, &:focus
+                                {
+                                    background: transparent;
+                                    border: none;
+                                    @include box-shadow(none);
+                                }
+
+                            }
+                            &.active
+                            {
+                                background: transparent;
+                                border: none;
+                                a
+                                {
+                                    span
+                                    {
+                                        @include font-details(14px, 'OpenSans', 700);
+                                        color: $black_4a;
+                                    }
+
+                                    .icon
+                                    {
+                                        &:after
+                                        {
+                                            border-left-color: $grey_70;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .right_bar
+                {
+                    border-left: 1px solid $grey_97;
+                    position: relative;
+                    min-height: 556px;
+
+                    #profile
+                    {
+                        .profile_tabs
+                        {
+                            @include nav-tabs(220px);
+                            text-align: left;
+                            margin-bottom: 33px;
+
+                            li
+                            {
+                                &:after
+                                {
+                                    display: none;
+                                }
+                                a
+                                {
+                                    color: $black_28;
+                                }
+                            }
+
+                            @media (max-width: 510px) {
+                                li
+                                {
+                                    &:first-child
+                                    {
+                                        margin-right: 0;
+                                    }
+                                }
+                            }
+                        }
+
+                        form
+                        {
+
+                            .form-group
+                            {
+                                margin-bottom: 42px;
+
+                                h3
+                                {
+                                    @include font-details(14px, 'OpenSans', 600);
+                                    line-height: 1.2;
+                                    color: $black_4a;
+                                    margin-top: 0;
+                                    text-transform: uppercase;
+                                    margin-bottom: 19px;
+                                }
+                            }
+
+                            .buttons_block
+                            {
+                                margin-top: 50px;
+                                margin-bottom: 54px;
+                                .btn_edit
+                                {
+                                    width: 220px;
+                                    @include font-details(16px, 'OpenSans', 400);
+                                    line-height: 1.2;
+                                    color: #fff;
+                                    background: $green_0a;
+                                    display: inline-block;
+                                    border: none;
+                                    margin-bottom: 20px;
+                                    text-align: center;
+                                    @include border-radius(2px);
+                                    padding: 15px 0 13px;
+                                    margin-right: 20px;
+                                    vertical-align: top;
+                                }
+                                .btn_save
+                                {
+                                    @extend .btn_edit;
+                                    background: $red_fa;
+                                    margin-right: 0;
+                                }
+
+                            }
+                        }
+
+                        #customer_profile
+                        {
+                            form
+                            {
+
+                                .form-group
+                                {
+                                    input
+                                    {
+                                        @include input_attributes;
+                                        width: 300px;
+                                    }
+
+                                    &.date_block
+                                    {
+                                        .input-group
+                                        {
+                                            width: 220px;
+                                            border: 1px solid $grey_97;
+                                            input
+                                            {
+                                                width: 100%;
+                                                @include border-radius(0);
+                                                border: none;
+                                                @include font-details(14px, 'OpenSans', 400);
+                                                line-height: 1.2;
+                                                color: $grey_9b;
+                                                padding: 13px 0 11px 19px;
+                                                @include box-shadow(none);
+
+                                                &:focus
+                                                {
+                                                    outline: 0 !important;
+                                                }
+                                            }
+                                            .input-group-addon
+                                            {
+                                                background: #fff;
+                                                border: none;
+                                                @include border-radius(0);
+
+                                                i
+                                                {
+                                                    width: 16px;
+                                                    height: 16px;
+                                                    display: block;
+                                                    background: no-repeat center;
+                                                    background-size: contain;
+
+                                                    &.date_icon
+                                                    {
+                                                        background-image: img_url('black_calendar.png');
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+
+                        #boutique_profile
+                        {
+                            form
+                            {
+
+                                .form-group
+                                {
+                                    input
+                                    {
+                                        @include input_attributes;
+                                        width: 380px;
+                                    }
+
+                                    textarea
+                                    {
+                                        @include input_attributes;
+                                        width: 88.8%;
+                                        max-width: 620px;
+                                        height: 88px;
+                                    }
+
+                                    .type
+                                    {
+                                        width: 140px;
+                                        @include font-details(14px, 'OpenSans', 400);
+                                        color: $black_4a;
+                                        text-transform: uppercase;
+                                        line-height: 1.2;
+                                        text-align: center;
+                                        border: 1px solid $grey_97;
+                                        padding: 22px 0 20px;
+                                        margin-bottom: 20px;
+                                        margin-right: 16px;
+                                        cursor: pointer;
+                                        display: inline-block;
+                                        @include transition(color .3s ease-in, background .3s ease-out, border-color .3s linear);
+
+                                        &:last-child
+                                        {
+                                            margin-right: 0;
+                                        }
+
+                                        i
+                                        {
+                                            width: 20px;
+                                            height: 20px;
+                                            vertical-align: middle;
+                                            margin-right: 2px;
+                                            display: inline-block;
+                                            background: no-repeat center;
+                                            background-size: auto;
+
+                                            &.men
+                                            {
+                                                background-image: img_url('black_men.png');
+                                            }
+                                            &.women
+                                            {
+                                                background-image: img_url('black_woman.png');
+                                            }
+                                            &.kids
+                                            {
+                                                background-image: img_url('black_kids.png');
+                                            }
+                                        }
+
+                                        &.active
+                                        {
+                                            border-color: $black_33;
+                                            color: $red_fa;
+                                            background: $black_33;
+
+                                            i
+                                            {
+                                                &.men
+                                                {
+                                                    background-image: img_url('red_men.png');
+                                                }
+                                                &.women
+                                                {
+                                                    background-image: img_url('red_woman.png');
+                                                }
+                                                &.kids
+                                                {
+                                                    background-image: img_url('red_kids.png');
+                                                }
+                                            }
+                                        }
+
+                                    }
+
+                                    .country_select
+                                    {
+                                        width: 300px;
+                                        position: relative;
+
+                                        select + span
+                                        {
+                                            background: transparent;
+                                            color: $grey_77;
+                                            @include font-details(14px, 'OpenSans', 400);
+                                            line-height: 1.2;
+                                            width: 300px;
+                                            display: block;
+                                            border: 1px solid $grey_97;
+                                            margin-top: 3px;
+                                            @include border-radius(0);
+                                            padding: 22px 12px 20px 52px;
+
+                                            &:focus
+                                            {
+                                                outline: 0 !important;
+                                            }
+                                        }
+
+                                        .icon
+                                        {
+                                            position: absolute;
+                                            width: 18px;
+                                            height: 18px;
+                                            background: img_url('country.png') no-repeat center;
+                                            background-size: auto;
+                                            left: 22px;
+                                            top: 21px;
+                                        }
+                                    }
+
+                                    &.boutique_type_block, &.product_type_block
+                                    {
+                                        margin-bottom: 24px;
+                                    }
+
+                                    &.file_block
+                                    {
+                                        .cover_photo
+                                        {
+                                            width: 300px;
+                                            height: 90px;
+                                            display: inline-block;
+                                            margin-right: 17px;
+                                            background: img_url('boutique_small.png') no-repeat center;
+                                            background-size: contain;
+                                        }
+                                        input
+                                        {
+                                            display: none;
+                                        }
+                                        label
+                                        {
+                                            width: 140px;
+                                            @include border-radius(8px);
+                                            background: $black_33;
+                                            color: #fff;
+                                            text-transform: uppercase;
+                                            text-align: center;
+                                            vertical-align: top;
+                                            @include font-details(10px, 'OpenSans', 700);
+                                            padding: 9px 0 7px;
+                                            margin-bottom: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    #password
+                    {
+                        form
+                        {
+
+                            .form-group
+                            {
+                                margin-bottom: 42px;
+
+                                h3
+                                {
+                                    @include font-details(14px, 'OpenSans', 600);
+                                    line-height: 1.2;
+                                    color: $black_4a;
+                                    margin-top: 0;
+                                    text-transform: uppercase;
+                                    margin-bottom: 19px;
+                                }
+
+                                input
+                                {
+                                    @include input_attributes;
+                                    width: 300px;
+                                    @include placeholder($grey_9b, 'left');
+                                }
+                            }
+
+                            .buttons_block
+                            {
+                                margin-top: 50px;
+                                margin-bottom: 77px;
+
+                                .btn_save
+                                {
+                                    width: 220px;
+                                    @include font-details(16px, 'OpenSans', 400);
+                                    line-height: 1.2;
+                                    color: #fff;
+                                    background: $red_fa;
+                                    display: inline-block;
+                                    border: none;
+                                    text-align: center;
+                                    @include border-radius(2px);
+                                    padding: 15px 0 13px;
+                                }
+
+                            }
+                        }
+                    }
+
+                    #membership
+                    {
+                        margin-bottom: 26px;
+                        .item
+                        {
+                            .item_block
+                            {
+                                border: 1px solid $grey_97;
+                                margin-bottom: 30px;
+                                width: 220px;
+                                @include margin_left_right(auto);
+                                position: relative;
+
+                                .item_header
+                                {
+                                    background: $green_0a;
+                                    padding: 28px 0 25px;
+                                    h3
+                                    {
+                                        @include font-details(32px, 'OpenSans', 400);
+                                        color: #fff;
+                                        margin-top: 0;
+                                        margin-bottom: 10px;
+                                        text-align: center;
+                                        text-transform: uppercase;
+                                    }
+                                    p
+                                    {
+                                        margin-bottom: 0;
+                                        @include font-details(12px, 'OpenSans', 400);
+                                        color: #fff;
+                                        text-align: center;
+                                    }
+
+                                    &.free
+                                    {
+                                        @include font-details(32px, 'OpenSans', 400);
+                                        color: #fff;
+                                        text-align: center;
+                                        text-transform: uppercase;
+                                        padding: 36px 0 34px;
+                                    }
+                                }
+
+                                .item_body
+                                {
+                                    padding: 13px 30px 19px;
+
+                                    .plan_features
+                                    {
+                                        @include font-details(14px, 'OpenSans', 400);
+                                        color: $grey_5e;
+                                        line-height: 1.2;
+                                        text-align: center;
+                                        padding: 14px 0 12px;
+                                        border-bottom: 1px solid $grey_df;
+
+                                        span
+                                        {
+                                            @include font-details(14px, 'OpenSans', 400);
+                                            color: $green_0a;
+                                            line-height: 1.2;
+                                            text-align: center;
+                                            padding-top: 11px;
+                                        }
+                                        .btn-select
+                                        {
+                                            width: 140px;
+                                            display: block;
+                                            text-align: center;
+                                            background: $red_fa;
+                                            color: #fff;
+                                            @include margin_left_right(auto);
+                                            margin-top: 10px;
+                                            text-transform: uppercase;
+                                            @include border-radius(8px);
+                                            padding: 11px 0 9px;
+                                        }
+
+                                        &:last-child
+                                        {
+                                            border-bottom: none;
+                                        }
+                                    }
+                                }
+
+                                &.active
+                                {
+                                    &:before
+                                    {
+                                        content: '';
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                        top: 0;
+                                        left: 0;
+                                        z-index: 3;
+                                        background: _rgba(#fff, .4);
+                                    }
+
+                                    &:after
+                                    {
+                                        position: absolute;
+                                        content: '';
+                                        width: 25px;
+                                        height: 25px;
+                                        left: 11px;
+                                        top: 8px;
+                                        z-index: 4;
+                                        background: img_url('selected.png') no-repeat center;
+                                        background-size: auto;
+                                    }
+                                }
+                            }
+
+                            @media (max-width: 700px) {
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    #delete
+                    {
+                        h4
+                        {
+                            @include font-details(16px, 'OpenSans', 400);
+                            color: $red_d0;
+                            margin-top: 0;
+                            line-height: 22px;
+                            margin-bottom: 47px;
+                        }
+                        .delete_block
+                        {
+                            width: 220px;
+                            text-align: center;
+
+                            h5
+                            {
+                                @include font-details(14px, 'OpenSans', 400);
+                                color: $black_4a;
+                                margin-top: 0;
+                                margin-bottom: 32px;
+                            }
+
+                            .btn_delete_account
+                            {
+                                width: 100%;
+                                @include border-radius(2px);
+                                border: 1px solid $grey_97;
+                                @include font-details(16px, 'OpenSans', 400);
+                                color: $black_4a;
+                                margin-bottom: 42px;
+                                padding: 12px 0 10px;
+                                display: block;
+                                text-align: center;
+                            }
+
+                        }
+                    }
+                }
+
+            }
+        }
+    }
 }
+
 
 .ui-state-active .ui-icon, .ui-button:active .ui-icon
 {

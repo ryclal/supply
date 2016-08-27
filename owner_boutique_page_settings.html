@@ -4,172 +4,23 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Supply Apparel</title>
+    <title>Supply Apparel </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/semantic/css/dropdown.min.css">
+    <link rel="stylesheet" href="libs/semantic/css/transition.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div id="loginModal" class="modal fade login_modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <form action="" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-                <a href="#" class="btn_facebook">
-                    <i></i>
-                    <span>Log in with Facebook</span>
-                </a>
-            </div>
-            <div class="form-group">
-                <a href="#" class="btn_google">
-                    <i></i>
-                    <span>Log in with Google</span>
-                </a>
-            </div>
-            <div class="form-group">
-                <div class="divider_line">or</div>
-            </div>
-            <div class="form-group email_block">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Email Address" name="email">
-                    <div class="input-group-addon"><i class="email_icon"></i></div>
-                </div>
-            </div>
-            <div class="form-group password_block">
-                <div class="input-group">
-                    <input type="password" class="form-control" placeholder="Password" name="password">
-                    <div class="input-group-addon"><i class="password_icon"></i></div>
-                </div>
-            </div>
-            <div class="form-group forgot_pass_block">
-                <div class="checkbox">
-                    <input name="remember" id="check_item" type="checkbox">
-                    <label for="check_item">Remember me</label>
-                </div>
-                <a href="#" class="btn_forgot_pass fourth_modal open_modal" data-modal="loginModal">Forgot
-                    password?</a>
-            </div>
-            <div class="form-group submit_block">
-                <button type="submit" class="btn_login">Log In</button>
-            </div>
-            <div class="form-group sign_up_block">
-                <p>Don't have an account?</p>
-                <a href="#" class="btn_signup seconds_modal open_modal" data-modal="loginModal">Sign Up</a>
-            </div>
-        </form>
-    </div>
-</div>
-<div id="registerModal" class="modal fade register_modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <form action="" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-                <a href="#" class="btn_facebook">
-                    <i></i>
-                    <span>Log in with Facebook</span>
-                </a>
-            </div>
-            <div class="form-group">
-                <a href="#" class="btn_google">
-                    <i></i>
-                    <span>Log in with Google</span>
-                </a>
-            </div>
-            <div class="form-group">
-                <div class="divider_line">or</div>
-            </div>
-            <div class="form-group submit_block">
-                <a href="#" data-modal="registerModal" class="btn_login third_modal open_modal">Sign up with email</a>
-            </div>
-            <div class="form-group agrement_block">
-                <p>
-                    By signing up, I agree to Supply Apparel’s
-                    <a href="#">Terms of Service</a>,
-                    <a href="#">Payment Terms</a>, <a href="#">Privacy Policy</a>, and <a href="#">Refund Policy</a>.
-                </p>
-            </div>
-            <div class="form-group sign_up_block">
-                <p>Already a member?</p>
-                <a href="#" data-modal="registerModal" class="btn_signup first_modal open_modal">Log in</a>
-            </div>
-        </form>
-    </div>
-</div>
-<div id="register_mail_Modal" class="modal fade register_mail_modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <form action="" method="post" enctype="multipart/form-data">
-            <div class="form-group first_block">
-                <p>
-                    Sign up with
-                    <a href="#">Facebook</a> or
-                    <a href="#">Google</a>
-                </p>
-            </div>
-            <div class="form-group">
-                <div class="divider_line">or</div>
-            </div>
-            <div class="form-group name_block">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Full name" name="name">
-                    <div class="input-group-addon"><i class="name_icon"></i></div>
-                </div>
-            </div>
-            <div class="form-group email_block">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Email Address" name="email">
-                    <div class="input-group-addon"><i class="email_icon"></i></div>
-                </div>
-            </div>
-            <div class="form-group password_block">
-                <div class="input-group">
-                    <input type="password" class="form-control" placeholder="Password" name="password">
-                    <div class="input-group-addon"><i class="password_icon"></i></div>
-                </div>
-            </div>
-            <div class="form-group date_block">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Data of Birth" name="birthdate">
-                    <div class="input-group-addon"><i class="date_icon"></i></div>
-                </div>
-            </div>
-            <div class="form-group agrement_block">
-                <p>
-                    By signing up, I agree to Supply Apparel’s
-                    <a href="#">Terms of Service</a>,
-                    <a href="#">Payment Terms</a>, <a href="#">Privacy Policy</a>, and <a href="#">Refund Policy</a>.
-                </p>
-            </div>
-            <div class="form-group submit_block">
-                <button type="submit" class="btn_login">Sign up with email</button>
-            </div>
-
-            <div class="form-group sign_up_block">
-                <p>Already a member?</p>
-                <a href="#" data-modal="register_mail_Modal" class="btn_signup first_modal open_modal">Log in</a>
-            </div>
-        </form>
-    </div>
-</div>
-<div id="reset_password_modal" class="modal fade reset_password_modal" tabindex="-1" role="dialog">
+<div id="delete_account_modal" class="modal fade delete_account_modal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <form action="" method="post" enctype="multipart/form-data">
             <div class="form-group title_block">
-                <span>Reset Password</span>
+                <span>Delete Account</span>
             </div>
             <div class="form-group first_block">
-                <p>
-                    Enter the email address associated with your account, and we’ll email you a link to reset your
-                    password.
-                </p>
-            </div>
-            <div class="form-group email_block">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Email Address" name="email">
-                    <div class="input-group-addon"><i class="email_icon"></i></div>
-                </div>
-            </div>
-            <div class="form-group sign_up_block">
-                <button type="button" class="btn_login btn_send">Send Reset Link</button>
-                <div class="loader"></div>
-                <a href="reset__password_page.html" class="btn_login btn_sent">
-                    <i class="glyphicon glyphicon-ok"></i> Email Sent
-                </a>
+                <h4>Are you sure you want to delete your account ?</h4>
+                <a href="#" class="btn_yes">Yes</a>
+                <a data-dismiss="modal" class="btn_no">No</a>
             </div>
         </form>
     </div>
@@ -220,7 +71,7 @@
                         </ul>
                     </li>
                     <li class="icons"><a href="#"><span class="wishlist_icon" title="Wishlist"></span></a></li>
-                    <li class="icons"><a href="#"><span class="cart_icon" data-product="1" title="Cart"></span></a></li>
+                    <li class="icons"><a href="#"><span class="cart_icon" title="Cart"></span></a></li>
                 </ul>
             </div>
             <div class="collapse navbar-collapse" id="website_navbar_collapse">
@@ -245,7 +96,7 @@
                         </ul>
                     </li>
                     <li class="icons"><a href="#"><span class="wishlist_icon" title="Wishlist"></span></a></li>
-                    <li class="icons"><a href="#"><span class="cart_icon" data-product="1" title="Cart"></span></a></li>
+                    <li class="icons"><a href="#"><span class="cart_icon" title="Cart"></span></a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-left">
                     <li class="dropdown women_dropdown">
@@ -342,7 +193,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="dropdown boutiques_dropdown">
+                    <li class="dropdown boutiques_dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                            aria-haspopup="true" aria-expanded="false">Boutiques</a>
                         <ul class="dropdown-menu">
@@ -433,8 +284,8 @@
         </div>
     </nav>
 </header>
-<main class="owner_landing_page">
-    <section class="section_0 owner_menu">
+<main class="boutique_settings">
+    <section class="section_1 owner_menu">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0">
@@ -442,27 +293,14 @@
                         <li>
                             <div class="icon"></div>
                         </li>
-                        <li class="active"><a href="#"><i class="boutique"></i><span>Boutique</span></a></li>
-                        <li><a href="#"><i class="orders"></i><span>Orders</span></a></li>
+                        <li><a href="owner_boutique_page_empty.html"><i class="boutique"></i><span>Boutique</span></a>
+                        </li>
+                        <li><a href="owner_boutique_page_orders.html"><i
+                                class="orders"></i><span>Orders</span></a></li>
                         <li><a href="#"><i class="messages"></i><span>Messages</span></a></li>
-                        <li><a href="#"><i class="settings"></i><span>Settings</span></a></li>
+                        <li class="active"><a href="owner_boutique_page_settings.html"><i
+                                class="settings"></i><span>Settings</span></a></li>
                     </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section_1">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5 col-md-offset-7 col-xs-12 col-xs-offset-0">
-                    <div class="content_block">
-                        <h2>Sell your Products to Millions Around The World</h2>
-                        <p>
-                            Setup your very own online store in less than a minute and increase your earning potential
-                            with our thriving community of buyers.
-                        </p>
-                        <a href="create_boutique_step_1.html" class="btn_create_boutique">Create A Boutique</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -470,87 +308,238 @@
     <section class="section_2">
         <div class="container">
             <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 col-md-12 col-sm-offset-0">
+                <div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0">
                     <div class="row">
-                        <div class="col-sm-4">
-                            <div class="information_item">
-                                <div class="icon safety"></div>
-                                <h4>Trust & Safety</h4>
-                                <p>We have your best interest and financial safety in mind so you can sell on our
-                                    marketplace
-                                    effortlessly.</p>
-                            </div>
+                        <div class="col-sm-3 col-xs-4 left_bar">
+                            <ul class="nav nav-tabs settings_tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#profile" aria-controls="profile" role="tab"
+                                       data-toggle="tab"><span>Profile</span> <i class="icon"></i></a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#password" aria-controls="password" role="tab"
+                                       data-toggle="tab"><span>Change Password</span><i class="icon"></i></a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#membership" aria-controls="membership" role="tab"
+                                       data-toggle="tab"><span>Membership Plan</span><i class="icon"></i></a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#delete" aria-controls="delete" role="tab"
+                                       data-toggle="tab"><span>Delete Account</span><i class="icon"></i></a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="col-sm-4">
-                            <div class="information_item">
-                                <div class="icon logistics"></div>
-                                <h4>100% Logistics Assistance</h4>
-                                <p>
-                                    We help you update the logistics of every sale, keeping you and your customers
-                                    informed
-                                    throughout the process.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="information_item">
-                                <div class="icon secure"></div>
-                                <h4>Secure Payments</h4>
-                                <p>
-                                    Every payment made on our platform is secured so you can grow your business while we
-                                    do all
-                                    the heavy lifting.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section_3  ">
-        <div class="container">
-            <div class="row">
-                <h2>Image Guidelines</h2>
-                <h5>It’s easy to create a boutique and begin selling on our marketplace.<br/>
-                    Use our simple image guidelines below when you’re uploading your apparel.
-                </h5>
-                <div class="col-lg-10 col-lg-offset-1 col-md-12 col-sm-offset-0">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6 item">
-                            <div class="item_block">
-                                <div class="item_header">
-                                    <i class="icon"></i>
-                                    <span>Apparel on models with natural background</span>
+                        <div class="col-sm-9 col-xs-8 right_bar">
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="profile">
+                                    <ul class="nav nav-tabs profile_tabs" role="tablist">
+                                        <li role="presentation" class="active">
+                                            <a href="#customer_profile" aria-controls="customer" role="tab"
+                                               data-toggle="tab">Customer Profile</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#boutique_profile" aria-controls="boutique" role="tab"
+                                               data-toggle="tab">Boutique Profile</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane active" id="customer_profile">
+                                            <form action="" method="post">
+                                                <div class="form-group">
+                                                    <h3>Name</h3>
+                                                    <input type="text" name="name" id="name" value="Ryan Almeida"/>
+                                                </div>
+                                                <div class="form-group">
+                                                    <h3>Email Address</h3>
+                                                    <input type="email" name="email" id="email"
+                                                           value="ryan.almeida86@gmail.com"/>
+                                                </div>
+                                                <div class="form-group date_block">
+                                                    <h3>Date of Birth</h3>
+                                                    <div class="input-group">
+                                                        <input readonly type="text" name="birth_date_r"
+                                                               id="birth_date_r"
+                                                               value="08 - April - 1986"/>
+                                                        <div class="input-group-addon"><i class="date_icon"></i>
+                                                            <input type="hidden" name="birth_date"
+                                                                   style="display:none">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="buttons_block">
+                                                    <a href="#" class="btn_edit">Edit</a>
+                                                    <a href="#" class="btn_save">Save</a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane" id="boutique_profile">
+                                            <form action="" method="post">
+                                                <div class="form-group">
+                                                    <h3>Boutique's Name</h3>
+                                                    <input type="text" name="boutique_name" id="boutique_name"
+                                                           value="Bangkok Tshirts"/>
+                                                </div>
+                                                <div class="form-group">
+                                                    <h3>Enter a description for your boutique</h3>
+                                                    <textarea name="boutique_desc" id="boutique_desc">Bangkok TShirts is a luxury retail chain of high quality tshirts that are available to be purchased anywhere around the world. The brand has won many awards and is one of the premier apparel brands in the world.</textarea>
+                                                </div>
+                                                <div class="form-group boutique_type_block">
+                                                    <h3>Boutique type</h3>
+                                                    <div class="boutique_type_select">
+                                                        <input type="hidden" name="boutique_type"
+                                                               id="boutique_type" value="1"/>
+                                                        <div class="type active" data-type="1">Own-label</div>
+                                                        <div class="type" data-type="2">Pre-owned</div>
+                                                        <div class="type" data-type="3">multi-brand</div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group product_type_block">
+                                                    <h3>Product type</h3>
+                                                    <div class="product_type_select">
+                                                        <input type="hidden" name="product_type" value="1"
+                                                               id="product_type"/>
+                                                        <div class="type active" data-type="1"><i class="men"></i>Men
+                                                        </div>
+                                                        <div class="type" data-type="2"><i class="women"></i>Women
+                                                        </div>
+                                                        <div class="type" data-type="3"><i class="kids"></i>Kids
+                                                        </div>
+                                                        <div class="type" data-type="4">All</div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <h3>your country</h3>
+                                                    <div class="country_select">
+                                                        <i class="icon"></i>
+                                                        <select name="country" id="create_boutique_country">
+                                                            <option value="1">Moldova</option>
+                                                            <option value="2" selected>United States of America
+                                                            </option>
+                                                            <option value="3">United Arab Emirates</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group file_block">
+                                                    <h3>Cover photo</h3>
+                                                    <input type="file" name="boutique_cover" id="boutique_cover">
+                                                    <div class="cover_photo"></div>
+                                                    <label for="boutique_cover">Change Cover</label>
+                                                </div>
+                                                <div class="buttons_block">
+                                                    <a href="#" class="btn_edit">Edit</a>
+                                                    <a href="#" class="btn_save">Save</a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="item_body"></div>
-                            </div>
-                        </div>
-                        <div class="col-md-4  col-sm-6 item">
-                            <div class="item_block">
-                                <div class="item_header">
-                                    <i class="icon"></i>
-                                    <span>Apparel on models with studio background</span>
+                                <div role="tabpanel" class="tab-pane" id="password">
+                                    <form action="" method="post">
+                                        <div class="form-group">
+                                            <h3>Old Password</h3>
+                                            <input type="password" name="old_password" id="old_password"
+                                                   placeholder="Enter Old Password"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <h3>New Password</h3>
+                                            <input type="password" name="new_password" id="new_password"
+                                                   placeholder="Enter New Password"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <h3>Confirm new password</h3>
+                                            <input type="password" name="confirm_new_password" id="confirm_new_password"
+                                                   placeholder="Re-enter New Password"/>
+                                        </div>
+                                        <div class="buttons_block">
+                                            <a href="#" class="btn_save">Save</a>
+                                        </div>
+                                    </form>
                                 </div>
-                                <div class="item_body"></div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 item">
-                            <div class="item_block">
-                                <div class="item_header">
-                                    <i class="icon"></i>
-                                    <span>Apparel on models with studio background</span>
+                                <div role="tabpanel" class="tab-pane" id="membership">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-6 col-xs-6 item">
+                                            <div class="item_block active">
+                                                <div class="item_header free">
+                                                    Free
+                                                </div>
+                                                <div class="item_body">
+                                                    <div class="plan_features">
+                                                        Unlimited products
+                                                    </div>
+                                                    <div class="plan_features">
+                                                        1 look book
+                                                    </div>
+                                                    <div class="plan_features">
+                                                        9am - 6pm customer support
+                                                    </div>
+                                                    <div class="plan_features">
+                                                        <span>20% commission per purchase</span>
+                                                        <a href="owner_boutique_page_empty.html" class="btn-select">Selected</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6 col-xs-6 item">
+                                            <div class="item_block">
+                                                <div class="item_header">
+                                                    <h3>$10</h3>
+                                                    <p>per month</p>
+                                                </div>
+                                                <div class="item_body">
+                                                    <div class="plan_features">
+                                                        Unlimited products
+                                                    </div>
+                                                    <div class="plan_features">
+                                                        3 look books
+                                                    </div>
+                                                    <div class="plan_features">
+                                                        24 x 7 customer support
+                                                    </div>
+                                                    <div class="plan_features">
+                                                        <span>15% commission per purchase</span>
+                                                        <a href="#" class="btn-select">Upgrade</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6 col-xs-6 item">
+                                            <div class="item_block">
+                                                <div class="item_header">
+                                                    <h3>$30</h3>
+                                                    <p>per month</p>
+                                                </div>
+                                                <div class="item_body">
+                                                    <div class="plan_features">
+                                                        Unlimited products
+                                                    </div>
+                                                    <div class="plan_features">
+                                                        Unlimited look books
+                                                    </div>
+                                                    <div class="plan_features">
+                                                        24 x 7 customer support
+                                                    </div>
+                                                    <div class="plan_features">
+                                                        <span>0% commission per purchase</span>
+                                                        <a href="#" class="btn-select">Upgrade</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="item_body"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="big_block">
-                                <h2>Increase your earning potential.</h2>
-                                <a href="create_boutique_step_1.html" class="btn_create_boutique">Create A Boutique</a>
-                                <div class="icon"></div>
+                                <div role="tabpanel" class="tab-pane" id="delete">
+                                    <h4>
+                                        Deleting your account will result in the loss of your transaction history,
+                                        invetory, look books, blogs and feedback.
+                                    </h4>
+                                    <div class="delete_block">
+                                        <h5>Still want to delete your account</h5>
+                                        <a data-toggle="modal" data-target="#delete_account_modal"
+                                           class="btn_delete_account">Yes</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
