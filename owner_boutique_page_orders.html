@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Supply Apparel </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/semantic/css/dropdown.min.css">
+    <link rel="stylesheet" href="libs/semantic/css/transition.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="shipped_modal" class="modal fade shipped_modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="form-group title_block">
+                <span>View Details</span>
+            </div>
+            <div class="form-group first_block">
+                <h4>Shipping Date</h4>
+                <input type="text" name="shipping_date" value="04 - November - 2015">
+            </div>
+            <div class="form-group">
+                <h4>Tracking Number</h4>
+                <input type="text" name="tracking_number" value="0189902990384">
+            </div>
+            <div class="form-group">
+                <h4>Logistics Provider</h4>
+                <input type="text" name="logistics_provider" value="DedEX">
+            </div>
+        </form>
+    </div>
+</div>
+<div id="delivered_modal" class="modal fade delivered_modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="form-group title_block">
+                <span>View Details</span>
+            </div>
+            <div class="form-group first_block">
+                <h4>Delivery Date</h4>
+                <input type="text" name="delivery_date" value="04 - November - 2015">
+            </div>
+            <div class="form-group">
+                <h4>Tracking Number</h4>
+                <input type="text" name="tracking_number" value="0189902990384">
+            </div>
+            <div class="form-group">
+                <h4>Logistics Provider</h4>
+                <input type="text" name="logistics_provider" value="DedEX">
+            </div>
+        </form>
+    </div>
+</div>
+<div id="update_modal" class="modal fade update_modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="form-group title_block">
+                <span>Update Order</span>
+            </div>
+            <div class="form-group first_block">
+                <h4>Tracking Number</h4>
+                <input type="text" name="tracking_number" placeholder="Enter Tracking Number">
+            </div>
+            <div class="form-group">
+                <h4>Logistics Provider</h4>
+                <input type="text" name="logistics_provider" placeholder="Enter Logistics Provider">
+            </div>
+            <div class="form-group save_block">
+                <button type="submit" class="btn_update">Update</button>
+            </div>
+            <div class="form-group terms_block">
+                <p>
+                    Clicking on “update” will sent the customer a notification about the shipping details.
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="reject_modal" class="modal fade reject_modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="form-group title_block">
+                <span>Reject Order</span>
+            </div>
+            <div class="form-group first_block">
+                <h4>Reason for Rejecting Order</h4>
+                <div class="ui selection dropdown" id="reject_reason_select">
+                    <input type="hidden" name="reason">
+                    <i class="dropdown icon"></i>
+                    <div class="default text">Out Of Stock</div>
+                    <div class="menu">
+                        <div class="item active selected" data-value="1">Out Of Stock</div>
+                        <div class="item" data-value="2">Problem with Logistics</div>
+                        <div class="item" data-value="0">Order Placed by Mistake</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group save_block">
+                <button type="submit" class="btn_reject_order">Reject Order</button>
+            </div>
+            <div class="form-group terms_block">
+                <p>
+                    Clicking on “Reject Order” will send the a refund to the customer and a notification about the
+                    status.
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
+<header class="index_page">
+    <div class="container-fluid website_head">
+        <div class="row">
+            <div class="container">
+                <a href="index.html">
+                    <div class="logo"></div>
+                </a>
+                <div class="auth_section">
+                    <a href="#" class="btn_create_boutique">Create a boutique</a>
+                    <a href="#" class="btn_auth" data-toggle="modal" data-target="#registerModal">Sign Up</a>
+                    <a href="#" class="btn_auth" data-toggle="modal" data-target="#loginModal">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#website_navbar_collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul class="mobile_right_nav visible-xs">
+                    <li class="dropdown language_dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">English <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">French</a></li>
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">German</a></li>
+                            <li><a href="#">Arabian</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown currency_dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">USD <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">EUR</a></li>
+                            <li><a href="#">USD</a></li>
+                            <li><a href="#">GBP</a></li>
+                        </ul>
+                    </li>
+                    <li class="icons"><a href="#"><span class="wishlist_icon" title="Wishlist"></span></a></li>
+                    <li class="icons"><a href="#"><span class="cart_icon" title="Cart"></span></a></li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="website_navbar_collapse">
+                <ul class="nav navbar-nav navbar-right hidden-xs">
+                    <li class="dropdown language_dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">English <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">French</a></li>
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">German</a></li>
+                            <li><a href="#">Arabian</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown currency_dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">USD <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">EUR</a></li>
+                            <li><a href="#">USD</a></li>
+                            <li><a href="#">GBP</a></li>
+                        </ul>
+                    </li>
+                    <li class="icons"><a href="#"><span class="wishlist_icon" title="Wishlist"></span></a></li>
+                    <li class="icons"><a href="#"><span class="cart_icon" title="Cart"></span></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="dropdown women_dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">Women</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <ul class="list-unstyled">
+                                    <li><a class="" href="#">Coats & Jackets</a></li>
+                                    <li><a class="" href="#">Dresses</a></li>
+                                    <li><a class="" href="#">Jeans</a></li>
+                                    <li><a class="" href="#">Jumpsuits</a></li>
+                                    <li><a class="" href="#">Shirts & Blouses</a></li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li><a class="" href="#">Tops & T-Shirts</a></li>
+                                    <li><a class="" href="#">Trousers & Leggings</a></li>
+                                    <li><a class="" href="#">Shorts & skirts</a></li>
+                                    <li><a class="" href="#">Lingerie & Nightware</a></li>
+                                    <li><a class="" href="#">Shoes</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown men_dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">Men</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <ul class="list-unstyled">
+                                    <li><a class="" href="#">Coats & Jackets</a></li>
+                                    <li><a class="" href="#">Hats & Caps</a></li>
+                                    <li><a class="" href="#">Jeans</a></li>
+                                    <li><a class="" href="#">Sweatshirts</a></li>
+                                    <li><a class="" href="#">Shirts</a></li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li><a class="" href="#">T-Shirts & Polos</a></li>
+                                    <li><a class="" href="#">Suits & Blazers</a></li>
+                                    <li><a class="" href="#">Shorts & skirts</a></li>
+                                    <li><a class="" href="#">Brief & Underwear</a></li>
+                                    <li><a class="" href="#">Shoes</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown kids_dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">Kids</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <ul class="list-unstyled col-sm-6 with_divider no_margin">
+                                    <div class="row">
+                                        <li>
+                                            <h2>Girls</h2>
+                                            <ul class="list-unstyled col-md-6 col-sm-12 no_margin">
+                                                <li><a class="" href="#">Coats & Jackets</a></li>
+                                                <li><a class="" href="#">Dresses</a></li>
+                                                <li><a class="" href="#">Jeans</a></li>
+                                                <li><a class="" href="#">Jumpsuits</a></li>
+                                                <li><a class="" href="#">Pajamas</a></li>
+                                            </ul>
+                                            <ul class="list-unstyled col-md-6 col-sm-12 no_margin">
+                                                <li><a class="" href="#">T-Shits</a></li>
+                                                <li><a class="" href="#">Bottoms</a></li>
+                                                <li><a class="" href="#">Shorts & Skirts</a></li>
+                                                <li><a class="" href="#">Sweaters</a></li>
+                                                <li><a class="" href="#">Shoes</a></li>
+                                            </ul>
+                                        </li>
+                                    </div>
+
+                                </ul>
+                                <ul class="list-unstyled col-sm-6  no_margin">
+                                    <div class="row">
+                                        <li>
+                                            <h2>Boys</h2>
+                                            <ul class="list-unstyled col-md-6 col-sm-12 no_margin">
+                                                <li><a class="" href="#">Coats & Jackets</a></li>
+                                                <li><a class="" href="#">Hats & Caps</a></li>
+                                                <li><a class="" href="#">Sweatshirts</a></li>
+                                                <li><a class="" href="#">Shirts</a></li>
+                                            </ul>
+                                            <ul class="list-unstyled col-md-6 col-sm-12 no_margin">
+                                                <li><a class="" href="#">T-Shirts & Polos</a></li>
+                                                <li><a class="" href="#">Suits & Blazers</a></li>
+                                                <li><a class="" href="#">Shorts & Trousers</a></li>
+                                                <li><a class="" href="#">Brief & Underwear</a></li>
+                                                <li><a class="" href="#">Shoes</a></li>
+                                            </ul>
+                                        </li>
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown boutiques_dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">Boutiques</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <ul class="list-unstyled col-md-6 col-sm-7 with_divider no_margin">
+                                    <li>
+                                        <div class="row">
+                                            <ul class="list-unstyled with_divider col-sm-6 no_margin">
+                                                <h2>Boutique Type</h2>
+                                                <li><a class="" href="#">Own Labels</a></li>
+                                                <li><a class="" href="#">Pre-owned</a></li>
+                                                <li><a class="" href="#">Multi Brand</a></li>
+                                            </ul>
+                                            <ul class="list-unstyled col-sm-6 no_margin">
+                                                <h2>Categories</h2>
+                                                <li><a class="" href="#">Men</a></li>
+                                                <li><a class="" href="#">Women</a></li>
+                                                <li><a class="" href="#">Kids</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled col-md-6 col-sm-5 no_margin">
+                                    <li>
+                                        <h2>Featured Boutiques</h2>
+                                        <ul class="list-unstyled col-md-6 col-sm-12 no_margin">
+                                            <li><a class="" href="#">Labels & Love</a></li>
+                                            <li><a class="" href="#">Forever 21</a></li>
+                                            <li><a class="" href="#">Brown Leather</a></li>
+
+                                        </ul>
+                                        <ul class="list-unstyled col-md-6 col-sm-12 no_margin">
+                                            <li><a class="" href="#">Sophia & Sons</a></li>
+                                            <li><a class="" href="#">Trouser Hub</a></li>
+                                            <li><a class="" href="#">T-shirt Bangkok</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown look_dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">Look Books</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <ul class="list-unstyled col-md-6 col-sm-7 with_divider no_margin">
+                                    <li>
+                                        <div class="row">
+                                            <ul class="list-unstyled with_divider col-sm-6  no_margin">
+                                                <h2>Boutique Type</h2>
+                                                <li><a class="" href="#">Own Labels</a></li>
+                                                <li><a class="" href="#">Pre-owned</a></li>
+                                                <li><a class="" href="#">Multi Brand</a></li>
+                                            </ul>
+                                            <ul class="list-unstyled col-sm-6  no_margin">
+                                                <h2>Categories</h2>
+                                                <li><a class="" href="#">Men</a></li>
+                                                <li><a class="" href="#">Women</a></li>
+                                                <li><a class="" href="#">Kids</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled col-md-6 col-sm-5 no_margin">
+                                    <li>
+                                        <h2>Featured Look Books</h2>
+                                        <ul class="list-unstyled col-md-6 col-sm-12 no_margin">
+                                            <li><a class="" href="#">Labels & Love</a></li>
+                                            <li><a class="" href="#">Forever 21</a></li>
+                                            <li><a class="" href="#">Brown Leather</a></li>
+
+                                        </ul>
+                                        <ul class="list-unstyled col-md-6 col-sm-12 no_margin">
+                                            <li><a class="" href="#">Sophia & Sons</a></li>
+                                            <li><a class="" href="#">Trouser Hub</a></li>
+                                            <li><a class="" href="#">T-shirt Bangkok</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<main class="boutique_orders">
+    <section class="section_1 owner_menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0">
+                    <ul class="list-inline account_menu">
+                        <li>
+                            <div class="icon"></div>
+                        </li>
+                        <li><a href="owner_boutique_page_empty.html"><i class="boutique"></i><span>Boutique</span></a>
+                        </li>
+                        <li class="active"><a href="owner_boutique_page_orders.html"><i
+                                class="orders"></i><span>Orders</span></a></li>
+                        <li><a href="#"><i class="messages"></i><span>Messages</span></a></li>
+                        <li><a href="#"><i class="settings"></i><span>Settings</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section_2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0">
+                    <ul class="nav nav-tabs orders_tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#products_bought" aria-controls="bought" role="tab"
+                               data-toggle="tab">Products Bought</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#products_sold" aria-controls="sold" role="tab" data-toggle="tab">Products Sold</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="products_bought">
+                            <div class="row">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th>Product Bought</th>
+                                            <th>Boutique</th>
+                                            <th>Delivery Address</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="product_block">
+                                                <div class="product_item">
+                                                    <div class="photo"></div>
+                                                    <div class="details">
+                                                        <div class="name">The Twill Snap Backpack</div>
+                                                        <div class="type">Reverse Denim + Brown Leather</div>
+                                                        <div class="quantity">Quantity: 1</div>
+                                                    </div>
+                                                    <div class="price">$235</div>
+                                                </div>
+                                            </td>
+                                            <td>The Summer Show Collection</td>
+                                            <td>203, Silicon Oasis, New Heights Ave, Dubai, UAE, 401202</td>
+                                            <td class="status"><!--  shipped |  decision    -->
+                                                Purchased
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product_block">
+                                                <div class="product_item">
+                                                    <div class="photo"></div>
+                                                    <div class="details">
+                                                        <div class="name">The Twill Snap Backpack</div>
+                                                        <div class="type">Reverse Denim + Brown Leather</div>
+                                                        <div class="quantity">Quantity: 1</div>
+                                                    </div>
+                                                    <div class="price">$235</div>
+                                                </div>
+                                            </td>
+                                            <td>The Summer Show Collection</td>
+                                            <td>203, Silicon Oasis, New Heights Ave, Dubai, UAE, 401202</td>
+                                            <td class="status shipped"> <!-- shipped |  decision    -->
+                                                <span>Shipped</span>
+                                                <a data-toggle="modal" data-id="3" data-target="#shipped_modal"
+                                                   class="btn_view">View Details</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product_block">
+                                                <div class="product_item">
+                                                    <div class="photo"></div>
+                                                    <div class="details">
+                                                        <div class="name">The Twill Snap Backpack</div>
+                                                        <div class="type">Reverse Denim + Brown Leather</div>
+                                                        <div class="quantity">Quantity: 1</div>
+                                                    </div>
+                                                    <div class="price">$235</div>
+                                                </div>
+                                            </td>
+                                            <td>The Summer Show Collection</td>
+                                            <td>203, Silicon Oasis, New Heights Ave, Dubai, UAE, 401202</td>
+                                            <td class="status shipped"><!-- shipped |  decision    -->
+                                                <span>Shipped</span>
+                                                <a data-toggle="modal" data-id="2" data-target="#shipped_modal"
+                                                   class="btn_view">View Details</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product_block">
+                                                <div class="product_item">
+                                                    <div class="photo"></div>
+                                                    <div class="details">
+                                                        <div class="name">The Twill Snap Backpack</div>
+                                                        <div class="type">Reverse Denim + Brown Leather</div>
+                                                        <div class="quantity">Quantity: 1</div>
+                                                    </div>
+                                                    <div class="price">$235</div>
+                                                </div>
+                                            </td>
+                                            <td>The Summer Show Collection</td>
+                                            <td>203, Silicon Oasis, New Heights Ave, Dubai, UAE, 401202</td>
+                                            <td class="status shipped"><!-- shipped |  decision    -->
+                                                <span>Delivered</span>
+                                                <a data-toggle="modal" data-id="1" data-target="#delivered_modal"
+                                                   class="btn_view">View Details</a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="products_sold">
+                            <div class="row">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th>Product Sold</th>
+                                            <th>Customer</th>
+                                            <th>Delivery Address</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="product_block">
+                                                <div class="product_item">
+                                                    <div class="photo"></div>
+                                                    <div class="details">
+                                                        <div class="name">The Twill Snap Backpack</div>
+                                                        <div class="type">Reverse Denim + Brown Leather</div>
+                                                        <div class="quantity">Quantity: 1</div>
+                                                    </div>
+                                                    <div class="price">$235</div>
+                                                </div>
+                                            </td>
+                                            <td>John Snow</td>
+                                            <td>203, Silicon Oasis, New Heights Ave, Dubai, UAE, 401202</td>
+                                            <td class="status decision"><!--  shipped |  decision  -->
+                                                <a data-id="4" class="btn_accept">Accept</a>
+                                                <a data-toggle="modal" data-id="4" data-target="#reject_modal"
+                                                   class="btn_reject">Reject</a>
+                                                <span class="hidden">Accepted</span>
+                                                <a data-toggle="modal" data-id="4" data-target="#update_modal"
+                                                   class="btn_view hidden">Update Order</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product_block">
+                                                <div class="product_item">
+                                                    <div class="photo"></div>
+                                                    <div class="details">
+                                                        <div class="name">The Twill Snap Backpack</div>
+                                                        <div class="type">Reverse Denim + Brown Leather</div>
+                                                        <div class="quantity">Quantity: 1</div>
+                                                    </div>
+                                                    <div class="price">$235</div>
+                                                </div>
+                                            </td>
+                                            <td>Elizabeth Mcurry</td>
+                                            <td>203, Silicon Oasis, New Heights Ave, Dubai, UAE, 401202</td>
+                                            <td class="status shipped"> <!-- shipped |  decision    -->
+                                                <span>Accepted</span>
+                                                <a data-toggle="modal" data-id="3" data-target="#update_modal"
+                                                   class="btn_view">Update Order</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product_block">
+                                                <div class="product_item">
+                                                    <div class="photo"></div>
+                                                    <div class="details">
+                                                        <div class="name">The Twill Snap Backpack</div>
+                                                        <div class="type">Reverse Denim + Brown Leather</div>
+                                                        <div class="quantity">Quantity: 1</div>
+                                                    </div>
+                                                    <div class="price">$235</div>
+                                                </div>
+                                            </td>
+                                            <td>Michael Bender</td>
+                                            <td>203, Silicon Oasis, New Heights Ave, Dubai, UAE, 401202</td>
+                                            <td class="status shipped"><!-- shipped |  decision    -->
+                                                <span>Shipped</span>
+                                                <a data-toggle="modal" data-id="2" data-target="#shipped_modal"
+                                                   class="btn_view">View Details</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product_block">
+                                                <div class="product_item">
+                                                    <div class="photo"></div>
+                                                    <div class="details">
+                                                        <div class="name">The Twill Snap Backpack</div>
+                                                        <div class="type">Reverse Denim + Brown Leather</div>
+                                                        <div class="quantity">Quantity: 1</div>
+                                                    </div>
+                                                    <div class="price">$235</div>
+                                                </div>
+                                            </td>
+                                            <td>The Summer Show Collection</td>
+                                            <td>203, Silicon Oasis, New Heights Ave, Dubai, UAE, 401202</td>
+                                            <td class="status shipped"><!-- shipped |  decision    -->
+                                                <span>Delivered</span>
+                                                <a data-toggle="modal" data-id="1" data-target="#delivered_modal"
+                                                   class="btn_view">View Details</a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 col-xs-4 menu_quick_links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-2  col-xs-4 menu_browsing">
+                <h3>Browsing Menu</h3>
+                <ul>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">Boutiques</a></li>
+                    <li><a href="#">Look Books</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-2 col-xs-4 menu_help">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Track Orders</a></li>
+                    <li><a href="#">FAQ's</a></li>
+                    <li><a href="#">Shipping & Delivery</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-2 col-xs-4 menu_social">
+                <h3>Connect with Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Google +</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4 col-xs-8  menu_payments_newsletter">
+                <h3>Newsletter Sign Up</h3>
+                <div class="newsletter_block">
+                    <p>Subscribe to our newsletter to get the latest news about
+                        our sales and promotions</p>
+                    <form action="" method="post">
+                        <input type="email" name="email" placeholder="Your Email Address"/>
+                        <input type="submit" value="Submit"/>
+                    </form>
+                </div>
+                <div class="payments_block">
+                    <div class="payment visa"></div>
+                    <div class="payment mastercard"></div>
+                    <div class="payment paypal"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/base-min.js"></script>
+</body>
+</html>

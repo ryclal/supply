@@ -20,6 +20,7 @@
         @include box-shadow(none);
         position: absolute;
         width: 340px;
+        margin: 0 auto;
         border: 1px solid $grey_4a;
         padding: 25px 20px 20px;
         left: calc(50% - 170px);
@@ -397,10 +398,10 @@
         .modal-dialog
         {
             padding-top: 0;
-            top:calc(50% - 156px);
+            top: calc(50% - 156px);
 
             @media (max-height: 350px) {
-                top:30px;
+                top: 30px;
             }
 
             .form-group
@@ -444,30 +445,32 @@
                     .btn_login
                     {
                         @extend .btn_login;
-                        margin-top:20px;
+                        margin-top: 20px;
                     }
                     .btn_sent
                     {
                         display: none;
                         position: absolute;
-                        top:20px;
-                        left:0;
-                        margin-top:0;
+                        top: 20px;
+                        left: 0;
+                        margin-top: 0;
                         padding: 19px 0 17px;
 
-                        i{
-                            margin-right:5px;
+                        i
+                        {
+                            margin-right: 5px;
                             line-height: 1.2;
-                            top:-2px;
+                            top: -2px;
                             vertical-align: middle;
                         }
                     }
 
-                    .loader{
+                    .loader
+                    {
                         display: none;
-                        top:25px;
+                        top: 25px;
                         position: absolute;
-                        left:calc(50% - 12px);
+                        left: calc(50% - 12px);
                         border: 2px solid $google_yellow;
                         border-radius: 50%;
                         border-top: 2px solid $google_blue;
@@ -484,6 +487,370 @@
 
     }
 
+    &.shipped_modal, &.delivered_modal
+    {
+        .modal-dialog
+        {
+            padding-top: 0;
+            top: calc(50% - 188px);
 
+            @media (max-height: 400px) {
+                top: 30px;
+            }
+
+            .form-group
+            {
+                margin-bottom: 17px;
+
+                &:last-child
+                {
+                    margin-bottom: 6px;
+                }
+
+                &.title_block
+                {
+                    position: absolute;
+                    top: -1px;
+                    left: -1px;
+                    width: calc(100% + 2px);
+
+                    span
+                    {
+                        width: 100%;
+                        display: block;
+                        position: relative;
+                        @include font-details(16px, 'OpenSans', 600);
+                        color: $black_4a;
+                        line-height: 1.2;
+                        @include border-radius(8px);
+                        background: $grey_f7;
+                        padding: 15px 0 13px 20px;
+                        border: 1px solid $grey_4a;
+                    }
+                }
+
+                &.first_block
+                {
+                    margin-top: 65px;
+                }
+
+                input
+                {
+                    width: 100%;
+                    @include border-radius(0);
+                    border: 1px solid $grey_c8;
+                    @include font-details(14px, 'OpenSans', 600);
+                    line-height: 1.2;
+                    color: $grey_9b;
+                    padding: 19px 0 17px $padding_left;
+                    @include box-shadow(none);
+                    @include placeholder($grey_9b, left);
+
+                    &:focus
+                    {
+                        outline: 0 !important;
+                    }
+                }
+
+                h4
+                {
+                    margin-top: 0;
+                    @include font-details(14px, 'OpenSans', 600);
+                    line-height: 1.2;
+                    color: $black_4a;
+                    margin-bottom: 13px;
+                }
+            }
+        }
+
+    }
+
+    &.update_modal
+    {
+        .modal-dialog
+        {
+            padding-top: 0;
+            top: calc(50% - 202px);
+
+            @media (max-height: 450px) {
+                top: 30px;
+            }
+
+            .form-group
+            {
+                margin-bottom: 17px;
+
+                &.title_block
+                {
+                    position: absolute;
+                    top: -1px;
+                    left: -1px;
+                    width: calc(100% + 2px);
+
+                    span
+                    {
+                        width: 100%;
+                        display: block;
+                        position: relative;
+                        @include font-details(16px, 'OpenSans', 600);
+                        color: $black_4a;
+                        line-height: 1.2;
+                        @include border-radius(8px);
+                        background: $grey_f7;
+                        padding: 15px 0 13px 20px;
+                        border: 1px solid $grey_4a;
+                    }
+                }
+
+                &.first_block
+                {
+                    margin-top: 65px;
+                }
+
+                input
+                {
+                    width: 100%;
+                    @include border-radius(0);
+                    border: 1px solid $grey_c8;
+                    @include font-details(14px, 'OpenSans', 600);
+                    line-height: 1.2;
+                    color: $grey_9b;
+                    padding: 19px 0 17px $padding_left;
+                    @include box-shadow(none);
+                    @include placeholder($grey_9b, left);
+
+                    &:focus
+                    {
+                        outline: 0 !important;
+                    }
+                }
+
+                h4
+                {
+                    margin-top: 0;
+                    @include font-details(14px, 'OpenSans', 600);
+                    line-height: 1.2;
+                    color: $black_4a;
+                    margin-bottom: 13px;
+                }
+
+                &.save_block
+                {
+                    margin-top: 24px;
+                    margin-bottom: 16px;
+
+                    .btn_update
+                    {
+                        @include font-details(14px, 'OpenSans', 600);
+                        line-height: 1.2;
+                        color: #fff;
+                        background: $red_fa;
+                        width: 100%;
+                        border: none;
+                        display: block;
+                        text-align: center;
+                        padding: 20px 0 18px;
+
+                        &:focus
+                        {
+                            outline: 0 !important;
+                        }
+                    }
+                }
+
+                &.terms_block
+                {
+                    margin-bottom: 6px;
+                    p
+                    {
+                        @include font-details(12px, 'OpenSans', 600);
+                        color: $black_4a;
+                        margin-bottom: 0;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    &.reject_modal
+    {
+        .modal-dialog
+        {
+            padding-top: 0;
+            top: calc(50% - 202px);
+
+            @media (max-height: 450px) {
+                top: 30px;
+            }
+
+            .form-group
+            {
+                margin-bottom: 17px;
+
+                &.title_block
+                {
+                    position: absolute;
+                    top: -1px;
+                    left: -1px;
+                    width: calc(100% + 2px);
+
+                    span
+                    {
+                        width: 100%;
+                        display: block;
+                        position: relative;
+                        @include font-details(16px, 'OpenSans', 600);
+                        color: $black_4a;
+                        line-height: 1.2;
+                        @include border-radius(8px);
+                        background: $grey_f7;
+                        padding: 15px 0 13px 20px;
+                        border: 1px solid $grey_4a;
+                    }
+                }
+
+                &.first_block
+                {
+                    margin-top: 65px;
+
+                    .ui.dropdown
+                    {
+                        border: 1px solid $grey_97;
+                        background: transparent;
+                        width: 100%;
+                        min-width: 0;
+                        position: relative;
+                        display: inline-block;
+                        margin-right: -4px;
+                        vertical-align: top;
+                        @include border-radius(0);
+                        padding: 0;
+
+                        .icon
+                        {
+                            color: $black_28;
+                            font-size: 14px;
+                            height: 11px;
+                            display: inline-block;
+                            margin: 0;
+                            border: none;
+                            position: absolute;
+                            top: 11px;
+                            right: 4px;
+                        }
+
+                        .text, .default
+                        {
+                            padding: 20px 25px 18px 19px;
+                            display: block;
+                            color: $black_4a;
+                            @include font-details(14px, 'OpenSans', 600);
+                        }
+
+                        .menu
+                        {
+                            @include border-radius(0);
+                            @include box-shadow(none);
+                            border: 1px solid $grey_97;
+                            border-top-width: 1px !important;
+
+                            > .item
+                            {
+                                border-top-color: transparent;
+                                padding: 13px 0 11px 19px!important;
+                                color: $black_4a;
+                                @include font-details(14px, 'OpenSans', 600);
+
+                                &:hover, &:focus
+                                {
+                                    background: transparent;
+                                }
+                                &.selected
+                                {
+                                    background: transparent;
+                                }
+                            }
+                        }
+
+                        &.active
+                        {
+                            .menu
+                            {
+                                outline: 0 !important;
+                                border-color: $grey_97;
+                                @include box-shadow(none);
+                            }
+                        }
+                    }
+
+                }
+
+                input
+                {
+                    width: 100%;
+                    @include border-radius(0);
+                    border: 1px solid $grey_c8;
+                    @include font-details(14px, 'OpenSans', 600);
+                    line-height: 1.2;
+                    color: $grey_9b;
+                    padding: 19px 0 17px $padding_left;
+                    @include box-shadow(none);
+                    @include placeholder($grey_9b, left);
+
+                    &:focus
+                    {
+                        outline: 0 !important;
+                    }
+                }
+
+                h4
+                {
+                    margin-top: 0;
+                    @include font-details(14px, 'OpenSans', 600);
+                    line-height: 1.2;
+                    color: $black_4a;
+                    margin-bottom: 13px;
+                }
+
+                &.save_block
+                {
+                    margin-top: 124px;
+                    margin-bottom: 16px;
+
+                    .btn_reject_order
+                    {
+                        @include font-details(14px, 'OpenSans', 600);
+                        line-height: 1.2;
+                        color: #fff;
+                        background: $green_0a;
+                        width: 100%;
+                        border: none;
+                        display: block;
+                        text-align: center;
+                        padding: 20px 0 18px;
+
+                        &:focus
+                        {
+                            outline: 0 !important;
+                        }
+                    }
+                }
+
+                &.terms_block
+                {
+                    margin-bottom: 6px;
+                    p
+                    {
+                        @include font-details(12px, 'OpenSans', 600);
+                        color: $black_4a;
+                        margin-bottom: 0;
+                    }
+                }
+
+            }
+        }
+    }
 
 }

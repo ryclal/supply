@@ -355,6 +355,44 @@ $(document).ready(function () {
 
         }
     });
+
+    //Review textarea
+    $('.btn_reply').on('click',function()
+    {
+        var button = $(this);
+       var review = $(this).parents('.item').children('.reply_block');
+       var textarea = $(this).parents('.item').children('.reply_block').children('textarea');
+
+        if (review.hasClass('opened'))
+        {
+            review.removeClass('opened');
+            review.addClass('replied');
+            textarea.hide();
+            var text_desc = textarea.val();
+            review.children('.owner_item').children('.owner_desc').children('p').text(text_desc);
+            button.hide();
+        }
+        else
+        {
+            review.addClass('opened');
+            button.addClass('active');
+        }
+    });
+
+    // Accept button product sold
+    $('.btn_accept').on('click',function(){
+        var bt_reject = $('.btn_reject');
+        var parent = $(this).parent();
+        var hidden_elements = parent.children('.hidden');
+
+        parent.removeClass('decision');
+        $(this).addClass('hidden');
+        bt_reject.addClass('hidden');
+        parent.addClass('shipped');
+        hidden_elements.removeClass('hidden');
+    });
+
+    $('#reject_reason_select').dropdown();
 });
 
 
