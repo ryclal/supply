@@ -138,23 +138,82 @@ main
                         line-height: 1.2;
                     }
 
-                    select + span
+                    .country_dropdown
                     {
-                        background: transparent;
-                        border: none;
-                        color: $grey_77;
-                        @include font-details(14px, 'OpenSans', 400);
-                        line-height: 1.2;
-                        width: 100%;
-                        margin-top: 3px;
-                        padding: 6px 12px 4px;
-
-                        &:focus
+                        &.ui.dropdown
                         {
-                            outline: 0 !important;
-                        }
+                            border:none;
+                            background: transparent;
+                            width: 100%;
+                            min-width: 0;
+                            min-height: 0;
+                            position: relative;
+                            display: inline-block;
+                            vertical-align: top;
+                            @include border-radius(0);
+                            padding: 0;
 
+                            .icon
+                            {
+                                color: $black_28;
+                                font-size: 14px;
+                                height: 11px;
+                                display: inline-block;
+                                margin: 0;
+                                border: none;
+                                position: absolute;
+                                top: -4px;
+                                right: 4px;
+                            }
+
+                            .text, .default
+                            {
+                                padding: 7px 25px 5px 12px;
+                                display: block;
+                                color: $grey_77;
+                                @include font-details(14px, 'OpenSans', 400);
+                            }
+
+                            .menu
+                            {
+                                @include border-radius(0);
+                                @include box-shadow(none);
+                                border: 1px solid _rgba($grey_97, .2);
+                                max-height: 110px;
+                                overflow-y: auto;
+                                border-top-width: 1px!important;
+
+                                > .item
+                                {
+                                    border-top-color: transparent;
+                                    padding: 7px 0 5px 12px!important;
+                                    color: $grey_77;
+                                    @include font-details(14px, 'OpenSans', 400);
+
+                                    &:hover, &:focus
+                                    {
+                                        background: transparent;
+                                    }
+                                    &.selected
+                                    {
+                                        background: transparent;
+                                    }
+                                }
+                            }
+
+                            &.active
+                            {
+                                border:none;
+                                .menu
+                                {
+                                    outline: 0 !important;
+                                    border-color:_rgba($grey_97, .2);
+                                    @include box-shadow(none);
+                                }
+                            }
+                        }
                     }
+
                 }
 
                 .btn_step
@@ -266,7 +325,9 @@ main
                         line-height: 1.2;
                         color: $grey_77;
                         float: left;
+                        padding-bottom: 1px;
                     }
+
 
                     .value
                     {
@@ -384,6 +445,7 @@ main
                                 margin: 0;
                                 line-height: 1.2;
                                 border: none;
+                                @include border-radius(0);
 
                                 &:hover
                                 {
@@ -398,6 +460,7 @@ main
                                     a:after
                                     { opacity: 1; }
                                 }
+
                                 &.paypal
                                 {
                                     a:after

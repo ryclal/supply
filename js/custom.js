@@ -30,6 +30,17 @@ $(document).ready(function () {
         }
     });
 
+    // Date picker register
+    $('#register_date_birth').datepicker({
+        format: "dd/mm/yyyy"
+    });
+
+    //Date picker settings menu
+    // Date picker register
+    $('#birth_date_r').datepicker({
+        format: "dd - MM - yyyy"
+    });
+
     // Split view
     $('.split_view_block .split').unbind().on('click', function () {
         var prev_element = $(this),
@@ -241,7 +252,7 @@ $(document).ready(function () {
     $('.slider_block .second_value').text("$" + slider_b.slider("values", 1));
 
 
-    $("#filter_select,#filter_select_1,#checkout_select_step_1,#create_boutique_country,#country_prefix").selectmenu();
+    $("#filter_select,#filter_select_1").selectmenu();
 
 //Boutique Type select
     $('.boutique_type_select .type').on('click', function () {
@@ -316,7 +327,7 @@ $(document).ready(function () {
     });
 
 
-    var inputs = $('input[type="text"],input[type="email"],input[type="password"],textarea').not('#number_prefix');
+    var inputs = $('input[type="text"],input[type="email"],input[type="password"],textarea').not('#number_prefix,#register_date_birth,#birth_date_r');
 
     inputs.focus(function () {
         $(this).attr("data-placeholder", $(this).attr('placeholder')).removeAttr("placeholder");
@@ -344,27 +355,25 @@ $(document).ready(function () {
     });
 
     $("#country_prefix_dropdown").dropdown({
-        onChange: function (value,text) {
+        onChange: function (value, text) {
             var dpd = $('#country_prefix_dropdown');
             var input = $('#number_prefix');
             var logo_url = dpd.dropdown('get item').attr('data-logo');
 
             input.val(value);
 
-            dpd.dropdown('set text','<div class="logo" style="background-image: url('+ logo_url +')"></div>');
+            dpd.dropdown('set text', '<div class="logo" style="background-image: url(' + logo_url + ')"></div>');
 
         }
     });
 
     //Review textarea
-    $('.btn_reply').on('click',function()
-    {
+    $('.btn_reply').on('click', function () {
         var button = $(this);
-       var review = $(this).parents('.item').children('.reply_block');
-       var textarea = $(this).parents('.item').children('.reply_block').children('textarea');
+        var review = $(this).parents('.item').children('.reply_block');
+        var textarea = $(this).parents('.item').children('.reply_block').children('textarea');
 
-        if (review.hasClass('opened'))
-        {
+        if (review.hasClass('opened')) {
             review.removeClass('opened');
             review.addClass('replied');
             textarea.hide();
@@ -372,15 +381,14 @@ $(document).ready(function () {
             review.children('.owner_item').children('.owner_desc').children('p').text(text_desc);
             button.hide();
         }
-        else
-        {
+        else {
             review.addClass('opened');
             button.addClass('active');
         }
     });
 
     // Accept button product sold
-    $('.btn_accept').on('click',function(){
+    $('.btn_accept').on('click', function () {
         var bt_reject = $('.btn_reject');
         var parent = $(this).parent();
         var hidden_elements = parent.children('.hidden');
@@ -392,7 +400,7 @@ $(document).ready(function () {
         hidden_elements.removeClass('hidden');
     });
 
-    $('#reject_reason_select').dropdown();
+    $('#reject_reason_select,#country_dropdown_step_1,#country_dropdown_boutique_step_1,#country_dropdown_settings_step_1').dropdown();
 });
 
 

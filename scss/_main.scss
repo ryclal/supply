@@ -763,7 +763,8 @@ main
                             @include font-details(14px, 'OpenSans', 600);
                             line-height: 1.2;
                             color: $black_4a;
-                            padding: 27px 0 25px $padding_left;
+                            height: 54px;
+                            padding: 16px 0 14px $padding_left;
                             @include box-shadow(none);
                             @include placeholder($grey_9b, left);
                         }
@@ -1054,6 +1055,7 @@ main
                             .name_block
                             {
                                 height: 42px;
+                                background: #fff;
 
                                 div
                                 {
@@ -1227,11 +1229,22 @@ main
                                 .name_block
                                 {
                                     height: 42px;
+                                    background: #fff;
 
                                     div
                                     {
                                         padding-top: 11px;
                                         padding-bottom: 9px;
+
+                                        .item_icon,span
+                                        {
+                                            color:$black_4a;
+                                        }
+                                        .item_icon
+                                        {
+                                            background-image: img_url('black_boutique.png');
+                                        }
+
                                     }
                                 }
                             }

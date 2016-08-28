@@ -299,12 +299,32 @@
                             <div class="form-group">
                                 <h3>your country</h3>
                                 <div class="country_select">
-                                    <i class="icon"></i>
-                                    <select name="country" id="create_boutique_country">
-                                        <option value="1">Moldova</option>
-                                        <option value="2" selected>United States of America</option>
-                                        <option value="3">United Arab Emirates</option>
-                                    </select>
+                                    <i class="icons"></i>
+                                    <div class="ui selection dropdown country_dropdown"
+                                         id="country_dropdown_boutique_step_1">
+                                        <i class="dropdown icon"></i>
+                                        <input type="hidden" name="country" id="country">
+                                        <div class="default text">
+                                            United States of America
+                                        </div>
+                                        <div class="menu">
+                                            <div class="item active selected" data-value="1">
+                                                <span>United States of America</span>
+                                            </div>
+                                            <div class="item" data-value="2">
+                                                <span>Moldova</span>
+                                            </div>
+                                            <div class="item" data-value="2">
+                                                <span>United Arab Emirates</span>
+                                            </div>
+                                            <div class="item" data-value="2">
+                                                <span>Russia</span>
+                                            </div>
+                                            <div class="item" data-value="2">
+                                                <span>Saint Vincent and the Grenadines</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <a href="create_boutique_step_2.html" class="btn-step">Continue</a>

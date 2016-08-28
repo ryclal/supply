@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Supply Apparel </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="libs/semantic/css/dropdown.min.css">
-    <link rel="stylesheet" href="libs/semantic/css/transition.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -359,11 +357,9 @@
                                                     <h3>Date of Birth</h3>
                                                     <div class="input-group">
                                                         <input readonly type="text" name="birth_date_r"
-                                                               id="birth_date_r"
+                                                               id="birth_date_r" readonly
                                                                value="08 - April - 1986"/>
                                                         <div class="input-group-addon"><i class="date_icon"></i>
-                                                            <input type="hidden" name="birth_date"
-                                                                   style="display:none">
                                                         </div>
                                                     </div>
 
@@ -412,13 +408,32 @@
                                                 <div class="form-group">
                                                     <h3>your country</h3>
                                                     <div class="country_select">
-                                                        <i class="icon"></i>
-                                                        <select name="country" id="create_boutique_country">
-                                                            <option value="1">Moldova</option>
-                                                            <option value="2" selected>United States of America
-                                                            </option>
-                                                            <option value="3">United Arab Emirates</option>
-                                                        </select>
+                                                        <i class="icons"></i>
+                                                        <div class="ui selection dropdown country_dropdown"
+                                                             id="country_dropdown_settings_step_1">
+                                                            <i class="dropdown icon"></i>
+                                                            <input type="hidden" name="country" id="country">
+                                                            <div class="default text">
+                                                                United States of America
+                                                            </div>
+                                                            <div class="menu">
+                                                                <div class="item active selected" data-value="1">
+                                                                    <span>United States of America</span>
+                                                                </div>
+                                                                <div class="item" data-value="2">
+                                                                    <span>Moldova</span>
+                                                                </div>
+                                                                <div class="item" data-value="2">
+                                                                    <span>United Arab Emirates</span>
+                                                                </div>
+                                                                <div class="item" data-value="2">
+                                                                    <span>Russia</span>
+                                                                </div>
+                                                                <div class="item" data-value="2">
+                                                                    <span>Saint Vincent and the Grenadines</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="form-group file_block">

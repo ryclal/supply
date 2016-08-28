@@ -178,16 +178,18 @@
 
             .input-group
             {
+                border: 1px solid $grey_c8;
                 input
                 {
                     width: 100%;
                     @include border-radius(0);
-                    border: 1px solid $grey_c8;
+                    border:none;
                     @include font-details(14px, 'OpenSans', 600);
                     line-height: 1.2;
                     color: $black_4a;
-                    padding: 27px 0 25px $padding_left;
-                    border-right-color: transparent;
+                    height: 54px;
+                    background: #fff;
+                    padding: 16px 0 14px $padding_left;
                     @include box-shadow(none);
                     @include placeholder($grey_9b, left);
 
@@ -199,8 +201,7 @@
                 .input-group-addon
                 {
                     background: #fff;
-                    border:1px solid $grey_c8;
-                    border-left-color: transparent;
+                    border:none;
                     @include border-radius(0);
 
                     i
