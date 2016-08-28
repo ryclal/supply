@@ -3890,6 +3890,10 @@ main
                                 overflow: hidden;
                                 border: none;
                                 width: 174px;
+                                @media (max-width: 991px)
+                                {
+                                    width: 160px;
+                                }
                                 padding: 0;
                                 span
                                 {
@@ -3957,6 +3961,25 @@ main
                             }
                         }
                     }
+
+                    @media (max-width: 599px) {
+                        width: 100%;
+
+                        .settings_tabs
+                        {
+                            margin-bottom: 30px;
+                            li
+                            {
+                                margin-right: 10px;
+
+                                a
+                                {
+                                    width: 165px;
+                                }
+                            }
+                        }
+                    }
+
                 }
 
                 .right_bar
@@ -3965,16 +3988,22 @@ main
                     position: relative;
                     min-height: 556px;
 
+                    @media (max-width: 599px) {
+                        width: 100%;
+                        border-left:none;
+                    }
+
                     #profile
                     {
                         .profile_tabs
                         {
                             @include nav-tabs(220px);
                             text-align: left;
-                            margin-bottom: 33px;
+                            margin-bottom: 13px;
 
                             li
                             {
+                                margin-bottom: 20px;
                                 &:after
                                 {
                                     display: none;
@@ -4055,6 +4084,10 @@ main
                                     {
                                         @include input_attributes;
                                         width: 300px;
+
+                                        @media (max-width: 599px) {
+                                            width: 350px;
+                                        }
                                     }
 
                                     &.date_block
@@ -4117,6 +4150,10 @@ main
                                     {
                                         @include input_attributes;
                                         width: 380px;
+
+                                        @media (max-width: 767px) {
+                                            width: 350px;
+                                        }
                                     }
 
                                     textarea
@@ -4125,6 +4162,11 @@ main
                                         width: 88.8%;
                                         max-width: 620px;
                                         height: 88px;
+
+                                        @media (max-width: 767px) {
+                                            width: 350px;
+                                            height:160px;
+                                        }
                                     }
 
                                     .type
