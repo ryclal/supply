@@ -164,6 +164,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/img\/avatar.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3341,
+		"inputAbbreviatedPath": "\/img\/avatar.jpg",
+		"outputAbbreviatedPath": "\/img\/avatar.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/black_boutique.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -483,6 +494,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/file.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 334,
+		"inputAbbreviatedPath": "\/img\/file.png",
+		"outputAbbreviatedPath": "\/img\/file.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/gilr_avatar.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5812,
+		"inputAbbreviatedPath": "\/img\/gilr_avatar.jpg",
+		"outputAbbreviatedPath": "\/img\/gilr_avatar.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/google.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -527,6 +560,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/image_guide_2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 169641,
+		"inputAbbreviatedPath": "\/img\/image_guide_2.png",
+		"outputAbbreviatedPath": "\/img\/image_guide_2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/image_guide_3.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 205836,
+		"inputAbbreviatedPath": "\/img\/image_guide_3.png",
+		"outputAbbreviatedPath": "\/img\/image_guide_3.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/link.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 476,
+		"inputAbbreviatedPath": "\/img\/link.png",
+		"outputAbbreviatedPath": "\/img\/link.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/logistics.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -545,6 +611,17 @@
 		"initialSize": 4408,
 		"inputAbbreviatedPath": "\/img\/logo.png",
 		"outputAbbreviatedPath": "\/img\/logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/logo_grey.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8638,
+		"inputAbbreviatedPath": "\/img\/logo_grey.png",
+		"outputAbbreviatedPath": "\/img\/logo_grey.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -831,6 +908,17 @@
 		"initialSize": 1028,
 		"inputAbbreviatedPath": "\/img\/selected.png",
 		"outputAbbreviatedPath": "\/img\/selected.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/send.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 462,
+		"inputAbbreviatedPath": "\/img\/send.png",
+		"outputAbbreviatedPath": "\/img\/send.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1299,11 +1387,11 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/mens_page.html": {
+	"\/mens_item.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/mens_page.html",
+		"inputAbbreviatedPath": "\/mens_item.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1313,6 +1401,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/owner_boutique_page_empty.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/owner_boutique_page_messages.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/owner_boutique_page_messages.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

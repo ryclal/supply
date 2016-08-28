@@ -28,6 +28,9 @@ $(document).ready(function () {
         if (!$(event.target).closest('.search_b').length) {
             $('.search_b').removeClass('expand');
         }
+        if (!$(event.target).closest('.expand_menu').length) {
+            $('.chat_block .contact_list').removeClass('expand');
+        }
     });
 
     // Date picker register
@@ -283,6 +286,15 @@ $(document).ready(function () {
         }
     });
 
+    // Chat expand
+    $('.expand_menu').on('click',function()
+    {
+        $('.chat_block .contact_list').toggleClass('expand','');
+    });
+
+
+
+
 //Modal open
     $('.open_modal').on('click', function () {
         var to = $(this).data('modal');
@@ -367,7 +379,7 @@ $(document).ready(function () {
         }
     });
 
-    //Review textarea
+//Review textarea
     $('.btn_reply').on('click', function () {
         var button = $(this);
         var review = $(this).parents('.item').children('.reply_block');
@@ -387,7 +399,7 @@ $(document).ready(function () {
         }
     });
 
-    // Accept button product sold
+// Accept button product sold
     $('.btn_accept').on('click', function () {
         var bt_reject = $('.btn_reject');
         var parent = $(this).parent();
@@ -401,6 +413,7 @@ $(document).ready(function () {
     });
 
     $('#reject_reason_select,#country_dropdown_step_1,#country_dropdown_boutique_step_1,#country_dropdown_settings_step_1').dropdown();
-});
+})
+;
 
 
