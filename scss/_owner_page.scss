@@ -5379,7 +5379,6 @@ main
                                         {
                                             a
                                             {
-                                                width: 50px;
                                                 @include font-details(12px, 'OpenSans', 600);
                                                 color: $green_0a;
                                                 padding: 0;
@@ -5499,8 +5498,6 @@ main
         }
     }
 }
-
-
 .ui-state-active .ui-icon, .ui-button:active .ui-icon
 {
     background-image: url("../libs/jquery_ui/images/ui-icons_777777_256x240.png");
